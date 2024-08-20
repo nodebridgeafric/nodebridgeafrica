@@ -12,20 +12,21 @@ No more junk accumulating on disk and no more guerilla (offline) pruning!
 
 ### :tada: Enjoy performance improvements
 
-<figure><img src="../../../../.gitbook/assets/geth-v1.13.0-sync-bench.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="./../../.gitbook/assets/geth-v1.13.0-sync-bench.png" alt=""><figcaption></figcaption></figure>
 
 ### :robot: How to enable PBSS for existing installations
 
 {% hint style="info" %}
 Before continuing please understand the following:
 
-* Synching Geth can take hours during which time block proposals can be missed
-* Consider using a backup EL/CL if you have many validators
-* Enabling PBSS requires a full Geth resync
-{% endhint %}
+- Synching Geth can take hours during which time block proposals can be missed
+- Consider using a backup EL/CL if you have many validators
+- Enabling PBSS requires a full Geth resync
+  {% endhint %}
 
 {% tabs %}
 {% tab title="V2 Staking Setup (Current)" %}
+
 ```bash
 # Stop geth
 sudo systemctl stop execution
@@ -44,9 +45,11 @@ sudo -u execution /usr/local/bin/geth --datadir /var/lib/geth removedb
 # Start geth
 sudo systemctl start execution
 ```
+
 {% endtab %}
 
 {% tab title="V1 Staking Setup" %}
+
 ```bash
 # Stop geth
 sudo systemctl stop eth1
@@ -65,6 +68,7 @@ sudo /usr/bin/geth --datadir ~/.ethereum removedb
 # Start geth
 sudo systemctl start eth1
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -75,7 +79,7 @@ Example of V2 service file with updated ExecStart line using `--state.scheme=pat
 Description=Geth Execution Layer Client service for Mainnet
 Wants=network-online.target
 After=network-online.target
-Documentation=https://www.coincashew.com
+Documentation=https://www.nodebridgeafrica.com
 
 [Service]
 Type=simple
@@ -92,7 +96,7 @@ ExecStart=/usr/local/bin/geth \
     --pprof \
     --state.scheme=path \
     --authrpc.jwtsecret=/secrets/jwtsecret
-   
+
 [Install]
 WantedBy=multi-user.target
 ```

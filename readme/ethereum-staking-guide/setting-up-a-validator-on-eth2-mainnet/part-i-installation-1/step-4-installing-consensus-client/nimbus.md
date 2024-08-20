@@ -36,8 +36,8 @@ sudo apt install curl libsnappy-dev libc6-dev jq libc6 unzip ccze -y
 
 ### 2. Install Binaries
 
-* Downloading binaries is often faster and more convenient.
-* Building from source code can offer better compatibility and is more aligned with the spirit of FOSS (free open source software).
+- Downloading binaries is often faster and more convenient.
+- Building from source code can offer better compatibility and is more aligned with the spirit of FOSS (free open source software).
 
 <details>
 
@@ -122,6 +122,7 @@ Paste the following configuration into the file.
 
 {% tabs %}
 {% tab title="Standalone Beacon Node (Recommended)" %}
+
 ```shell
 [Unit]
 Description=Nimbus Consensus Layer Client service for Mainnet
@@ -158,6 +159,7 @@ ExecStart=/usr/local/bin/nimbus_beacon_node \
 [Install]
 WantedBy=multi-user.target
 ```
+
 {% endtab %}
 
 {% tab title="Combined (BN+VC)" %}
@@ -170,7 +172,7 @@ This configuration combines the beacon chain and validator into one running serv
 Description=Nimbus Consensus Layer Client service for Mainnet
 Wants=network-online.target
 After=network-online.target
-Documentation=https://www.coincashew.com
+Documentation=https://www.nodebridgeafrica.com
 
 [Service]
 Type=simple
@@ -199,11 +201,12 @@ ExecStart=/usr/local/bin/nimbus_beacon_node \
 [Install]
 WantedBy=multi-user.target
 ```
+
 {% endtab %}
 {% endtabs %}
 
-* Replace `<0x_CHANGE_THIS_TO_MY_ETH_FEE_RECIPIENT_ADDRESS>` with your own Ethereum address that you control. Tips are sent to this address and are immediately spendable.
-* **Not staking?** If you only want a full node, use the Standalone Beacon Node configuration and delete the whole line beginning with
+- Replace `<0x_CHANGE_THIS_TO_MY_ETH_FEE_RECIPIENT_ADDRESS>` with your own Ethereum address that you control. Tips are sent to this address and are immediately spendable.
+- **Not staking?** If you only want a full node, use the Standalone Beacon Node configuration and delete the whole line beginning with
 
 ```
 --suggested-fee-recipient
@@ -262,6 +265,7 @@ nimbus_beacon_node[292966]: INF 2023-02-05 01:20:08.000+00:00 Slot end         t
 
 {% tabs %}
 {% tab title="View Logs" %}
+
 ```bash
 sudo journalctl -fu consensus | ccze
 ```
@@ -272,32 +276,39 @@ sudo journalctl -fu consensus | ccze
 nimbus_beacon_node[292966]: INF 2023-02-05 01:20:00.000+00:00 Slot start       topics="beacnde" slot=31205 epoch=903 sync=synced peers=80 head=13a131:31204 finalized=1111:cdba33411 delay=69us850ns
 nimbus_beacon_node[292966]: INF 2023-02-05 01:20:08.000+00:00 Slot end         topics="beacnde" slot=31205 nextActionWait=7m27s985ms126us530ns nextAttestationSlot=31235 nextProposalSlot=-1 syncCommitteeDuties=none head=13a131:31204
 ```
+
 {% endtab %}
 
 {% tab title="Stop" %}
+
 ```bash
 sudo systemctl stop consensus
 ```
+
 {% endtab %}
 
 {% tab title="Start" %}
+
 ```bash
 sudo systemctl start consensus
 ```
+
 {% endtab %}
 
 {% tab title="View Status" %}
+
 ```bash
 sudo systemctl status consensus
 ```
+
 {% endtab %}
 
 {% tab title="Reset Database" %}
 Common reasons to reset the database can include:
 
-* To reduce disk space usage
-* To recover from a corrupted database due to power outage or hardware failure
-* To upgrade to a new storage format
+- To reduce disk space usage
+- To recover from a corrupted database due to power outage or hardware failure
+- To upgrade to a new storage format
 
 ```bash
 sudo systemctl stop consensus

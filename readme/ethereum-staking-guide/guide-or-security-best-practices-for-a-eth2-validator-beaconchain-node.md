@@ -6,9 +6,9 @@ description: Quick steps to secure your node.
 
 ## :robot: Pre-requisites
 
-* Ubuntu Server or Ubuntu Desktop installed
-* SSH server installed
-* a SSH client or terminal window access
+- Ubuntu Server or Ubuntu Desktop installed
+- SSH server installed
+- a SSH client or terminal window access
 
 In case you need to install SSH server, refer to:
 
@@ -18,7 +18,7 @@ In case you need a SSH client for your operating system, refer to:
 
 {% embed url="https://www.howtogeek.com/311287/how-to-connect-to-an-ssh-server-from-windows-macos-or-linux/" %}
 
-## :man\_mage:Create a non-root user with sudo privileges
+## :man_mage:Create a non-root user with sudo privileges
 
 {% hint style="info" %}
 Make a habit of logging to your server using a non-root account. This will prevent the accidental deletion of files if you make a mistake. For instance, the command `rm` can wipe your entire server if run incorrectly using by a root user.
@@ -54,17 +54,17 @@ Add ethereum to the sudo group
 sudo usermod -aG sudo ethereum
 ```
 
-## :closed\_lock\_with\_key: **Disable SSH password Authentication and Use SSH Keys only**
+## :closed_lock_with_key: **Disable SSH password Authentication and Use SSH Keys only**
 
 {% hint style="info" %}
 The basic rules of hardening SSH are:
 
-* No password for SSH access (use private key)
-* Don't allow root to SSH (the appropriate users should SSH in, then `su` or `sudo`)
-* Use `sudo` for users so commands are logged
-* Log unauthorized login attempts (and consider software to block/ban users who try to access your server too many times, like fail2ban)
-* Lock down SSH to only the ip range your require (if you feel like it)
-{% endhint %}
+- No password for SSH access (use private key)
+- Don't allow root to SSH (the appropriate users should SSH in, then `su` or `sudo`)
+- Use `sudo` for users so commands are logged
+- Log unauthorized login attempts (and consider software to block/ban users who try to access your server too many times, like fail2ban)
+- Lock down SSH to only the ip range your require (if you feel like it)
+  {% endhint %}
 
 Create a new SSH key pair on your local machine. Run this on your local machine. You will be asked to type a file name in which to save the key. This will be your **keyname**.
 
@@ -72,15 +72,19 @@ Your choice of [ED25519 or RSA](https://goteleport.com/blog/comparing-ssh-keys/)
 
 {% tabs %}
 {% tab title="ED25519" %}
+
 ```
 ssh-keygen -t ed25519
 ```
+
 {% endtab %}
 
 {% tab title="RSA" %}
+
 ```bash
 ssh-keygen -t rsa -b 4096
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -129,7 +133,7 @@ PermitEmptyPasswords no
 **Optional**: Locate **Port** and customize it your **random** port.
 
 {% hint style="info" %}
-Use a **random** port # from 1024 thru 49141. [Check for possible conflicts.](https://en.wikipedia.org/wiki/List\_of\_TCP\_and\_UDP\_port\_numbers)
+Use a **random** port # from 1024 thru 49141. [Check for possible conflicts.](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
 {% endhint %}
 
 ```bash
@@ -152,15 +156,19 @@ Verify the login still works
 
 {% tabs %}
 {% tab title="Standard SSH Port 22" %}
+
 ```
 ssh ethereum@server.public.ip.address
 ```
+
 {% endtab %}
 
 {% tab title="Custom SSH Port" %}
+
 ```bash
 ssh ethereum@server.public.ip.address -p <custom port number>
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -170,6 +178,7 @@ Alternatively, you might need to add the `-p <port#>` flag if you used a custom 
 ```bash
 ssh -i <path to your SSH_key_name.pub> ethereum@server.public.ip.address
 ```
+
 {% endhint %}
 
 **Optional**: Make logging in easier by updating your local ssh config.
@@ -274,11 +283,11 @@ google-authenticator
 
 It will ask you a series of questions, here is a recommended configuration:
 
-* Make tokens “time-base”": yes
-* Update the `.google_authenticator` file: yes
-* Disallow multiple uses: yes
-* Increase the original generation time limit: no
-* Enable rate-limiting: yes
+- Make tokens “time-base”": yes
+- Update the `.google_authenticator` file: yes
+- Disallow multiple uses: yes
+- Increase the original generation time limit: no
+- Enable rate-limiting: yes
 
 You may have noticed the giant QR code that appeared during the process, underneath are your emergency scratch codes to be used if you don’t have access to your phone: write them down on paper and keep them in a safe place.
 
@@ -297,6 +306,7 @@ To learn more about secure shared memory, read this [techrepublic.com article](h
 {% endhint %}
 
 {% hint style="warning" %}
+
 #### One exceptional case
 
 There may be a reason for you needing to have that memory space mounted in read/write mode (such as a specific server application like **DappNode** that requires such access to the shared memory or standard applications like Google Chrome). In this case, use the following line for the fstab file with instructions below.
@@ -355,8 +365,9 @@ Add the following lines to the bottom of the file.
 
 ```bash
 # Example
-ignoreip = 192.168.1.0/24 127.0.0.1/8 
+ignoreip = 192.168.1.0/24 127.0.0.1/8
 ```
+
 {% endhint %}
 
 ```bash
@@ -384,17 +395,18 @@ The standard UFW firewall can be used to control network access to your node.
 
 With any new installation, ufw is disabled by default. Enable it with the following settings.
 
-* Port 22 (or your random port #) TCP for SSH connection
-* Ports for p2p traffic
-  * Lighthouse uses port 9000 tcp/udp
-  * Teku uses port 9000 tcp/udp
-  * Prysm uses port 13000 tcp and port 12000 udp
-  * Nimbus uses port 9000 tcp/udp
-  * Lodestar uses port 30607 tcp and port 9000 udp
-* Port 30303 tcp/udp eth1 node
+- Port 22 (or your random port #) TCP for SSH connection
+- Ports for p2p traffic
+  - Lighthouse uses port 9000 tcp/udp
+  - Teku uses port 9000 tcp/udp
+  - Prysm uses port 13000 tcp and port 12000 udp
+  - Nimbus uses port 9000 tcp/udp
+  - Lodestar uses port 30607 tcp and port 9000 udp
+- Port 30303 tcp/udp eth1 node
 
 {% tabs %}
 {% tab title="Lighthouse" %}
+
 ```bash
 # By default, deny all incoming and outgoing traffic
 sudo ufw default deny incoming
@@ -410,9 +422,11 @@ sudo ufw allow 30303/udp
 # Enable firewall
 sudo ufw enable
 ```
+
 {% endtab %}
 
 {% tab title="Prysm" %}
+
 ```bash
 # By default, deny all incoming and outgoing traffic
 sudo ufw default deny incoming
@@ -428,9 +442,11 @@ sudo ufw allow 30303/udp
 # Enable firewall
 sudo ufw enable
 ```
+
 {% endtab %}
 
 {% tab title="Teku" %}
+
 ```bash
 # By default, deny all incoming and outgoing traffic
 sudo ufw default deny incoming
@@ -446,9 +462,11 @@ sudo ufw allow 30303/udp
 # Enable firewall
 sudo ufw enable
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus" %}
+
 ```bash
 # By default, deny all incoming and outgoing traffic
 sudo ufw default deny incoming
@@ -464,9 +482,11 @@ sudo ufw allow 30303/udp
 # Enable firewall
 sudo ufw enable
 ```
+
 {% endtab %}
 
 {% tab title="Lodestar" %}
+
 ```bash
 # By default, deny all incoming and outgoing traffic
 sudo ufw default deny incoming
@@ -482,6 +502,7 @@ sudo ufw allow 30303/udp
 # Enable firewall
 sudo ufw enable
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -543,10 +564,10 @@ sudo ufw allow from <your local daily laptop/pc>
 ```
 
 {% hint style="info" %}
-:confetti\_ball: **Port Forwarding Tip:** You'll need to forward and open ports to your validator. Verify it's working with [https://www.yougetsignal.com/tools/open-ports/](https://www.yougetsignal.com/tools/open-ports/) or [https://canyouseeme.org/](https://canyouseeme.org) .
+:confetti_ball: **Port Forwarding Tip:** You'll need to forward and open ports to your validator. Verify it's working with [https://www.yougetsignal.com/tools/open-ports/](https://www.yougetsignal.com/tools/open-ports/) or [https://canyouseeme.org/](https://canyouseeme.org) .
 {% endhint %}
 
-## :telephone\_receiver: Verify Listening Ports
+## :telephone_receiver: Verify Listening Ports
 
 If you want to maintain a secure server, you should validate the listening network ports every once in a while. This will provide you essential information about your network.
 
@@ -574,7 +595,7 @@ sudo netstat -tulpn
 # udp6       0      0 :::30303                :::*                    LISTEN      22117/geth
 ```
 
-## :woman\_astronaut: **Use** system user accounts - Principle of Least Privilege \[Advanced Users / Optional]
+## :woman_astronaut: **Use** system user accounts - Principle of Least Privilege \[Advanced Users / Optional]
 
 {% hint style="info" %}
 **Recommended for Advanced Users Only**
@@ -612,6 +633,7 @@ Furthermore, ensure the correct **file ownership** is assigned to your **system 
 # Example of prysm validator's password file
 sudo chown validator:validator -R $HOME/.eth2validators/validators-password.txt
 ```
+
 {% endhint %}
 
 ## :sparkles: Additional validator node best practices
@@ -621,7 +643,6 @@ sudo chown validator:validator -R $HOME/.eth2validators/validators-password.txt
 | Networking             | Assign static internal IPs to both your validator node and daily laptop/PC. This is useful in conjunction with ufw and Fail2ban's whitelisting feature. Typically, this can be configured in your router's settings. Consult your router's manual for instructions.         |
 | Power Outage           | In case of power outage, you want your validator machine to restart as soon as power is available. In the BIOS settings, change the **Restore on AC / Power Loss** or **After Power Loss** setting to always on. Better yet, install an Uninterruptable Power Supply (UPS). |
 | Clear the bash history | <p>When pressing the up-arrow key, you can see prior commands which may contain sensitive data. To clear this, run the following:</p><p><code>shred -u ~/.bash_history &#x26;&#x26; touch ~/.bash_history</code></p>                                                        |
-
 
 ## :robot: Start staking by building a validator
 

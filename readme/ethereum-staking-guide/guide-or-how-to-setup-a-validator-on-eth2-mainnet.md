@@ -12,7 +12,7 @@ As of Dec 5 2020, this guide is updated for **mainnet.** 😁
 
 #### ✨ For the testnet guide, [please click here](../../nodes/ethereum-node/guide-or-how-to-setup-a-validator-on-eth2-testnet.md).
 
-![](../../.gitbook/assets/gg.jpg)
+![](./.gitbook/assets/gg.jpg)
 
 ## 🏁 0. Prerequisites
 
@@ -20,34 +20,34 @@ As of Dec 5 2020, this guide is updated for **mainnet.** 😁
 
 As a validator for eth2, you will typically have the following abilities:
 
-* operational knowledge of how to set up, run and maintain a eth2 beacon node and validator continuously
-* a long term commitment to maintain your validator 24/7/365
-* basic operating system skills
-* have learned the essentials by watching ['Intro to Eth2 & Staking for Beginners' by Superphiz](https://www.youtube.com/watch?v=tpkpW031RCI)
-* have passed or is actively enrolled in the [Eth2 Study Master course](https://ethereumstudymaster.com/)
-* and have read the [8 Things Every Eth2 validator should know.](https://medium.com/chainsafe-systems/8-things-every-eth2-validator-should-know-before-staking-94df41701487)
+- operational knowledge of how to set up, run and maintain a eth2 beacon node and validator continuously
+- a long term commitment to maintain your validator 24/7/365
+- basic operating system skills
+- have learned the essentials by watching ['Intro to Eth2 & Staking for Beginners' by Superphiz](https://www.youtube.com/watch?v=tpkpW031RCI)
+- have passed or is actively enrolled in the [Eth2 Study Master course](https://ethereumstudymaster.com/)
+- and have read the [8 Things Every Eth2 validator should know.](https://medium.com/chainsafe-systems/8-things-every-eth2-validator-should-know-before-staking-94df41701487)
 
 ### 🎗 **Minimum Setup Requirements**
 
-* **Operating system:** 64-bit Linux (i.e. Ubuntu 20.04 LTS Server or Desktop)
-* **Processor:** Dual core CPU, Intel Core i5–760 or AMD FX-8100 or better
-* **Memory:** 8GB RAM
-* **Storage:** 20GB SSD
-* **Internet:** Broadband internet connection with speeds at least 1 Mbps.
-* **Power:** Reliable electrical power.
-* **ETH balance:** at least 32 ETH and some ETH for deposit transaction fees
-* **Wallet**: Metamask installed
+- **Operating system:** 64-bit Linux (i.e. Ubuntu 20.04 LTS Server or Desktop)
+- **Processor:** Dual core CPU, Intel Core i5–760 or AMD FX-8100 or better
+- **Memory:** 8GB RAM
+- **Storage:** 20GB SSD
+- **Internet:** Broadband internet connection with speeds at least 1 Mbps.
+- **Power:** Reliable electrical power.
+- **ETH balance:** at least 32 ETH and some ETH for deposit transaction fees
+- **Wallet**: Metamask installed
 
 ### 🏋♂ Recommended Hardware Setup
 
-* **Operating system:** 64-bit Linux (i.e. Ubuntu 20.04 LTS Server or Desktop)
-* **Processor:** Quad core CPU, Intel Core i7–4770 or AMD FX-8310 or better
-* **Memory:** 16GB RAM or more
-* **Storage:** 1TB SSD or more
-* **Internet:** Broadband internet connections with speeds at least 10 Mbps without data limit.
-* **Power:** Reliable electrical power with uninterruptible power supply (UPS)
-* **ETH balance:** at least 32 ETH and some ETH for deposit transaction fees
-* **Wallet**: Metamask installed
+- **Operating system:** 64-bit Linux (i.e. Ubuntu 20.04 LTS Server or Desktop)
+- **Processor:** Quad core CPU, Intel Core i7–4770 or AMD FX-8310 or better
+- **Memory:** 16GB RAM or more
+- **Storage:** 1TB SSD or more
+- **Internet:** Broadband internet connections with speeds at least 10 Mbps without data limit.
+- **Power:** Reliable electrical power with uninterruptible power supply (UPS)
+- **ETH balance:** at least 32 ETH and some ETH for deposit transaction fees
+- **Wallet**: Metamask installed
 
 {% hint style="success" %}
 ✨ **Pro Validator Tip**: Highly recommend you begin with a brand new instance of an OS, VM, and/or machine. Avoid headaches by NOT reusing testnet keys, wallets, or databases for your validator.
@@ -128,6 +128,7 @@ Make a new mnemonic.
 ```
 ./deposit.sh new-mnemonic --chain mainnet
 ```
+
 {% endtab %}
 
 {% tab title="Pre-built eth2deposit-cli" %}
@@ -160,6 +161,7 @@ Make a new mnemonic.
 ```
 ./deposit new-mnemonic --chain mainnet
 ```
+
 {% endtab %}
 
 {% tab title="Advanced - Most Secure" %}
@@ -175,10 +177,10 @@ The Tails OS is an _amnesic_ operating system, meaning it will save nothing and 
 
 You need:
 
-* 2 storage mediums (can be USB stick, SD cards or external hard drives)
-* One of them must be > 8GB
-* Windows or Mac computer
-* 30 minutes or longer depending on your download speed
+- 2 storage mediums (can be USB stick, SD cards or external hard drives)
+- One of them must be > 8GB
+- Windows or Mac computer
+- 30 minutes or longer depending on your download speed
 
 #### Part 1 - Download Tails OS
 
@@ -190,9 +192,9 @@ Make sure you follow the guide on the Tails website to verify your download of T
 
 For Windows:
 
-* [Etcher](https://tails.boum.org/etcher/Etcher-Portable.exe)
-* [Win32 Disk Imager](https://win32diskimager.org/#download)
-* [Rufus](https://rufus.ie/en\_US/)
+- [Etcher](https://tails.boum.org/etcher/Etcher-Portable.exe)
+- [Win32 Disk Imager](https://win32diskimager.org/#download)
+- [Rufus](https://rufus.ie/en_US/)
 
 For Mac download [Etcher](https://tails.boum.org/etcher/Etcher.dmg)
 
@@ -200,7 +202,7 @@ For Mac download [Etcher](https://tails.boum.org/etcher/Etcher.dmg)
 
 Run the above software. This is an example how it looks like on Mac OS with etcher. But other software should be similar.
 
-![](../../.gitbook/assets/etcher\_in\_mac.png)
+![](./.gitbook/assets/etcher_in_mac.png)
 
 Select the Tails OS image that you downloaded as the image. Then select the USB stick (the larger one).
 
@@ -226,7 +228,7 @@ Choose the USB stick that you loaded up with Tails OS to boot into Tails.
 
 #### Part 6 - Welcome to Tails OS
 
-![](../../.gitbook/assets/grub.png)
+![](./.gitbook/assets/grub.png)
 
 You can boot with all the default settings.
 
@@ -287,11 +289,11 @@ Your transaction is sending and depositing your ETH to the [official ETH2 deposi
 {% hint style="danger" %}
 \*\*\*\*🔥 **Critical Crypto Reminder:** **Keep your mnemonic, keep your ETH.** 🚀
 
-* Write down your mnemonic seed **offline**. _Not email. Not cloud._
-* Multiple copies are better. _Best stored in a_ [_metal seed._](https://jlopp.github.io/metal-bitcoin-storage-reviews/)
-* The withdrawal keys will be generated from this mnemonic in the future.
-* Make **offline backups**, such as to a USB key, of your **`validator_keys`** directory.
-{% endhint %}
+- Write down your mnemonic seed **offline**. _Not email. Not cloud._
+- Multiple copies are better. _Best stored in a_ [_metal seed._](https://jlopp.github.io/metal-bitcoin-storage-reviews/)
+- The withdrawal keys will be generated from this mnemonic in the future.
+- Make **offline backups**, such as to a USB key, of your **`validator_keys`** directory.
+  {% endhint %}
 
 ## 🛸 3. Install a ETH1 node
 
@@ -364,6 +366,7 @@ EOF
 ```bash
 --ws-origins=all
 ```
+
 {% endhint %}
 
 Move the unit file to `/etc/systemd/system` and give it permissions.
@@ -388,6 +391,7 @@ sudo systemctl enable eth1
 ```
 sudo systemctl start eth1
 ```
+
 {% endtab %}
 
 {% tab title="Geth" %}
@@ -434,6 +438,7 @@ EOF
 ```bash
 --ws
 ```
+
 {% endhint %}
 
 Move the unit file to `/etc/systemd/system` and give it permissions.
@@ -458,6 +463,7 @@ sudo systemctl enable eth1
 ```
 sudo systemctl start eth1
 ```
+
 {% endtab %}
 
 {% tab title="Besu" %}
@@ -531,6 +537,7 @@ sudo systemctl enable eth1
 ```
 sudo systemctl start eth1
 ```
+
 {% endtab %}
 
 {% tab title="Nethermind" %}
@@ -604,6 +611,7 @@ sudo systemctl enable eth1
 ```
 sudo systemctl start eth1
 ```
+
 {% endtab %}
 
 {% tab title="Minimum Hardware Setup (Infura)" %}
@@ -667,6 +675,7 @@ eth1-endpoint: <your https:// infura endpoint>
 #example
 --http-web3provider=<your https:// infura endpoint>
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -677,11 +686,11 @@ Syncing an eth1 node can take up to 1 week. On high-end machines with gigabit in
 {% hint style="success" %}
 Your eth1 node is fully sync'd when these events occur.
 
-* **`OpenEthereum:`** `Imported #<block number>`
-* **`Geth:`** `Imported new chain segment`
-* **`Besu:`** `Imported #<block number>`
-* **`Nethermind:`** `No longer syncing Old Headers`
-{% endhint %}
+- **`OpenEthereum:`** `Imported #<block number>`
+- **`Geth:`** `Imported new chain segment`
+- **`Besu:`** `Imported #<block number>`
+- **`Nethermind:`** `No longer syncing Old Headers`
+  {% endhint %}
 
 #### 🛠 Helpful eth1.service commands
 
@@ -748,6 +757,7 @@ rustup update
 cargo clean
 make
 ```
+
 {% endhint %}
 
 {% hint style="info" %}
@@ -788,8 +798,8 @@ lighthouse account_manager validator list --network mainnet
 
 Specific to your networking setup or cloud provider settings, [ensure your validator's firewall ports are open and reachable.](guide-or-security-best-practices-for-a-eth2-validator-beaconchain-node.md#configure-your-firewall)
 
-* **Lighthouse beacon chain** requires port 9000 for tcp and udp
-* **eth1** node requires port 30303 for tcp and udp
+- **Lighthouse beacon chain** requires port 9000 for tcp and udp
+- **eth1** node requires port 30303 for tcp and udp
 
 {% hint style="info" %}
 ✨ **Port Forwarding Tip:** You'll need to forward and open ports to your validator. Verify it's working with [https://www.yougetsignal.com/tools/open-ports/](https://www.yougetsignal.com/tools/open-ports/) or [https://canyouseeme.org/](https://canyouseeme.org/) .
@@ -834,6 +844,7 @@ EOF
 # Example:
 --eth1-endpoints http://localhost:8545,https://nodes.mewapi.io/rpc/eth,https://mainnet.eth.cloud.ava.do,https://mainnet.infura.io/v3/xxx
 ```
+
 {% endhint %}
 
 Move the unit file to `/etc/systemd/system`
@@ -861,12 +872,12 @@ sudo systemctl start beacon-chain
 
 _The beacon chain couldn't connect to the :8545 service?_
 
-* In the beacon chain unit file under \[Service], add, "`ExecStartPre = /bin/sleep 30`" so that it waits 30 seconds for eth1 node to startup before connecting.
+- In the beacon chain unit file under \[Service], add, "`ExecStartPre = /bin/sleep 30`" so that it waits 30 seconds for eth1 node to startup before connecting.
 
 _CRIT Invalid eth1 chain id. Please switch to correct chain id._
 
-* Allow your eth1 node to fully sync to mainnet.
-{% endhint %}
+- Allow your eth1 node to fully sync to mainnet.
+  {% endhint %}
 
 {% hint style="success" %}
 Nice work. Your beacon chain is now managed by the reliability and robustness of systemd. Below are some commands for using systemd.
@@ -1022,6 +1033,7 @@ journalctl --unit=validator --since=today
 #view log between a date
 journalctl --unit=validator --since='2020-12-01 00:00:00' --until='2020-12-02 12:00:00'
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus" %}
@@ -1115,8 +1127,8 @@ For more on keys and keystores, see [here](https://blog.ethereum.org/2020/05/21/
 
 Specific to your networking setup or cloud provider settings, [ensure your validator's firewall ports are open and reachable.](guide-or-security-best-practices-for-a-eth2-validator-beaconchain-node.md#configure-your-firewall)
 
-* **Nimbus beacon chain node** will use port 9000 for tcp and udp
-* **eth1** node requires port 30303 for tcp and udp
+- **Nimbus beacon chain node** will use port 9000 for tcp and udp
+- **eth1** node requires port 30303 for tcp and udp
 
 {% hint style="info" %}
 ✨ **Port Forwarding Tip:** You'll need to forward and open ports to your validator. Verify it's working with [https://www.yougetsignal.com/tools/open-ports/](https://www.yougetsignal.com/tools/open-ports/) or [https://canyouseeme.org/](https://canyouseeme.org/) .
@@ -1243,6 +1255,7 @@ journalctl --unit=beacon-chain --since=today
 #view log between a date
 journalctl --unit=beacon-chain --since='2020-12-01 00:00:00' --until='2020-12-02 12:00:00'
 ```
+
 {% endtab %}
 
 {% tab title="Teku" %}
@@ -1312,8 +1325,8 @@ sudo cp -r $HOME/git/teku/build/install/teku /usr/bin/teku
 
 Specific to your networking setup or cloud provider settings, [ensure your validator's firewall ports are open and reachable.](guide-or-security-best-practices-for-a-eth2-validator-beaconchain-node.md#configure-your-firewall)
 
-* **Teku beacon chain node** will use port 9000 for tcp and udp
-* **eth1** node requires port 30303 for tcp and udp
+- **Teku beacon chain node** will use port 9000 for tcp and udp
+- **eth1** node requires port 30303 for tcp and udp
 
 {% hint style="info" %}
 \*\*\*\*✨ **Port Forwarding Tip:** You'll need to forward and open ports to your validator. Verify it's working with [https://www.yougetsignal.com/tools/open-ports/](https://www.yougetsignal.com/tools/open-ports/) or [https://canyouseeme.org/](https://canyouseeme.org/) .
@@ -1333,7 +1346,7 @@ sudo mkdir -p /etc/teku
 sudo chown $(whoami):$(whoami) /var/lib/teku
 ```
 
-Copy your `validator_files` directory to the data directory we created above and remove the extra deposit\_data file.
+Copy your `validator_files` directory to the data directory we created above and remove the extra deposit_data file.
 
 ```bash
 cp -r $HOME/eth2deposit-cli/validator_keys /var/lib/teku
@@ -1529,6 +1542,7 @@ journalctl --unit=beacon-chain --since=today
 #view log between a date
 journalctl --unit=beacon-chain --since='2020-12-01 00:00:00' --until='2020-12-02 12:00:00'
 ```
+
 {% endtab %}
 
 {% tab title="Prysm" %}
@@ -1547,8 +1561,8 @@ curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.sh --out
 
 Specific to your networking setup or cloud provider settings, [ensure your validator's firewall ports are open and reachable.](guide-or-security-best-practices-for-a-eth2-validator-beaconchain-node.md#configure-your-firewall)
 
-* **Prysm beacon chain node** will use port 12000 for udp and port 13000 for tcp
-* **eth1** node requires port 30303 for tcp and udp
+- **Prysm beacon chain node** will use port 12000 for udp and port 13000 for tcp
+- **eth1** node requires port 30303 for tcp and udp
 
 {% hint style="info" %}
 ✨ **Port Forwarding Tip:** You'll need to forward and open ports to your validator. Verify it's working with [https://www.yougetsignal.com/tools/open-ports/](https://www.yougetsignal.com/tools/open-ports/) or [https://canyouseeme.org/](https://canyouseeme.org/) .
@@ -1800,11 +1814,12 @@ journalctl --unit=validator --since=today
 # Example below
 # INFO Enabled validator       voting_pubkey: 0x2374.....7121
 ```
+
 {% endtab %}
 
 {% tab title="Lodestar" %}
 {% hint style="info" %}
-**Lodestar is a Typescript implementation** of the official [Ethereum 2.0 specification](https://github.com/ethereum/eth2.0-specs) by the [ChainSafe.io](https://lodestar.chainsafe.io/) team. In addition to the beacon chain client, the team is also working on 22 packages and libraries. A complete list can be found [here](https://hackmd.io/CcsWTnvRS\_eiLUajr3gi9g). Finally, the Lodestar team is leading the Eth2 space in light client research and development and has received funding from the EF and Moloch DAO for this purpose.
+**Lodestar is a Typescript implementation** of the official [Ethereum 2.0 specification](https://github.com/ethereum/eth2.0-specs) by the [ChainSafe.io](https://lodestar.chainsafe.io/) team. In addition to the beacon chain client, the team is also working on 22 packages and libraries. A complete list can be found [here](https://hackmd.io/CcsWTnvRS_eiLUajr3gi9g). Finally, the Lodestar team is leading the Eth2 space in light client research and development and has received funding from the EF and Moloch DAO for this purpose.
 {% endhint %}
 
 {% hint style="danger" %}
@@ -1874,8 +1889,8 @@ yarn run cli --help
 
 Specific to your networking setup or cloud provider settings, [ensure your validator's firewall ports are open and reachable.](guide-or-security-best-practices-for-a-eth2-validator-beaconchain-node.md#configure-your-firewall)
 
-* **Lodestar beacon chain node** will use port 30607 for tcp and port 9000 for udp peer discovery.
-* **eth1** node requires port 30303 for tcp and udp
+- **Lodestar beacon chain node** will use port 30607 for tcp and port 9000 for udp peer discovery.
+- **eth1** node requires port 30303 for tcp and udp
 
 {% hint style="info" %}
 \*\*\*\*✨ **Port Forwarding Tip:** You'll need to forward and open ports to your validator. Verify it's working with [https://www.yougetsignal.com/tools/open-ports/](https://www.yougetsignal.com/tools/open-ports/) or [https://canyouseeme.org/](https://canyouseeme.org/) .
@@ -2113,6 +2128,7 @@ journalctl --unit=validator --since=today
 #view log between a date
 journalctl --unit=validator --since='2020-12-01 00:00:00' --until='2020-12-02 12:00:00'
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -2177,6 +2193,7 @@ Create the **prometheus.yml** config file. Choose the tab for your eth2 client. 
 
 {% tabs %}
 {% tab title="Lighthouse" %}
+
 ```bash
 cat > $HOME/prometheus.yml << EOF
 global:
@@ -2203,9 +2220,11 @@ scrape_configs:
        - targets: ['localhost:5064']
 EOF
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus" %}
+
 ```bash
 cat > $HOME/prometheus.yml << EOF
 global:
@@ -2228,9 +2247,11 @@ scrape_configs:
        - targets: ['localhost:8008']
 EOF
 ```
+
 {% endtab %}
 
 {% tab title="Teku" %}
+
 ```bash
 cat > $HOME/prometheus.yml << EOF
 global:
@@ -2253,9 +2274,11 @@ scrape_configs:
        - targets: ['localhost:8008']
 EOF
 ```
+
 {% endtab %}
 
 {% tab title="Prysm" %}
+
 ```bash
 cat > $HOME/prometheus.yml << EOF
 global:
@@ -2283,9 +2306,11 @@ scrape_configs:
       - targets: ['localhost:8082']
 EOF
 ```
+
 {% endtab %}
 
 {% tab title="Lodestar" %}
+
 ```bash
 cat > $HOME/prometheus.yml << EOF
 scrape_configs:
@@ -2298,6 +2323,7 @@ scrape_configs:
        - targets: ['localhost:8008']
 EOF
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -2311,6 +2337,7 @@ Append the applicable job snippet for your eth1 node to the end of **prometheus.
 
 {% tabs %}
 {% tab title="Geth" %}
+
 ```bash
    - job_name: 'geth'
      scrape_interval: 15s
@@ -2320,9 +2347,11 @@ Append the applicable job snippet for your eth1 node to the end of **prometheus.
      static_configs:
      - targets: ['localhost:6060']
 ```
+
 {% endtab %}
 
 {% tab title="Besu" %}
+
 ```bash
   - job_name: 'besu'
     scrape_interval: 15s
@@ -2333,9 +2362,11 @@ Append the applicable job snippet for your eth1 node to the end of **prometheus.
     - targets:
       - localhost:9545
 ```
+
 {% endtab %}
 
 {% tab title="Nethermind" %}
+
 ```bash
    - job_name: 'nethermind'
     scrape_interval: 15s
@@ -2357,9 +2388,11 @@ Pushgateway listens for data from Nethermind on port 9091.
 {% endtab %}
 
 {% tab title="OpenEthereum" %}
+
 ```bash
 Work in progress
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -2395,7 +2428,7 @@ sudo systemctl status grafana-server.service prometheus.service prometheus-node-
 6. Set **Name** to **"Prometheus**"
 7. Set **URL** to [http://localhost:9090](http://localhost:9090)
 8. Click **Save & Test**
-9. **Download and save** your ETH2 Client's json file. \[ [Lighthouse BC ](https://raw.githubusercontent.com/sigp/lighthouse-metrics/master/dashboards/Summary.json)| [Lighthouse VC](https://raw.githubusercontent.com/sigp/lighthouse-metrics/master/dashboards/ValidatorClient.json) | [Teku ](https://grafana.com/api/dashboards/13457/revisions/2/download)| [Nimbus ](https://raw.githubusercontent.com/status-im/nimbus-eth2/master/grafana/beacon\_nodes\_Grafana\_dashboard.json)| [Prysm ](https://raw.githubusercontent.com/GuillaumeMiralles/prysm-grafana-dashboard/master/less\_10\_validators.json)| [Prysm > 10 Validators](https://raw.githubusercontent.com/GuillaumeMiralles/prysm-grafana-dashboard/master/more\_10\_validators.json) | Lodestar ]
+9. **Download and save** your ETH2 Client's json file. \[ [Lighthouse BC ](https://raw.githubusercontent.com/sigp/lighthouse-metrics/master/dashboards/Summary.json)| [Lighthouse VC](https://raw.githubusercontent.com/sigp/lighthouse-metrics/master/dashboards/ValidatorClient.json) | [Teku ](https://grafana.com/api/dashboards/13457/revisions/2/download)| [Nimbus ](https://raw.githubusercontent.com/status-im/nimbus-eth2/master/grafana/beacon_nodes_Grafana_dashboard.json)| [Prysm ](https://raw.githubusercontent.com/GuillaumeMiralles/prysm-grafana-dashboard/master/less_10_validators.json)| [Prysm > 10 Validators](https://raw.githubusercontent.com/GuillaumeMiralles/prysm-grafana-dashboard/master/more_10_validators.json) | Lodestar ]
 10. **Download and save** your ETH1 Client's json file \[ [Geth](https://gist.githubusercontent.com/karalabe/e7ca79abdec54755ceae09c08bd090cd/raw/3a400ab90f9402f2233280afd086cb9d6aac2111/dashboard.json) | [Besu ](https://grafana.com/api/dashboards/10273/revisions/5/download)| [Nethermind ](https://raw.githubusercontent.com/NethermindEth/metrics-infrastructure/master/grafana/dashboards/nethermind.json)| OpenEthereum ]
 11. Click **Create +** icon > **Import**
 12. Add the ETH2 client dashboard via **Upload JSON file**
@@ -2408,35 +2441,35 @@ sudo systemctl status grafana-server.service prometheus.service prometheus-node-
 
 _The dashboards do not display eth1 node data._
 
-* In the **eth1 unit file** under located at `/etc/systemd/system/eth1.service`, make sure your eth1 node/geth is started with the correct parameters so that reporting metrics and pprof http server are enabled.
-  * Example:`ExecStartPre = /usr/bin/geth --http --metrics --pprof`
-{% endhint %}
+- In the **eth1 unit file** under located at `/etc/systemd/system/eth1.service`, make sure your eth1 node/geth is started with the correct parameters so that reporting metrics and pprof http server are enabled.
+  - Example:`ExecStartPre = /usr/bin/geth --http --metrics --pprof`
+    {% endhint %}
 
 #### Example of Grafana Dashboards for each ETH2 client.
 
 {% tabs %}
 {% tab title="Lighthouse" %}
-![Beacon Chain dashboard by sigp](../../.gitbook/assets/lhm.png)
+![Beacon Chain dashboard by sigp](./.gitbook/assets/lhm.png)
 
-![Validator Client dashboard by sigp](../../.gitbook/assets/lighthouse-validator.png)
+![Validator Client dashboard by sigp](./.gitbook/assets/lighthouse-validator.png)
 
 Credits: [https://github.com/sigp/lighthouse-metrics/](https://github.com/sigp/lighthouse-metrics/)
 {% endtab %}
 
 {% tab title="Nimbus" %}
-![Dashboard by status-im](../../.gitbook/assets/nim\_dashboard.png)
+![Dashboard by status-im](./.gitbook/assets/nim_dashboard.png)
 
 Credits: [https://github.com/status-im/nimbus-eth2/](https://github.com/status-im/nimbus-eth2/)
 {% endtab %}
 
 {% tab title="Teku" %}
-![Teku by PegaSys Engineering](../../.gitbook/assets/teku.dash.png)
+![Teku by PegaSys Engineering](./.gitbook/assets/teku.dash.png)
 
 Credits: [https://grafana.com/grafana/dashboards/13457](https://grafana.com/grafana/dashboards/13457)
 {% endtab %}
 
 {% tab title="Prysm" %}
-![Prysm dashboard by GuillaumeMiralles](../../.gitbook/assets/prysm\_dash.png)
+![Prysm dashboard by GuillaumeMiralles](./.gitbook/assets/prysm_dash.png)
 
 Credits: [https://github.com/GuillaumeMiralles/prysm-grafana-dashboard](https://github.com/GuillaumeMiralles/prysm-grafana-dashboard)
 {% endtab %}
@@ -2450,19 +2483,19 @@ Work in progress.
 
 {% tabs %}
 {% tab title="Geth" %}
-![Dashboard by karalabe](../../.gitbook/assets/geth-dash.png)
+![Dashboard by karalabe](./.gitbook/assets/geth-dash.png)
 
 Credits: [https://gist.github.com/karalabe/e7ca79abdec54755ceae09c08bd090cd](https://gist.github.com/karalabe/e7ca79abdec54755ceae09c08bd090cd)
 {% endtab %}
 
 {% tab title="Besu" %}
-![](../../.gitbook/assets/besu-dash.png)
+![](./.gitbook/assets/besu-dash.png)
 
 Credits: [https://grafana.com/dashboards/10273](https://grafana.com/dashboards/10273)
 {% endtab %}
 
 {% tab title="Nethermind" %}
-![](../../.gitbook/assets/nethermind-dash.png)
+![](./.gitbook/assets/nethermind-dash.png)
 
 Credits: [https://github.com/NethermindEth/metrics-infrastructure](https://github.com/NethermindEth/metrics-infrastructure)
 {% endtab %}
@@ -2482,14 +2515,16 @@ Get notified of problems with your validators. Choose between email, telegram, d
 
 {% tabs %}
 {% tab title="Email Notifications" %}
+
 1. Visit [https://beaconcha.in/](https://beaconcha.in/)
 2. Sign up for an account.
 3. Verify your **email**
 4. Search for your **validator's public address**
 5. Add validators to your watchlist by clicking the **bookmark symbol**.
-{% endtab %}
+   {% endtab %}
 
 {% tab title="Telegram Notifications" %}
+
 1. On the menu of Grafana, select **Notification channels** under the bell icon.
 2. Click on **Add channel**.
 3. Give the notification channel a **name**.
@@ -2504,12 +2539,14 @@ Get notified of problems with your validators. Choose between email, telegram, d
     ```
     "chat":{"id":-123123123,"title":
     ```
+
 11. Paste the **Chat ID** into the corresponding field in **Grafana**.
 12. **Save and test** the notification channel for your alerts.
 13. Now you can create custom alerts from your dashboards. [Visit here to learn how to create alerts.](https://grafana.com/docs/grafana/latest/alerting/create-alerts/)
-{% endtab %}
+    {% endtab %}
 
 {% tab title="Discord Notifications" %}
+
 1. On the menu of Grafana, select **Notification channels** under the bell icon.
 2. Click on **Add channel**.
 3. Add a **name** to the notification channel.
@@ -2517,9 +2554,10 @@ Get notified of problems with your validators. Choose between email, telegram, d
 5. To complete the set up, a Discord server (and a text channel available) as well as a Webhook URL are required. For instructions on setting up a Discord's Webhooks, see [this section](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) of their documentation.
 6. Enter the Webhook **URL** in the Discord notification settings panel.
 7. Click **Send Test**, which will push a confirmation message to the Discord channel.
-{% endtab %}
+   {% endtab %}
 
 {% tab title="Slack Notifications" %}
+
 1. On the menu of Grafana, select **Notification channels** under the bell icon.
 2. Click on **Add channel**.
 3. Add a **name** to the notification channel.
@@ -2527,8 +2565,8 @@ Get notified of problems with your validators. Choose between email, telegram, d
 5. For instructions on setting up a Slack's Incoming Webhooks, see [this section](https://api.slack.com/messaging/webhooks) of their documentation.
 6. Enter the Slack Incoming Webhook URL in the **URL** field.
 7. Click **Send Test**, which will push a confirmation message to the Slack channel.
-{% endtab %}
-{% endtabs %}
+   {% endtab %}
+   {% endtabs %}
 
 ### 🌊 6.4 Monitoring with Uptime Check by Google Cloud
 
@@ -2541,7 +2579,7 @@ Credits to [Mohamed Mansour for inspiring this how-to guide](https://www.youtube
 Here's how to setup a no-cost monitoring service called Uptime Check by Google.
 
 {% hint style="info" %}
-For a video demo, watch [MohamedMansour's eth2 education videos](https://www.youtube.com/watch?v=txgOVDTemPQ). Please support his [GITCOIN grant](https://gitcoin.co/grants/1709/video-educational-grant). 🙏
+For a video demo, watch [MohamedMansour's eth2 education videos](https://www.youtube.com/watch?v=txgOVDTemPQ).
 {% endhint %}
 
 1. Visit [cloud.google.com](https://cloud.google.com/)
@@ -2567,16 +2605,6 @@ For a video demo, watch [MohamedMansour's eth2 education videos](https://www.you
 
 {% hint style="success" %}
 🎉Congrats on setting up your validator! You're good to go on eth2.0.
-
-Did you find our guide useful? Let us know with a tip and we'll keep updating it.
-
-Use [cointr.ee to find our donation ](https://cointr.ee/coincashew)addresses. 🙏
-
-Any feedback and all pull requests much appreciated. 🌛
-
-Hang out and chat with fellow stakers on Discord @
-
-[https://discord.gg/w8Bx8W2HPW](https://discord.gg/w8Bx8W2HPW) 😃
 {% endhint %}
 
 ## 🧙♂7. Update a ETH2 client
@@ -2614,6 +2642,7 @@ Restart beacon chain and validator as per normal operating procedures.
 ```
 sudo systemctl reload-or-restart beacon-chain validator
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus" %}
@@ -2644,6 +2673,7 @@ sudo rm /usr/bin/nimbus_beacon_node
 sudo cp $HOME/git/nimbus-eth2/build/nimbus_beacon_node /usr/bin
 sudo systemctl reload-or-restart beacon-chain
 ```
+
 {% endtab %}
 
 {% tab title="Teku" %}
@@ -2674,6 +2704,7 @@ sudo rm -rf /usr/bin/teku
 sudo cp -r $HOME/git/teku/build/install/teku /usr/bin/teku
 sudo systemctl reload-or-restart beacon-chain
 ```
+
 {% endtab %}
 
 {% tab title="Prysm" %}
@@ -2683,6 +2714,7 @@ Review release notes and check for breaking changes/features. [https://github.co
 #Simply restart the processes
 sudo systemctl reload-or-restart beacon-chain validator
 ```
+
 {% endtab %}
 
 {% tab title="Lodestar" %}
@@ -2710,6 +2742,7 @@ Restart beacon chain and validator as per normal operating procedures.
 ```
 sudo systemctl reload-or-restart beacon-chain validator
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -2717,15 +2750,19 @@ Check the logs to verify the services are working properly and ensure there are 
 
 {% tabs %}
 {% tab title="Lighthouse | Prysm | Lodestar" %}
+
 ```bash
 sudo systemctl status beacon-chain validator
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus | Teku" %}
+
 ```
 sudo systemctl status beacon-chain
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -2736,46 +2773,56 @@ sudo systemctl status beacon-chain
 {% hint style="info" %}
 Use this command to signal your intentions to stop validating with your validator. This means you no longer want to stake with your validator and want to turn off your node.
 
-* Voluntary exiting takes a minimum of 2048 epochs (or \~9days). There is a queue to exit and a delay before your validator is finally exited.
-* Once a validator is exited in phase 0, this is non-reversible and you can no longer restart validating again.
-* Your funds will not be available for withdrawal until phase 1.5 or later.
-* After your validator leaves the exit queue and is truely exited, it is safe to turn off your beacon node and validator.
-{% endhint %}
+- Voluntary exiting takes a minimum of 2048 epochs (or \~9days). There is a queue to exit and a delay before your validator is finally exited.
+- Once a validator is exited in phase 0, this is non-reversible and you can no longer restart validating again.
+- Your funds will not be available for withdrawal until phase 1.5 or later.
+- After your validator leaves the exit queue and is truely exited, it is safe to turn off your beacon node and validator.
+  {% endhint %}
 
 {% tabs %}
 {% tab title="Lighthouse" %}
+
 ```bash
 lighthouse account validator exit \
 --keystore $HOME/.lighthouse/mainnet/validators \
 --beacon-node http://localhost:5052
 ```
+
 {% endtab %}
 
 {% tab title="Teku" %}
+
 ```bash
 teku voluntary-exit \
 --epoch=<epoch number to exit> \
 --beacon-node-api-endpoint=http://127.0.0.1:5051 \
 --validator-keys=<path to keystore.json>:<path to password.txt file>
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus" %}
+
 ```bash
 build/nimbus_beacon_node deposits exit --validator=<VALIDATOR_PUBLIC_KEY> --data-dir=/var/lib/nimbus
 ```
+
 {% endtab %}
 
 {% tab title="Prysm" %}
+
 ```bash
 $HOME/prysm/prysm.sh validator accounts voluntary-exit
 ```
+
 {% endtab %}
 
 {% tab title="Lodestar" %}
+
 ```bash
 #TO BE DETERMINED
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -2826,15 +2873,19 @@ In order to export the slashing database, the validator needs to be stopped.
 
 {% tabs %}
 {% tab title="Lighthouse | Prysm | Lodestar" %}
+
 ```bash
 sudo systemctl stop beacon-chain validator
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus | Teku" %}
+
 ```
 sudo systemctl stop beacon-chain
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -2848,9 +2899,11 @@ Update the export .json file location and name.
 
 {% tabs %}
 {% tab title="Lighthouse" %}
+
 ```bash
 lighthouse account validator slashing-protection export <lighthouse_interchange.json>
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus" %}
@@ -2858,9 +2911,11 @@ To be implemented
 {% endtab %}
 
 {% tab title="Teku" %}
+
 ```bash
 teku slashing-protection export --to=<FILE>
 ```
+
 {% endtab %}
 
 {% tab title="Prysm" %}
@@ -2890,9 +2945,11 @@ Using your new eth2 client, run the following command and update the relevant pa
 
 {% tabs %}
 {% tab title="Lighthouse" %}
+
 ```bash
 lighthouse account validator slashing-protection import <my_interchange.json>
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus" %}
@@ -2900,9 +2957,11 @@ To be implemented
 {% endtab %}
 
 {% tab title="Teku" %}
+
 ```bash
 teku slashing-protection import --from=<FILE>
 ```
+
 {% endtab %}
 
 {% tab title="Prysm" %}
@@ -2918,15 +2977,19 @@ To be implemented
 
 {% tabs %}
 {% tab title="Lighthouse | Prysm | Lodestar" %}
+
 ```bash
 sudo systemctl start beacon-chain validator
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus | Teku" %}
+
 ```
 sudo systemctl start beacon-chain
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -2936,15 +2999,19 @@ Check the logs to verify the services are working properly and ensure there are 
 
 {% tabs %}
 {% tab title="Lighthouse | Prysm | Lodestar" %}
+
 ```bash
 sudo systemctl status beacon-chain validator
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus | Teku" %}
+
 ```
 sudo systemctl status beacon-chain
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -2997,35 +3064,43 @@ Add the following flag to limit the number of peers on the `ExecStart` line.
 
 {% tabs %}
 {% tab title="Geth" %}
+
 ```bash
 --maxpeers 10
 # Example
 # ExecStart       = /usr/bin/geth --maxpeers 10 --http --ws
 ```
+
 {% endtab %}
 
 {% tab title="OpenEthereum (Parity)" %}
+
 ```bash
 --max-peers 10
 # Example
 # ExecStart       = <home directory>/openethereum/openethereum --max-peers 10
 ```
+
 {% endtab %}
 
 {% tab title="Besu" %}
+
 ```bash
 --max-peers 10
 # Example
 # ExecStart       = <home directory>/besu/bin/besu --max-peers 10 --rpc-http-enabled
 ```
+
 {% endtab %}
 
 {% tab title="Nethermind" %}
+
 ```bash
 --ActivePeersMaxCount 10
 # Example
 # ExecStart       = <home directory>/nethermind/Nethermind.Runner --ActivePeersMaxCount 10 --JsonRpc.Enabled true
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -3046,6 +3121,7 @@ In case you need to locate your validator keys, database directories or other im
 
 {% tabs %}
 {% tab title="Lighthouse" %}
+
 ```bash
 # Validator Keys
 ~/.lighthouse/mainnet/validators
@@ -3059,9 +3135,11 @@ In case you need to locate your validator keys, database directories or other im
 #Slash protection db
 ~/.lighthouse/mainnet/validators/slashing_protection.sqlite
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus" %}
+
 ```bash
 # Validator Keys
 /var/lib/nimbus/validators
@@ -3075,9 +3153,11 @@ In case you need to locate your validator keys, database directories or other im
 #Logs
 /var/lib/nimbus/beacon.log
 ```
+
 {% endtab %}
 
 {% tab title="Teku" %}
+
 ```bash
 # Validator Keys
 /var/lib/teku
@@ -3088,9 +3168,11 @@ In case you need to locate your validator keys, database directories or other im
 #Slash protection db
 ~/tekudata/validator/slashprotection
 ```
+
 {% endtab %}
 
 {% tab title="Prysm" %}
+
 ```bash
 # Validator Keys
 ~/.eth2validators/prysm-wallet-v2/direct
@@ -3098,6 +3180,7 @@ In case you need to locate your validator keys, database directories or other im
 # Beacon Chain Data
 ~/.eth2/beaconchaindata
 ```
+
 {% endtab %}
 
 {% tab title="Lodestar" %}
@@ -3109,31 +3192,39 @@ TBD
 
 {% tabs %}
 {% tab title="Geth" %}
+
 ```bash
 # database location
 $HOME/.ethereum
 ```
+
 {% endtab %}
 
 {% tab title="OpenEthereum (Parity)" %}
+
 ```bash
 # database location
 $HOME/.local/share/openethereum
 ```
+
 {% endtab %}
 
 {% tab title="Besu" %}
+
 ```bash
 # database location
 $HOME/.besu/database
 ```
+
 {% endtab %}
 
 {% tab title="Nethermind" %}
+
 ```bash
 #database location
 $HOME/.nethermind/nethermind_db/mainnet
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -3157,35 +3248,43 @@ If not using websockets, there's no need to include ws parameters. Only Nimbus r
 
 {% tabs %}
 {% tab title="Geth" %}
+
 ```bash
 --http.addr 0.0.0.0 --ws.addr 0.0.0.0
 # Example
 # ExecStart       = /usr/bin/geth --http.addr 0.0.0.0 --ws.addr 0.0.0.0 --http --ws
 ```
+
 {% endtab %}
 
 {% tab title="OpenEthereum (Parity)" %}
+
 ```bash
 --jsonrpc-interface=all --ws-interface=all
 # Example
 # ExecStart       = <home directory>/openethereum/openethereum --jsonrpc-interface=all --ws-interface=all
 ```
+
 {% endtab %}
 
 {% tab title="Besu" %}
+
 ```bash
 --rpc-http-host=0.0.0.0 --rpc-ws-enabled --rpc-ws-host=0.0.0.0
 # Example
 # ExecStart       = <home directory>/besu/bin/besu --rpc-http-host=0.0.0.0 --rpc-ws-enabled --rpc-ws-host=0.0.0.0 --rpc-http-enabled
 ```
+
 {% endtab %}
 
 {% tab title="Nethermind" %}
+
 ```bash
 --JsonRpc.Host 0.0.0.0 --WebSocketsEnabled
 # Example
 # ExecStart       = <home directory>/nethermind/Nethermind.Runner --JsonRpc.Host 0.0.0.0 --WebSocketsEnabled --JsonRpc.Enabled true
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -3200,6 +3299,7 @@ On the separate machine hosting the beacon-chain, update the beacon-chain unit f
 
 {% tabs %}
 {% tab title="Lighthouse" %}
+
 ```bash
 # edit beacon-chain unit file
 nano /etc/systemd/system/beacon-chain.service
@@ -3207,9 +3307,11 @@ nano /etc/systemd/system/beacon-chain.service
 # example
 # --eth1-endpoint=http://192.168.10.22
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus" %}
+
 ```bash
 # edit beacon chain unit file
 nano /etc/systemd/system/beacon-chain.service
@@ -3217,9 +3319,11 @@ nano /etc/systemd/system/beacon-chain.service
 # example
 # --web3-url=ws://192.168.10.22
 ```
+
 {% endtab %}
 
 {% tab title="Teku" %}
+
 ```bash
 # edit teku.yaml
 nano /etc/teku/teku.yaml
@@ -3227,9 +3331,11 @@ nano /etc/teku/teku.yaml
 # example
 # eth1-endpoint: "http://192.168.10.20:8545"
 ```
+
 {% endtab %}
 
 {% tab title="Prysm" %}
+
 ```bash
 # edit beacon-chain unit file
 nano /etc/systemd/system/beacon-chain.service
@@ -3237,12 +3343,15 @@ nano /etc/systemd/system/beacon-chain.service
 # example
 # --http-web3provider=http://192.168.10.20:8545
 ```
+
 {% endtab %}
 
 {% tab title="Lodestar" %}
+
 ```
 tbd.
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -3305,6 +3414,7 @@ Update file permissions.
 ```bash
 sudo chmod 644 /etc/systemd/system/validator.service
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus" %}
@@ -3348,6 +3458,7 @@ Update file permissions.
 ```bash
 sudo chmod 644 /etc/systemd/system/beacon-chain.service
 ```
+
 {% endtab %}
 
 {% tab title="Teku" %}
@@ -3393,6 +3504,7 @@ Move the config file to `/etc/teku`
 ```bash
 sudo mv $HOME/teku.yaml /etc/teku/teku.yaml
 ```
+
 {% endtab %}
 
 {% tab title="Prysm" %}
@@ -3429,6 +3541,7 @@ Update its permissions.
 ```bash
 sudo chmod 644 /etc/systemd/system/validator.service
 ```
+
 {% endtab %}
 
 {% tab title="Lodestar" %}
@@ -3466,6 +3579,7 @@ Update its permissions.
 ```bash
 sudo chmod 644 /etc/systemd/system/validator.service
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -3473,17 +3587,21 @@ Reload the updated unit file and restart the validator process for your graffiti
 
 {% tabs %}
 {% tab title="Lighthouse | Prysm | Lodestar" %}
+
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl restart validator
 ```
+
 {% endtab %}
 
 {% tab title="Teku | Nimbus" %}
+
 ```
 sudo systemctl daemon-reload
 sudo systemctl restart beacon-chain
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -3497,17 +3615,21 @@ Stop your eth2 beacon chain, validator, and eth1 node processes.
 
 {% tabs %}
 {% tab title="Lighthouse | Prysm | Lodestar" %}
+
 ```bash
 # This can take some time.
 sudo systemctl stop validator beacon-chain eth1
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus | Teku" %}
+
 ```bash
 # This can take some time.
 sudo systemctl stop beacon-chain eth1
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -3521,6 +3643,7 @@ Review the latest release notes at [https://github.com/ethereum/go-ethereum/rele
 sudo apt update
 sudo apt upgrade -y
 ```
+
 {% endtab %}
 
 {% tab title="OpenEthereum (Parity)" %}
@@ -3543,6 +3666,7 @@ chmod +x openethereum
 # cleanup
 rm openethereum*.zip
 ```
+
 {% endtab %}
 
 {% tab title="Besu" %}
@@ -3569,6 +3693,7 @@ rm besu.tar.gz
 # rename besu to standard folder location
 mv besu* besu
 ```
+
 {% endtab %}
 
 {% tab title="Nethermind" %}
@@ -3589,6 +3714,7 @@ unzip -o nethermind*.zip
 # cleanup
 rm nethermind*linux*.zip
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -3596,15 +3722,19 @@ Start your eth2 beacon chain, validator, and eth1 node processes.
 
 {% tabs %}
 {% tab title="Lighthouse | Prysm | Lodestar" %}
+
 ```bash
 sudo systemctl start eth1 beacon-chain validator
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus | Teku" %}
+
 ```
 sudo systemctl start eth1 beacon-chain
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -3612,15 +3742,19 @@ Check the logs to verify the services are working properly and ensure there are 
 
 {% tabs %}
 {% tab title="Lighthouse | Prysm | Lodestar" %}
+
 ```bash
 sudo systemctl status eth1 status beacon-chain validator
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus | Teku" %}
+
 ```
 sudo systemctl status eth1 beacon-chain
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -3667,6 +3801,7 @@ Restart the Eth1 node
 ```bash
 sudo systemctl start eth1
 ```
+
 {% endtab %}
 
 {% tab title="Adding new hard disks and changing the data directory" %}
@@ -3725,6 +3860,7 @@ journalctl -u eth1 -f
 ```bash
 rm -r ~/.ethereum
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -3810,7 +3946,7 @@ Appreciate the hard work done by the fine folks at the following links which ser
 
 {% embed url="https://agstakingco.gitbook.io/eth-2-0-staking-guide-medalla/" %}
 
-#### Hardware Staking Guide [https://www.reddit.com/r/ethstaker/comments/j3mlup/a\_slightly\_updated\_look\_at\_hardware\_for\_staking/](https://www.reddit.com/r/ethstaker/comments/j3mlup/a\_slightly\_updated\_look\_at\_hardware\_for\_staking/)
+#### Hardware Staking Guide [https://www.reddit.com/r/ethstaker/comments/j3mlup/a_slightly_updated_look_at_hardware_for_staking/](https://www.reddit.com/r/ethstaker/comments/j3mlup/a_slightly_updated_look_at_hardware_for_staking/)
 
 {% embed url="https://medium.com/@RaymondDurk/how-to-stake-for-ethereum-2-0-with-dappnode-231fa7689c02" %}
 

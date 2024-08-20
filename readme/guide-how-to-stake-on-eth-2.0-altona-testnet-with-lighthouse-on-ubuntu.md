@@ -9,26 +9,26 @@ description: >-
 
 ## 📶 0.0 Altona ETH 2.0 Network Stats
 
-* Genesis Time: `1593433805` (2020-06-29 12:30:05 +0000 UTC)
-* Genesis Block Root: `0x9e2ffe8ab9316e03e45409eaaffab10cf02e1b60e609276113e07240d4a31b7a`
-* Deposit Contract: [`0x16e82D77882A663454Ef92806b7DeCa1D394810f`](https://goerli.etherscan.io/address/0x16e82D77882A663454Ef92806b7DeCa1D394810f) ([Goerli Testnet](https://github.com/goerli/testnet))
-* Blockchain Explorer: [altona.beaconcha.in](https://altona.beaconcha.in/)
-* Multi-client test net predecessors: Schlsi and Witti
-* Implements ETH 2.0 spec v0.12.1
-* [More information](https://github.com/goerli/altona)
+- Genesis Time: `1593433805` (2020-06-29 12:30:05 +0000 UTC)
+- Genesis Block Root: `0x9e2ffe8ab9316e03e45409eaaffab10cf02e1b60e609276113e07240d4a31b7a`
+- Deposit Contract: [`0x16e82D77882A663454Ef92806b7DeCa1D394810f`](https://goerli.etherscan.io/address/0x16e82D77882A663454Ef92806b7DeCa1D394810f) ([Goerli Testnet](https://github.com/goerli/testnet))
+- Blockchain Explorer: [altona.beaconcha.in](https://altona.beaconcha.in/)
+- Multi-client test net predecessors: Schlsi and Witti
+- Implements ETH 2.0 spec v0.12.1
+- [More information](https://github.com/goerli/altona)
 
 ## 🐣 0.1 Prerequisites
 
 ### \*\*\*\*🎗 **Minimum Setup Requirements**
 
-* **Operating system:** 64-bit Linux (i.e. Ubuntu 18.04.4 LTS)
-* **Processor:** Dual core CPU
-* **Memory:** 4GB RAM
-* **Storage:** 20GB SSD
-* **Internet:** 24/7 broadband internet connection with speeds at least 1 Mbps.
-* **Power:** 24/7 electrical power
-* **ETH balance:** at least 32 Goerli ETH
-* **Wallet**: Metamask installed
+- **Operating system:** 64-bit Linux (i.e. Ubuntu 18.04.4 LTS)
+- **Processor:** Dual core CPU
+- **Memory:** 4GB RAM
+- **Storage:** 20GB SSD
+- **Internet:** 24/7 broadband internet connection with speeds at least 1 Mbps.
+- **Power:** 24/7 electrical power
+- **ETH balance:** at least 32 Goerli ETH
+- **Wallet**: Metamask installed
 
 If you need to install Ubuntu, refer to
 
@@ -57,7 +57,7 @@ or manually download at:
 ## 📄 2. Create a geth startup script
 
 ```
-cat > startGethNode.sh << EOF 
+cat > startGethNode.sh << EOF
 geth --goerli --datadir="$HOME/Goerli" --rpc
 EOF
 ```
@@ -229,9 +229,9 @@ Do not send mainnet ETH.
 9. Paste the **Deposit Data** from step 11 into the **Hex Data** field.
 10. Click **Next** to send.
 
-![Turning on Show Hex Data](../.gitbook/assets/eth2-onyx-metamask.png)
+![Turning on Show Hex Data](./ethereum-staking-guide/.gitbook/assets/eth2-onyx-metamask.png)
 
-![Sending the deposit data transaction](../.gitbook/assets/altona.png)
+![Sending the deposit data transaction](./ethereum-staking-guide/.gitbook/assets/altona.png)
 
 {% hint style="success" %}
 Congratulations. Once your beacon-chain is sync'd, validator up and running, you just wait for activation. This process takes up to 8 hours. When you're assigned, your validator will begin creating and voting on blocks while earning ETH staking rewards. Find your validator's status at [beaconcha.in](https://altona.beaconcha.in)

@@ -12,25 +12,25 @@ The following steps align with our mainnet guide. You may need to adjust file na
 
 ## :question:Overview: What? Withdrawals? Owls?
 
-* Greetings, fellow ETH staker! If you were staking before April 2, 2021, setting ETH withdrawal (0x01) credentials was not yet released and so, this guide is relevant for you.
-* As of the Shapella upgrade, ETH validators with 0x00 credentials should update to 0x01 credentials to enable partial withdrawals, the sweeping of excess ETH > 32.
-* If your validator previously voluntarily exited or you now would like to stop validator duties, you'll need to set your withdrawal credentials to fully reclaim your staked ETH.
+- Greetings, fellow ETH staker! If you were staking before April 2, 2021, setting ETH withdrawal (0x01) credentials was not yet released and so, this guide is relevant for you.
+- As of the Shapella upgrade, ETH validators with 0x00 credentials should update to 0x01 credentials to enable partial withdrawals, the sweeping of excess ETH > 32.
+- If your validator previously voluntarily exited or you now would like to stop validator duties, you'll need to set your withdrawal credentials to fully reclaim your staked ETH.
 
-<figure><img src="../../.gitbook/assets/withdrawal-owl.png" alt=""><figcaption><p>Nimbus CL says: WITHDROWLS ON</p></figcaption></figure>
+<figure><img src="./.gitbook/assets/withdrawal-owl.png" alt=""><figcaption><p>Nimbus CL says: WITHDROWLS ON</p></figcaption></figure>
 
 ## :thumbsup:Pre-requisites: Before you begin
 
-* Your validator's mnemonic keys (the offline 24 word secrets)
-* An ETH withdrawal address **you control the private keys** to, ideally one from a hardware wallet. :octagonal\_sign::octagonal\_sign: **DO NOT USE A EXCHANGE ADDRESS!** :octagonal\_sign::octagonal\_sign:
-* An **offline air-gapped computer**. Create a Linux Live USB like [Ubuntu](https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview) or [Tails](https://tails.boum.org/install/download/index.en.html); needs a USB key.
-* A ETH staking node using Ubuntu or Linux, also known as **online computer**.
-* A USB storage key for moving files between the offline and online computer.
-* Familiarize yourself with the [Ethereum.org Staking Withdrawals guide](https://launchpad.ethereum.org/en/withdrawals).
+- Your validator's mnemonic keys (the offline 24 word secrets)
+- An ETH withdrawal address **you control the private keys** to, ideally one from a hardware wallet. :octagonal_sign::octagonal_sign: **DO NOT USE A EXCHANGE ADDRESS!** :octagonal_sign::octagonal_sign:
+- An **offline air-gapped computer**. Create a Linux Live USB like [Ubuntu](https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview) or [Tails](https://tails.boum.org/install/download/index.en.html); needs a USB key.
+- A ETH staking node using Ubuntu or Linux, also known as **online computer**.
+- A USB storage key for moving files between the offline and online computer.
+- Familiarize yourself with the [Ethereum.org Staking Withdrawals guide](https://launchpad.ethereum.org/en/withdrawals).
 
 ### Step 1: Prepare chain information
 
-* If you no longer have a synced full node, use option 1.
-* Option 2 uses your own consensus client to generate chain information.
+- If you no longer have a synced full node, use option 1.
+- Option 2 uses your own consensus client to generate chain information.
 
 <details>
 
@@ -71,7 +71,7 @@ tar -xvf ethdo-1.30.0-linux-amd64.tar.gz
 ./ethdo validator credentials get --validator=<MY-VALIDATOR-INDEX>
 ```
 
-Example output of a validator with BLS credentials. :white\_check\_mark:
+Example output of a validator with BLS credentials. :white_check_mark:
 
 ```
 BLS credentials: 0x0002a0addda8106aed690654c7af7af0bc5ccde321c8e5e2319ff432cee70396
@@ -122,8 +122,8 @@ tar -xvf offline-preparation-goerli.tar.gz
 
 9. Using your USB key, copy both
 
-* the `ethdo` executable
-* and `offline-preparation.json` file
+- the `ethdo` executable
+- and `offline-preparation.json` file
 
 to your offline air-gapped computer.
 
@@ -168,7 +168,7 @@ tar -xvf ethdo-1.30.0-linux-amd64.tar.gz
 ./ethdo validator credentials get --validator=<MY-VALIDATOR-INDEX>
 ```
 
-Example output of a validator with BLS credentials. :white\_check\_mark:
+Example output of a validator with BLS credentials. :white_check_mark:
 
 ```
 BLS credentials: 0x0002a0addda8106aed690654c7af7af0bc5ccde321c8e5e2319ff432cee70396
@@ -186,8 +186,8 @@ After a minute or two, you should see the text, "`offline-preparation.json gener
 
 7. Using your USB key, copy both
 
-* the `ethdo` executable
-* and `offline-preparation.json` file
+- the `ethdo` executable
+- and `offline-preparation.json` file
 
 to your offline air-gapped computer.
 
@@ -215,9 +215,9 @@ chmod +x ethdo
 
 4. This ethdo command sets your validator credentials and the output is stored in a `change-operations.json` file. Replace `<MY MNEMONIC PHRASE>` AND `<MY ETH WITHDRAW ADDRESS>` accordingly.
 
-:octagonal\_sign: Double check your work as this is permanent once set! :octagonal\_sign:
+:octagonal_sign: Double check your work as this is permanent once set! :octagonal_sign:
 
-:octagonal\_sign: FINAL REMINDER: DO NOT USE AN EXCHANGE ETH ADDRESS AS YOUR WITHDRAWAL ADDRESS :octagonal\_sign:
+:octagonal_sign: FINAL REMINDER: DO NOT USE AN EXCHANGE ETH ADDRESS AS YOUR WITHDRAWAL ADDRESS :octagonal_sign:
 
 ```
 ./ethdo validator credentials set --offline --mnemonic="<MY MNEMONIC PHRASE>” --withdrawal-address=<MY ETH WITHDRAW ADDRRESS>
@@ -230,13 +230,13 @@ chmod +x ethdo
 cat change-operations.json
 ```
 
-7. Ensure the field **"to\_execution\_address":** contains your withdraw address.
+7. Ensure the field **"to_execution_address":** contains your withdraw address.
 
 <!---->
 
 8. Using your USB key, copy
 
-* `change-operations.json` file
+- `change-operations.json` file
 
 back to your online computer.
 
@@ -265,25 +265,25 @@ back to your online computer.
 Congrats! Your BLS to Execution change is now pending in a queue, waiting to be included in a block.
 {% endhint %}
 
-## :fast\_forward:Next Steps
+## :fast_forward:Next Steps
 
 #### For your information:
 
-* Up to 16 BLS to Execution changes are included in each proposed block.
-* Depending on the withdrawal queue size, your withdrawal change may take up to a few days to be finalized.
-* Terminology: prefix of 0x01 = "Type 1" = execution withdrawal credentials = Withdrawals enabled
-* As a partial withdrawal, periodically every few days any amount of ETH over 32 will be automatically swept to your withdrawal address.
+- Up to 16 BLS to Execution changes are included in each proposed block.
+- Depending on the withdrawal queue size, your withdrawal change may take up to a few days to be finalized.
+- Terminology: prefix of 0x01 = "Type 1" = execution withdrawal credentials = Withdrawals enabled
+- As a partial withdrawal, periodically every few days any amount of ETH over 32 will be automatically swept to your withdrawal address.
 
 #### Learn more from:
 
-* Official Consensus Layer Withdrawal References
-  * Prysm: [https://docs.prylabs.network/docs/wallet/withdraw-validator](https://docs.prylabs.network/docs/wallet/withdraw-validator)
-  * Nimbus: [https://nimbus.guide/withdrawals.html](https://nimbus.guide/withdrawals.html)
-  * Lighthouse: [https://lighthouse-book.sigmaprime.io/voluntary-exit.html#withdrawal-of-exited-funds](https://lighthouse-book.sigmaprime.io/voluntary-exit.html#withdrawal-of-exited-funds)
-  * Teku: [https://docs.teku.consensys.net/HowTo/Withdrawal-Keys](https://docs.teku.consensys.net/HowTo/Withdrawal-Keys)
-  * Lodestar: [https://chainsafe.github.io/lodestar/reference/cli/#validator-bls-to-execution-change](https://chainsafe.github.io/lodestar/reference/cli/#validator-bls-to-execution-change)
-* Ethdo official withdrawals guide: [https://github.com/wealdtech/ethdo/blob/master/docs/changingwithdrawalcredentials.md](https://github.com/wealdtech/ethdo/blob/master/docs/changingwithdrawalcredentials.md)
-* Attestant's Post: [https://www.attestant.io/posts/understanding-withdrawals/](https://www.attestant.io/posts/understanding-withdrawals/)
+- Official Consensus Layer Withdrawal References
+  - Prysm: [https://docs.prylabs.network/docs/wallet/withdraw-validator](https://docs.prylabs.network/docs/wallet/withdraw-validator)
+  - Nimbus: [https://nimbus.guide/withdrawals.html](https://nimbus.guide/withdrawals.html)
+  - Lighthouse: [https://lighthouse-book.sigmaprime.io/voluntary-exit.html#withdrawal-of-exited-funds](https://lighthouse-book.sigmaprime.io/voluntary-exit.html#withdrawal-of-exited-funds)
+  - Teku: [https://docs.teku.consensys.net/HowTo/Withdrawal-Keys](https://docs.teku.consensys.net/HowTo/Withdrawal-Keys)
+  - Lodestar: [https://chainsafe.github.io/lodestar/reference/cli/#validator-bls-to-execution-change](https://chainsafe.github.io/lodestar/reference/cli/#validator-bls-to-execution-change)
+- Ethdo official withdrawals guide: [https://github.com/wealdtech/ethdo/blob/master/docs/changingwithdrawalcredentials.md](https://github.com/wealdtech/ethdo/blob/master/docs/changingwithdrawalcredentials.md)
+- Attestant's Post: [https://www.attestant.io/posts/understanding-withdrawals/](https://www.attestant.io/posts/understanding-withdrawals/)
 
 ## :books:FAQ
 
@@ -382,8 +382,8 @@ They can both be set to the same ETH address; however, understand that these are
 
 <summary>Partial Withdrawals vs Full Withdrawals?</summary>
 
-* **Full validator withdrawal:** To withdraw your entire stake on Ethereum and no longer perform validator duties. Exit your validator, and then after your exit request progresses through the withdraw queue while finally your full validator balance is transferred to your withdrawal address.
-* **Partial validator withdrawal:** To withdraw your validator’s earnings only. For a validator, any amount over the initial 32 ETH deposit is the earnings and is automatically swept every few days to the withdrawal address.
+- **Full validator withdrawal:** To withdraw your entire stake on Ethereum and no longer perform validator duties. Exit your validator, and then after your exit request progresses through the withdraw queue while finally your full validator balance is transferred to your withdrawal address.
+- **Partial validator withdrawal:** To withdraw your validator’s earnings only. For a validator, any amount over the initial 32 ETH deposit is the earnings and is automatically swept every few days to the withdrawal address.
 
 </details>
 
@@ -411,7 +411,7 @@ ethdo validator credentials set --mnemonic="<my-mnemonic-phrase>" --path='m/1238
 
 Where the path is the derivation path to your withdrawal key.
 
-* For example, `m/12381/3600/`_`i`_`/0` is the path to a withdrawal key, where _i_ starts at 0 for your 1st validator, 1 for your 2nd validator ...
+- For example, `m/12381/3600/`_`i`_`/0` is the path to a withdrawal key, where _i_ starts at 0 for your 1st validator, 1 for your 2nd validator ...
 
 </details>
 

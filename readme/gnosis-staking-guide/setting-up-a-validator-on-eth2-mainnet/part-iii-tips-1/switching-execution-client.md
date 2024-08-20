@@ -3,9 +3,9 @@
 {% hint style="info" %}
 Important reasons why you would want to switch Execution Clients:
 
-:owl: **Client Diversity**: Improve Ethereum's resilience by using a [minority client](https://mirror.xyz/jmcook.eth/S7ONEka\_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
+:owl: **Client Diversity**: Improve Ethereum's resilience by using a [minority client](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
 
-:floppy\_disk: **Unique Features**: Each client has their own strengths, i.e. faster sync, lower resource requirements, different programming language, unique abilities
+:floppy_disk: **Unique Features**: Each client has their own strengths, i.e. faster sync, lower resource requirements, different programming language, unique abilities
 {% endhint %}
 
 {% hint style="info" %}
@@ -13,8 +13,8 @@ Important reasons why you would want to switch Execution Clients:
 
 Here are some public options:
 
-* [RocketPool's Rescue Node](https://rescuenode.com/docs/how-to-connect/solo)
-* [Tennisbowling's Open Execution Node](https://openexecution.tennisbowling.com/)
+- [RocketPool's Rescue Node](https://rescuenode.com/docs/how-to-connect/solo)
+- [Tennisbowling's Open Execution Node](https://openexecution.tennisbowling.com/)
 
 However, as validator downtime incurs minimal penalties, the added complexity might not be worth your time and extra work configuring a failover option.
 {% endhint %}
@@ -23,19 +23,7 @@ However, as validator downtime incurs minimal penalties, the added complexity mi
 The following steps align with our [mainnet guide](../../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/). You may need to adjust file names and directory locations where appropriate. The core concepts remain the same.
 {% endhint %}
 
-## Option 1: Automated One-Liner
-
-Simply copy and paste the command into your terminal.
-
-Open source source code available here: [https://github.com/coincashew/client-switcher](https://github.com/coincashew/client-switcher)
-
-```bash
-sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/coincashew/client-switcher/master/install.sh)"
-```
-
-<figure><img src="../../../../.gitbook/assets/client-switcher.png" alt=""><figcaption><p>One-liner screenshot</p></figcaption></figure>
-
-## Option 2: Manual Method
+## Manual Method
 
 <details>
 
@@ -83,7 +71,7 @@ sudo userdel execution
 
 Follow the instructions found under section: [Installing a new Execution Client.](../../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-i-installation-1/step-3-installing-execution-client/)
 
-***
+---
 
 :fire:**Tip**: As well as being a minority client, **Nethermind** is known to be incredibly fast at syncing, often as quick as 2 hours with fast NVME drives.
 
@@ -107,13 +95,13 @@ sudo systemctl restart consensus
 
 **Promentheus and Grafana**:
 
-* Revisit the [monitoring guide](../../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-i-installation-1/monitoring-your-validator-with-grafana-and-prometheus.md) and update your `prometheus.yml`configuration for the new execution client.
-* Ensure prometheus is connected to your new execution client's metrics port 6060.
-* Also import your new execution client's dashboard.
+- Revisit the [monitoring guide](../../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-i-installation-1/monitoring-your-validator-with-grafana-and-prometheus.md) and update your `prometheus.yml`configuration for the new execution client.
+- Ensure prometheus is connected to your new execution client's metrics port 6060.
+- Also import your new execution client's dashboard.
 
 **Beaconcha.in Mobile App:**
 
-* To receive new notifications, update your app's settings to indicate you're using a different execution client
+- To receive new notifications, update your app's settings to indicate you're using a different execution client
 
 </details>
 

@@ -6,18 +6,18 @@ description: How to connect your ETH wallet to your own node's RPC endpoint
 
 ### :tada: Reasons to use your own NODE as RPC URL endpoint
 
-* **Privacy**: No spying by middleman between you and the blockchain
-* **Trustless verification**: Ability to verify the ETH transaction data you see is raw and not manipulated
-* **Decentralization**: No need to depend on Infura or other centralized 3rd parties
-* **Coolness and credibility**: Using Ethereum as it was meant to be, a step towards being more sovereign
+- **Privacy**: No spying by middleman between you and the blockchain
+- **Trustless verification**: Ability to verify the ETH transaction data you see is raw and not manipulated
+- **Decentralization**: No need to depend on Infura or other centralized 3rd parties
+- **Coolness and credibility**: Using Ethereum as it was meant to be, a step towards being more sovereign
 
 ### :robot: How to use your NODE as a RPC endpoint
 
 {% hint style="info" %}
 Before continuing please understand the following:
 
-* As this method uses SSH tunneling, no changes are required to your firewall or router's port forwarding
-{% endhint %}
+- As this method uses SSH tunneling, no changes are required to your firewall or router's port forwarding
+  {% endhint %}
 
 ### 1. Verify RPC port 8545 is listening
 
@@ -67,6 +67,7 @@ Make sure to reload and restart.
 sudo systemctl daemon-reload
 sudo systemctl restart execution
 ```
+
 {% endhint %}
 
 ### 2. Create a SSH tunnel
@@ -87,6 +88,7 @@ ssh -N -v <user>@<staking.node.ip.address> -L 8545:localhost:8545
 #Full Example
 ssh -N -v ethereum@192.168.1.69 -L 8545:localhost:8545
 ```
+
 {% endtab %}
 
 {% tab title="Windows" %}
@@ -94,7 +96,7 @@ Example of how to create a SSH tunnel in Windows with [Putty](https://putty.org/
 
 Navigate to Connection > SSH > Tunnels > Enter Source Port `8545`> Enter Destination `localhost:8545`> Click Add
 
-![](../../../../.gitbook/assets/8545.png)
+![](./../../.gitbook/assets/8545.png)
 
 Now save your configuration. Navigate to Session > Enter a session name > Save
 
@@ -130,7 +132,7 @@ Download from [https://rabby.io](https://rabby.io/)
 
 Example of Adding a Network:
 
-<img src="../../../../.gitbook/assets/rabby.png" alt="" data-size="original">
+<img src="./../../.gitbook/assets/rabby.png" alt="" data-size="original">
 
 </details>
 
@@ -149,7 +151,7 @@ Download from [https://frame.sh](https://frame.sh/)
 
 Example of Adding a Network:
 
-<img src="../../../../.gitbook/assets/frame.png" alt="" data-size="original">
+<img src="./../../.gitbook/assets/frame.png" alt="" data-size="original">
 
 </details>
 
@@ -169,7 +171,7 @@ Download from [https://metamask.io](https://metamask.io/)
 
 Example of Adding a Network:
 
-<img src="../../../../.gitbook/assets/meta.png" alt="" data-size="original">
+<img src="./../../.gitbook/assets/meta.png" alt="" data-size="original">
 
 </details>
 

@@ -10,20 +10,20 @@ To update, navigate to
 
 `EthPillar > Execution Client > Update to latest release`
 
-<figure><img src="../../../../.gitbook/assets/el-update.png" alt=""><figcaption><p>EthPillar Update</p></figcaption></figure>
+<figure><img src="./../../.gitbook/assets/el-update.png" alt=""><figcaption><p>EthPillar Update</p></figcaption></figure>
 
-## :fast\_forward: Manual Updates
+## :fast_forward: Manual Updates
 
 When a new release is cut, you will want to update to the latest stable release. The following shows you how to update your execution client.
 
 {% hint style="warning" %}
 Always review the **release notes** before updating. There may be changes requiring your attention.
 
-* [Nethermind](https://github.com/NethermindEth/nethermind/releases)
-* [Besu](https://github.com/hyperledger/besu/releases)
-* [Geth](https://github.com/ethereum/go-ethereum/releases)
-* [Erigon](https://github.com/ledgerwatch/erigon/releases)
-{% endhint %}
+- [Nethermind](https://github.com/NethermindEth/nethermind/releases)
+- [Besu](https://github.com/hyperledger/besu/releases)
+- [Geth](https://github.com/ethereum/go-ethereum/releases)
+- [Erigon](https://github.com/ledgerwatch/erigon/releases)
+  {% endhint %}
 
 {% hint style="success" %}
 :fire: **Pro tip**: Plan your update to overlap with the longest attestation gap. [Learn how here.](finding-the-longest-attestation-slot-gap.md)
@@ -33,7 +33,7 @@ Always review the **release notes** before updating. There may be changes requir
 
 {% hint style="warning" %}
 Staking setups prior to July 2023:\
-Using **eth1** as the execution client service name? [V1 update instructions available here.](https://www.coincashew.com/coins/overview-eth/archived-guides/guide-or-how-to-setup-a-validator-on-eth2-mainnet/part-ii-maintenance/updating-your-execution-client)
+Using **eth1** as the execution client service name? Checkout our update execution guide.
 {% endhint %}
 
 ### Nethermind

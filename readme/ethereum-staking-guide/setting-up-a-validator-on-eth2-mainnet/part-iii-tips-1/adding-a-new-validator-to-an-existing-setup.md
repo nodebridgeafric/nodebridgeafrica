@@ -6,15 +6,15 @@ description: >-
 
 # Adding a New Validator to an Existing Setup with Existing Seed Words
 
-## :white\_check\_mark: Requirements
+## :white_check_mark: Requirements
 
 Before continuing please have the following ready:
 
-* Existing 24 word validator mnemonic phrase
-* Existing keystore password
-* ETH Withdrawal Address from your hardware wallet
+- Existing 24 word validator mnemonic phrase
+- Existing keystore password
+- ETH Withdrawal Address from your hardware wallet
 
-### Step 1: Create new deposit\_data json file and new validator\_keys&#x20;
+### Step 1: Create new deposit_data json file and new validator_keys&#x20;
 
 In this example, using the `staking-deposit-cli` tool, you can add more validators by creating a new deposit data file and `validator_keys`&#x20;
 
@@ -39,12 +39,12 @@ For example, in case we originally created **3 validators** but now wish to **ad
 
 &#x20;
 
-| Flag                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| --validator\_start\_index | Number of validators you ALREADY created                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| --num\_validators         | Number of NEW validators you want to create                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| --chain                   | Options: mainnet holesky goerli                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| --execution\_address      | <p><strong>Critically important</strong>: Your Ethereum Address from a Hardware Wallet. </p><p></p><p>Withdrawals will be sent to this address. If you stop validating and exit your validator, your 32 ETH will be sent here. </p><p></p><p>This <strong>ETH withdrawal address</strong> is one such that <strong>you control the private keys</strong> to, ideally one from a hardware wallet.</p><p></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f6d1">🛑</span><strong>DO NOT USE A EXCHANGE ADDRESS!</strong><span data-gb-custom-inline data-tag="emoji" data-code="1f6d1">🛑</span></p> |
+| Flag                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --validator_start_index | Number of validators you ALREADY created                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| --num_validators        | Number of NEW validators you want to create                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| --chain                 | Options: mainnet holesky goerli                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| --execution_address     | <p><strong>Critically important</strong>: Your Ethereum Address from a Hardware Wallet. </p><p></p><p>Withdrawals will be sent to this address. If you stop validating and exit your validator, your 32 ETH will be sent here. </p><p></p><p>This <strong>ETH withdrawal address</strong> is one such that <strong>you control the private keys</strong> to, ideally one from a hardware wallet.</p><p></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f6d1">🛑</span><strong>DO NOT USE A EXCHANGE ADDRESS!</strong><span data-gb-custom-inline data-tag="emoji" data-code="1f6d1">🛑</span></p> |
 
 ### Step 2: Deposit 32 ETH per validator
 
@@ -52,8 +52,8 @@ For example, in case we originally created **3 validators** but now wish to **ad
 
 Two important tasks to complete at the launchpad.
 
-* Upload the `deposit_data-#########.json`
-* Make the 32 ETH deposit transaction(s), 32 ETH per validator. 1 deposit transaction per validator.&#x20;
+- Upload the `deposit_data-#########.json`
+- Make the 32 ETH deposit transaction(s), 32 ETH per validator. 1 deposit transaction per validator.&#x20;
 
 **Option 2**: Use [Abyss's Batch Ethereum Depositor](https://abyss.finance/eth2depositor) to combine many validator deposits into just 1 transaction.
 
@@ -122,6 +122,7 @@ INFO Enabled validator          voting_pubkey: 0x82b225f66476962b161ed015786df00
 INFO Enabled validator          voting_pubkey: 0x95d39860a0d6ea3b92cba78069d21f3a987988f3b8417b14f0945353d79ed9e338bbe6e9d63d487abc044a710ce34866, signing_method: local_keystore
 INFO Initialized validators     enabled: 2, disabled: 0
 ```
+
 {% endtab %}
 
 {% tab title="Lodestar" %}
@@ -185,6 +186,7 @@ Press `Ctrl` + `C` to exit the logs.
 {% endtab %}
 
 {% tab title="Teku" %}
+
 <details>
 
 <summary>Option 1: For standalone validator</summary>
@@ -360,6 +362,7 @@ INFO  - Loaded 2 Validators: 95d3986, 82b225f
 {% endtab %}
 
 {% tab title="Nimbus" %}
+
 <details>
 
 <summary>Option 1: For standalone validator</summary>
@@ -556,12 +559,13 @@ level=info msg="Validating for public key" prefix=validator publicKey=0x95d39860
 level=info msg="Validating for public key" prefix=validator publicKey=0x82b225f66476
 
 ```
+
 {% endtab %}
 {% endtabs %}
 
 ### Step 4: Backup and Delete `validator_keys` directory
 
-Make backup copies of your validator\_keys directory to USB media or other devices. These validator keys can always be regenerated from secret recovery mnemonic phrase.
+Make backup copies of your validator_keys directory to USB media or other devices. These validator keys can always be regenerated from secret recovery mnemonic phrase.
 
 Afterwards, you may safely delete the directory.
 
@@ -576,4 +580,4 @@ Your additional validators are now in the activation queue waiting their turn. C
 
 In the below example, the wait time was approximately 11 days, 1 hour until a new validator became active.
 
-<figure><img src="../../../../.gitbook/assets/entryqueue.png" alt=""><figcaption><p>Entry Queue</p></figcaption></figure>
+<figure><img src="./../../.gitbook/assets/entryqueue.png" alt=""><figcaption><p>Entry Queue</p></figcaption></figure>

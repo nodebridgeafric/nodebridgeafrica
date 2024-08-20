@@ -36,8 +36,8 @@ sudo apt install curl ccze openjdk-17-jdk libsnappy-dev libc6-dev jq git libc6 u
 
 ### 2. Install Binaries
 
-* Downloading binaries is often faster and more convenient.
-* Building from source code can offer better compatibility and is more aligned with the spirit of FOSS (free open source software).
+- Downloading binaries is often faster and more convenient.
+- Building from source code can offer better compatibility and is more aligned with the spirit of FOSS (free open source software).
 
 <details>
 
@@ -114,6 +114,7 @@ Paste the following configuration into the file.
 
 {% tabs %}
 {% tab title="Standalone Beacon Node (Recommended)" %}
+
 ```shell
 [Unit]
 Description=Teku Beacon Node Consensus Client service for Mainnet
@@ -151,8 +152,8 @@ ExecStart=/usr/local/bin/teku/bin/teku \
 WantedBy=multi-user.target
 ```
 
-* Replace**`<0x_CHANGE_THIS_TO_MY_ETH_FEE_RECIPIENT_ADDRESS>`** with your own Ethereum address that you control. Tips are sent to this address and are immediately spendable.
-* **Not staking?** If you only want a full node, delete the line beginning with
+- Replace**`<0x_CHANGE_THIS_TO_MY_ETH_FEE_RECIPIENT_ADDRESS>`** with your own Ethereum address that you control. Tips are sent to this address and are immediately spendable.
+- **Not staking?** If you only want a full node, delete the line beginning with
 
 ```
 --validators-proposer-default-fee-recipient
@@ -171,7 +172,7 @@ This configuration combines the beacon chain and validator into one running serv
 Description=Teku Beacon Node + Validator Consensus Layer Client service for Mainnet
 Wants=network-online.target
 After=network-online.target
-Documentation=https://www.coincashew.com
+Documentation=https://www.nodebridgeafrica.com
 
 [Service]
 Type=simple
@@ -205,8 +206,8 @@ ExecStart=/usr/local/bin/teku/bin/teku \
 WantedBy=multi-user.target
 ```
 
-* Replace**`<0x_CHANGE_THIS_TO_MY_ETH_FEE_RECIPIENT_ADDRESS>`** with your own Ethereum address that you control. Tips are sent to this address and are immediately spendable.
-* **Not staking?** If you only want a full node, delete the whole three lines beginning with
+- Replace**`<0x_CHANGE_THIS_TO_MY_ETH_FEE_RECIPIENT_ADDRESS>`** with your own Ethereum address that you control. Tips are sent to this address and are immediately spendable.
+- **Not staking?** If you only want a full node, delete the whole three lines beginning with
 
 ```
 --validator-keys
@@ -251,6 +252,7 @@ teku[64122]: 02:24:40.010 INFO  - Slot Event  *** Slot: 19200, Block: 72B092AADF
 
 {% tabs %}
 {% tab title="View Logs" %}
+
 ```bash
 sudo journalctl -fu consensus | ccze
 ```
@@ -261,32 +263,39 @@ sudo journalctl -fu consensus | ccze
 teku[64122]: 02:24:28.010 INFO  - Slot Event  *** Slot: 19200, Block: 1468A43F874EDE790DB6B499A51003500B5BA85226E9500A7A187DB9A169DE20, Justified: 1132, Finalized: 1133, Peers: 70
 teku[64122]: 02:24:40.010 INFO  - Slot Event  *** Slot: 19200, Block: 72B092AADFE146F5D3F395A720C0AA3B2354B2095E3F10DC18F0E9716D286DCB, Justified: 1132, Finalized: 1133, Peers: 70
 ```
+
 {% endtab %}
 
 {% tab title="Stop" %}
+
 ```bash
 sudo systemctl stop consensus
 ```
+
 {% endtab %}
 
 {% tab title="Start" %}
+
 ```bash
 sudo systemctl start consensus
 ```
+
 {% endtab %}
 
 {% tab title="View Status" %}
+
 ```bash
 sudo systemctl status consensus
 ```
+
 {% endtab %}
 
 {% tab title="Reset Database" %}
 Common reasons to reset the database can include:
 
-* To reduce disk space usage
-* To recover from a corrupted database due to power outage or hardware failure
-* To upgrade to a new storage format
+- To reduce disk space usage
+- To recover from a corrupted database due to power outage or hardware failure
+- To upgrade to a new storage format
 
 ```bash
 sudo systemctl stop consensus

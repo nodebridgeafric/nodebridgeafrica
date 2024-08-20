@@ -16,21 +16,21 @@ To update, navigate to
 
 `EthPillar > Consensus Client > Update to latest release`
 
-<figure><img src="../../../../.gitbook/assets/cl-update.png" alt=""><figcaption><p>EthPillar Update</p></figcaption></figure>
+<figure><img src="./../../../ethereum-staking-guide/.gitbook/assets/cl-update.png" alt=""><figcaption><p>EthPillar Update</p></figcaption></figure>
 
-## :fast\_forward: Manual Updates
+## :fast_forward: Manual Updates
 
 When a new release is cut, you will want to update to the latest stable release. The following shows you how to update your beacon chain and validator.
 
 {% hint style="warning" %}
 Always review the **release notes** before updating. There may be changes requiring your attention.
 
-* [Lighthouse](https://github.com/sigp/lighthouse/releases)
-* [Lodestar](https://github.com/ChainSafe/lodestar/releases)
-* [Teku](https://github.com/ConsenSys/teku/releases)
-* [Nimbus](https://github.com/status-im/nimbus-eth2/releases)
-* [Prysm](https://github.com/prysmaticlabs/prysm/releases)
-{% endhint %}
+- [Lighthouse](https://github.com/sigp/lighthouse/releases)
+- [Lodestar](https://github.com/ChainSafe/lodestar/releases)
+- [Teku](https://github.com/ConsenSys/teku/releases)
+- [Nimbus](https://github.com/status-im/nimbus-eth2/releases)
+- [Prysm](https://github.com/prysmaticlabs/prysm/releases)
+  {% endhint %}
 
 {% hint style="success" %}
 :fire: **Pro tip**: Plan your update to overlap with the longest attestation gap. [Learn how here.](../../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-ii-maintenance-1/finding-the-longest-attestation-slot-gap.md)
@@ -41,7 +41,7 @@ Always review the **release notes** before updating. There may be changes requir
 {% hint style="warning" %}
 Staking setups prior to July 2023:
 
-Using **beacon-chain** as the consensus client service name? [V1 update instructions available here.](https://www.coincashew.com/coins/overview-eth/archived-guides/guide-or-how-to-setup-a-validator-on-eth2-mainnet/part-ii-maintenance/updating-your-consensus-client)
+Using **beacon-chain** as the consensus client service name? Checkout our update consensus client guide.
 {% endhint %}
 
 ### Lighthouse
@@ -95,7 +95,7 @@ make
 
 :bulb:**Tip**: Improve some Lighthouse benchmarks by around 20% at the expense of increased compile time? Use `maxperf` profile.
 
-* To compile with maxperf, replace the above `make` command with
+- To compile with maxperf, replace the above `make` command with
 
 ```bash
 PROFILE=maxperf make
@@ -141,7 +141,7 @@ Run the following to automatically download the latest linux release, un-tar and
 RELEASE_URL="https://api.github.com/repos/ChainSafe/lodestar/releases/latest"
 LATEST_TAG="$(curl -s $RELEASE_URL | jq -r ".tag_name")"
 BINARIES_URL="https://github.com/ChainSafe/lodestar/releases/download/${LATEST_TAG}/lodestar-${LATEST_TAG}-linux-amd64.tar.gz"
-	
+
 echo Downloading URL: $BINARIES_URL
 
 cd $HOME
@@ -468,6 +468,7 @@ sudo systemctl start consensus validator
 
 {% tabs %}
 {% tab title="Lighthouse | Prysm | Lodestar | Nimbus | Teku" %}
+
 ```bash
 # Verify services status
 sudo systemctl status consensus validator
@@ -481,18 +482,21 @@ sudo journalctl -fu consensus
 ```bash
 sudo journalctl -fu validator
 ```
+
 {% endtab %}
 
 {% tab title=" Combined BN+VC for Nimbus | Teku" %}
+
 ```bash
 # Check services status
-sudo systemctl status consensus 
+sudo systemctl status consensus
 ```
 
 ```bash
 # Check logs
 sudo journalctl -fu consensus
 ```
+
 {% endtab %}
 {% endtabs %}
 

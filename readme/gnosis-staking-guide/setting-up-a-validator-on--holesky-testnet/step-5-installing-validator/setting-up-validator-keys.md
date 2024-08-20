@@ -10,15 +10,15 @@ Every 32 ETH you own allows you to make 1 validator. You can run thousands of va
 
 <summary>Option 1: Ethstaker's #cheap-holesky-validator Channel</summary>
 
-* **Step 1**: Visit the [Ethstaker Discord](https://discord.io/ethstaker) and join the #cheap-holesky-validator channel
+- **Step 1**: Visit the [Ethstaker Discord](https://discord.io/ethstaker) and join the #cheap-holesky-validator channel
 
 <!---->
 
-* **Step 2**: Use the `/cheap-holesky-deposit` slash command and follow the instructions from the bot. You need to start typing the slash command and it will show above your input box where you can use it.
+- **Step 2**: Use the `/cheap-holesky-deposit` slash command and follow the instructions from the bot. You need to start typing the slash command and it will show above your input box where you can use it.
 
 <!---->
 
-* **Requirement**: In order to use the cheap holesky validator process, you must now set your withdrawal address to `0x4D496CcC28058B1D74B7a19541663E21154f9c84` when creating your validator keys and deposit file. This is to prevent abuses of this service.
+- **Requirement**: In order to use the cheap holesky validator process, you must now set your withdrawal address to `0x4D496CcC28058B1D74B7a19541663E21154f9c84` when creating your validator keys and deposit file. This is to prevent abuses of this service.
 
 </details>
 
@@ -26,9 +26,9 @@ Every 32 ETH you own allows you to make 1 validator. You can run thousands of va
 
 <summary>Option 2: Use faucets from pk910 / axol.io / google</summary>
 
-* pk910: [https://holesky-faucet.pk910.de](https://holesky-faucet.pk910.de/)
-* axol.io: [https://faucet.axol.io/](https://faucet.axol.io/)
-* google: [https://cloud.google.com/application/web3/faucet/ethereum/holesky](https://cloud.google.com/application/web3/faucet/ethereum/holesky)
+- pk910: [https://holesky-faucet.pk910.de](https://holesky-faucet.pk910.de/)
+- axol.io: [https://faucet.axol.io/](https://faucet.axol.io/)
+- google: [https://cloud.google.com/application/web3/faucet/ethereum/holesky](https://cloud.google.com/application/web3/faucet/ethereum/holesky)
 
 </details>
 
@@ -36,19 +36,19 @@ Every 32 ETH you own allows you to make 1 validator. You can run thousands of va
 
 #### Before continuing please have the following:
 
-* [ ] **Hardware wallet address or** [**Safe multisig wallet**](https://app.safe.global/welcome) **address**: This is for your [Withdrawal Address](https://notes.ethereum.org/@launchpad/withdrawals-faq#Q-What-are-the-two-types-of-withdrawals). It must be in checksum format, which means some letters are UPPERCASE. If needed, validate your address's checksum format against a block explorer, such as [https://etherscan.io](https://etherscan.io)
-* [ ] **Browser dApp Wallet** (i.e. Metamask) with 32 Ethers for each validator
+- [ ] **Hardware wallet address or** [**Safe multisig wallet**](https://app.safe.global/welcome) **address**: This is for your [Withdrawal Address](https://notes.ethereum.org/@launchpad/withdrawals-faq#Q-What-are-the-two-types-of-withdrawals). It must be in checksum format, which means some letters are UPPERCASE. If needed, validate your address's checksum format against a block explorer, such as [https://etherscan.io](https://etherscan.io)
+- [ ] **Browser dApp Wallet** (i.e. Metamask) with 32 Ethers for each validator
 
-<figure><img src="../../../../.gitbook/assets/checksum.png" alt=""><figcaption><p>Example of Vitalik's address in checksum format</p></figcaption></figure>
+<figure><img src="./../../../ethereum-staking-guide/.gitbook/assets/checksum.png" alt=""><figcaption><p>Example of Vitalik's address in checksum format</p></figcaption></figure>
 
 #### Before continuing please understand the following:
 
-* [ ] The **Withdrawal Address** is:
-  * where your ETH is returned upon "voluntary exiting a validator", or also known as full withdrawal.
-  * where you receive partial withdrawals, which is where any excess balance above 32 ETH is periodically scraped and made available for use.
-* [ ] As this is **permanent** once set, **triple check** your address.
-* [ ] DO NOT USE AN :octagonal\_sign: **EXCHANGE ADDRESS** :octagonal\_sign: AS WITHDRAWAL ADDRESS.
-* [ ] For **testnet purposes** it's okay to use a browser/hot wallet address.
+- [ ] The **Withdrawal Address** is:
+  - where your ETH is returned upon "voluntary exiting a validator", or also known as full withdrawal.
+  - where you receive partial withdrawals, which is where any excess balance above 32 ETH is periodically scraped and made available for use.
+- [ ] As this is **permanent** once set, **triple check** your address.
+- [ ] DO NOT USE AN :octagonal_sign: **EXCHANGE ADDRESS** :octagonal_sign: AS WITHDRAWAL ADDRESS.
+- [ ] For **testnet purposes** it's okay to use a browser/hot wallet address.
 
 {% hint style="warning" %}
 **Offline Key Generation Best Practices**: The mnemonic seed (24 words) to your validator should be protected by keeping them offline. Use Tails OS (see option 3) or a [Linux Live USB with staking-deposit-cli](https://www.youtube.com/watch?v=oDELXYNSS5w) (Option 1) or Wagyu to generate keys.
@@ -93,14 +93,14 @@ Replace `<HARDWARE_WALLET_ADDRESS>` with withdrawal address.
 ./deposit new-mnemonic --chain holesky --execution_address <HARDWARE_WALLET_ADDRESS>
 ```
 
-* Choose your language
-* Repeat your withdrawal/execution address for confirmation
-* Choose the language of the mnemonic word list
-* Choose how many new validators you wish to run
-* Create a **keystore password** that secures your validator keystore files
-* Repeat your **keystore password** for confirmation
-* Write down your 24 word mnemonic seed
-* Type your mnemonic, first 4 letters is enough
+- Choose your language
+- Repeat your withdrawal/execution address for confirmation
+- Choose the language of the mnemonic word list
+- Choose how many new validators you wish to run
+- Create a **keystore password** that secures your validator keystore files
+- Repeat your **keystore password** for confirmation
+- Write down your 24 word mnemonic seed
+- Type your mnemonic, first 4 letters is enough
 
 You will see the following messages after successfully generated the keystore(s) and the deposit(s):
 
@@ -147,21 +147,21 @@ mkdir -p ~/staking-deposit-cli/verify_seed
 ./deposit existing-mnemonic --chain holesky --folder verify_seed --execution_address <HARDWARE_WALLET_ADDRESS>
 ```
 
-* Choose your language
-* Repeat your withdrawal/execution address for confirmation
-* Type your mnemonic seed, first 4 letters is enough
-* Since this is the first time generating keys, enter the index number as 0.
-* Repeat the index to confirm, 0.
-* Enter how many validators you with to run (same as before)
-* Enter any keystore password, since this is temporary and will be deleted
+- Choose your language
+- Repeat your withdrawal/execution address for confirmation
+- Type your mnemonic seed, first 4 letters is enough
+- Since this is the first time generating keys, enter the index number as 0.
+- Repeat the index to confirm, 0.
+- Enter how many validators you with to run (same as before)
+- Enter any keystore password, since this is temporary and will be deleted
 
-Compare the **deposit\_data** files.
+Compare the **deposit_data** files.
 
 ```bash
 diff -s validator_keys/deposit_data*.json verify_seed/validator_keys/deposit_data*.json
 ```
 
-When the **deposit\_data** files are the same, this means your mnemonic seed is correct.
+When the **deposit_data** files are the same, this means your mnemonic seed is correct.
 
 Example output:
 
@@ -214,10 +214,10 @@ The Tails OS is an _amnesic_ operating system, meaning it will save nothing and 
 
 You need:
 
-* 2 storage mediums (can be USB stick, SD cards or external hard drives)
-* One of them must be > 8GB
-* Windows or Mac computer
-* 30 minutes or longer depending on your download speed
+- 2 storage mediums (can be USB stick, SD cards or external hard drives)
+- One of them must be > 8GB
+- Windows or Mac computer
+- 30 minutes or longer depending on your download speed
 
 **2. Download Tails OS**
 
@@ -229,9 +229,9 @@ Make sure you follow the guide on the Tails website to verify your download of T
 
 For Windows, use one of
 
-* [Etcher](https://tails.boum.org/etcher/Etcher-Portable.exe)
-* [Win32 Disk Imager](https://win32diskimager.org/#download)
-* [Rufus](https://rufus.ie/en\_US/)
+- [Etcher](https://tails.boum.org/etcher/Etcher-Portable.exe)
+- [Win32 Disk Imager](https://win32diskimager.org/#download)
+- [Rufus](https://rufus.ie/en_US/)
 
 For Mac, download [Etcher](https://tails.boum.org/etcher/Etcher.dmg)
 
@@ -239,7 +239,7 @@ For Mac, download [Etcher](https://tails.boum.org/etcher/Etcher.dmg)
 
 Run the above software. This is an example how it looks like on Mac OS with etcher, but other software should be similar.
 
-<img src="../../../../.gitbook/assets/etcher_in_mac.png" alt="" data-size="original">
+<img src="./../../../ethereum-staking-guide/.gitbook/assets/etcher_in_mac.png" alt="" data-size="original">
 
 Select the Tails OS image that you downloaded as the image. Then select the USB stick (the larger one).
 
@@ -265,7 +265,7 @@ Choose the USB stick that you loaded up with Tails OS to boot into Tails.
 
 **7. Welcome to Tails OS**
 
-<img src="../../../../.gitbook/assets/grub.png" alt="" data-size="original">
+<img src="./../../../ethereum-staking-guide/.gitbook/assets/grub.png" alt="" data-size="original">
 
 You can boot with all the default settings.
 
@@ -296,14 +296,14 @@ Replace `<HARDWARE_WALLET_ADDRESS>` with withdrawal address.
 ./deposit new-mnemonic --chain holesky --execution_address <HARDWARE_WALLET_ADDRESS>
 ```
 
-* Choose your language
-* Repeat your withdrawal/execution address for confirmation
-* Choose the language of the mnemonic word list
-* Choose how many new validators you wish to run
-* Create a **keystore password** that secures your validator keystore files
-* Repeat your **keystore password** for confirmation
-* Write down your 24 word mnemonic seed
-* Type your mnemonic, first 4 letters is enough
+- Choose your language
+- Repeat your withdrawal/execution address for confirmation
+- Choose the language of the mnemonic word list
+- Choose how many new validators you wish to run
+- Create a **keystore password** that secures your validator keystore files
+- Repeat your **keystore password** for confirmation
+- Write down your 24 word mnemonic seed
+- Type your mnemonic, first 4 letters is enough
 
 You will see the following messages after successfully generated the keystore(s) and the deposit(s):
 
@@ -339,7 +339,7 @@ Success!
 Your keys can be found at: /home/username/staking-deposit-cli/validator_keys
 ```
 
-**Result**: a folder called `validator_keys` containing keystore-m files and deposit\_data.json
+**Result**: a folder called `validator_keys` containing keystore-m files and deposit_data.json
 
 **10. Verify mnemonic seed**
 
@@ -352,21 +352,21 @@ mkdir verify_seed
 ./deposit existing-mnemonic --chain holesky --folder verify_seed --execution_address <HARDWARE_WALLET_ADDRESS>
 ```
 
-* Choose your language
-* Repeat your withdrawal/execution address for confirmation
-* Type your mnemonic seed, first 4 letters is enough
-* Since this is the first time generating keys, enter the index number as 0.
-* Repeat the index to confirm, 0.
-* Enter how many validators you with to run (same as before)
-* Enter any keystore password, since this is temporary and will be deleted
+- Choose your language
+- Repeat your withdrawal/execution address for confirmation
+- Type your mnemonic seed, first 4 letters is enough
+- Since this is the first time generating keys, enter the index number as 0.
+- Repeat the index to confirm, 0.
+- Enter how many validators you with to run (same as before)
+- Enter any keystore password, since this is temporary and will be deleted
 
-Compare the **deposit\_data** files.
+Compare the **deposit_data** files.
 
 ```bash
 diff -s validator_keys/deposit_data*.json verify_seed/validator_keys/deposit_data*.json
 ```
 
-When the **deposit\_data** files are the same, this means your mnemonic seed is correct.
+When the **deposit_data** files are the same, this means your mnemonic seed is correct.
 
 Example output:
 
@@ -384,7 +384,7 @@ If you ran this command directly from your non-Tails USB stick, the validator ke
 
 If it hasn't, copy the directory over to your non-Tails USB stick.
 
-Confirm your validator\_keys are on the USB stick before leaving.
+Confirm your validator_keys are on the USB stick before leaving.
 
 ```bash
 ls /media/usb-drive/staking-deposit-cli/validator_keys
@@ -403,7 +403,7 @@ ls /media/usb-drive/staking-deposit-cli/validator_keys
 | <p>Keystore file(s)</p><p>[i.e.. keystore-16945983.json]</p>        | <ul><li>Controls the validator's ability to sign transactions</li><li>Imported and loaded into your validator</li><li>Keep private. Do not share with anyone</li><li>Can be recreated from your mnemonic seed/secret recovery phrase</li></ul> |
 | <p>Deposit data file(s)</p><p>[i.e. deposit_data-16945983.json]</p> | <ul><li>Public information about your validator</li><li>Required to execute your deposit through the Ethereum Launchpad</li><li>Can be recreated from your mnemonic seed/secret recovery phrase</li></ul>                                      |
 
-## :arrow\_up: 3. Transfer validator keys to node
+## :arrow_up: 3. Transfer validator keys to node
 
 {% hint style="info" %}
 **Local node**: Skip this step if you generated your keys on your node with **staking-deposit-cli**. No need to transfer as they're already there.
@@ -411,7 +411,7 @@ ls /media/usb-drive/staking-deposit-cli/validator_keys
 
 After creating the validator keys offline, you'll want to copy these validator keys to your node.
 
-To align with this guide's steps, make the default validator\_keys path on your node.
+To align with this guide's steps, make the default validator_keys path on your node.
 
 <pre class="language-bash"><code class="lang-bash"><strong>mkdir -p $HOME/staking-deposit-cli/validator_keys
 </strong></code></pre>
@@ -422,11 +422,11 @@ To transfer validator key files to your node from your local computer, consider 
 
 <summary>Option 1 - File Transfer</summary>
 
-* File transfer
-  * Windows OS - use [WinSCP](https://winscp.net) or [FileZilla](https://filezilla-project.org/download.php?type=client)
-  * Mac or Linux - use [FileZilla](https://filezilla-project.org/download.php?type=client) or [SFTP](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server) or [rsync](https://linuxize.com/post/how-to-use-rsync-for-local-and-remote-data-transfer-and-synchronization/)
+- File transfer
+  - Windows OS - use [WinSCP](https://winscp.net) or [FileZilla](https://filezilla-project.org/download.php?type=client)
+  - Mac or Linux - use [FileZilla](https://filezilla-project.org/download.php?type=client) or [SFTP](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server) or [rsync](https://linuxize.com/post/how-to-use-rsync-for-local-and-remote-data-transfer-and-synchronization/)
 
-Transfer the **keystore-m\_xxxxxxxx.json** files to the following location on your node.
+Transfer the **keystore-m_xxxxxxxx.json** files to the following location on your node.
 
 ```bash
 $HOME/staking-deposit-cli/validator_keys
@@ -539,12 +539,12 @@ Expected sample output:
 -r--r----- 1 ethereum ethereum 710 Oct  1 02:33 keystore-m_12381_3600_0_0_0-161664283.json
 ```
 
-## :woman\_technologist: 4. Deposit transactions at the Launchpad
+## :woman_technologist: 4. Deposit transactions at the Launchpad
 
 1. Follow the walk-through at the Launchpad: [https://holesky.launchpad.ethstaker.cc](https://holesky.launchpad.ethstaker.cc)
 
 {% hint style="danger" %}
-**Do not send real mainnet ETH during this process!** :octagonal\_sign: Use only Holesky ETH.
+**Do not send real mainnet ETH during this process!** :octagonal_sign: Use only Holesky ETH.
 {% endhint %}
 
 2. Upload your`deposit_data-#########.json` found in the `validator_keys` directory.
@@ -560,21 +560,21 @@ Source: [https://twitter.com/AbyssFinance/status/1379732382044069888](https://tw
 
 4. Confirm the transaction(s). There's one deposit transaction of 32 ETH for each validator.
 
-* **Deposit Example**: If you want to run 3 validators you will need to have (32 x 3) = 96 Holesky ETH plus some extra to cover the gas fees.
-* **Verify Deposit Contract:** Your transaction is depositing your ETH to the Holesky Deposit Contract address.**Check**, _double-check_, _**triple-check**_ that the Holesky Deposit Contract address is correct. [`0x4242424242424242424242424242424242424242`](https://holesky.beaconcha.in/address/4242424242424242424242424242424242424242)
-* **Ledger Nano Hardware wallet users**: If you encounter difficulty making the deposit transaction, enable blind signing and contract data.
+- **Deposit Example**: If you want to run 3 validators you will need to have (32 x 3) = 96 Holesky ETH plus some extra to cover the gas fees.
+- **Verify Deposit Contract:** Your transaction is depositing your ETH to the Holesky Deposit Contract address.**Check**, _double-check_, _**triple-check**_ that the Holesky Deposit Contract address is correct. [`0x4242424242424242424242424242424242424242`](https://holesky.beaconcha.in/address/4242424242424242424242424242424242424242)
+- **Ledger Nano Hardware wallet users**: If you encounter difficulty making the deposit transaction, enable blind signing and contract data.
 
 ## 4. Review backups
 
 {% hint style="danger" %}
 :fire: **Critical Crypto Reminder:** **Keep your mnemonics, keep your ETH.**
 
-* **Stay Offline**: Write down your mnemonic seed **offline**. _Not email. Not cloud._
-* **More than 1 backup of mnemonic**: Multiple copies with multiple locations is better. _Best stored in a_ [_metal seed._](https://jlopp.github.io/metal-bitcoin-storage-reviews/)
-* **Verify your hardware wallet's backup:** Most important of all data, this is where your withdrawal address belongs and ultimately controls the 32 ETH
-* **In case of recovery**: Stored on a USB key, keep copies of
-  * `validator_keys directory` - contains all the keystore .json files
-  * keystore password - used to encrypt keystore files
-{% endhint %}
+- **Stay Offline**: Write down your mnemonic seed **offline**. _Not email. Not cloud._
+- **More than 1 backup of mnemonic**: Multiple copies with multiple locations is better. _Best stored in a_ [_metal seed._](https://jlopp.github.io/metal-bitcoin-storage-reviews/)
+- **Verify your hardware wallet's backup:** Most important of all data, this is where your withdrawal address belongs and ultimately controls the 32 ETH
+- **In case of recovery**: Stored on a USB key, keep copies of
+  - `validator_keys directory` - contains all the keystore .json files
+  - keystore password - used to encrypt keystore files
+    {% endhint %}
 
 #### :tada:Validator key setup and deposits are complete!

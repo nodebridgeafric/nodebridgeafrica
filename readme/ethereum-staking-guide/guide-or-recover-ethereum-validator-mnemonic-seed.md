@@ -8,15 +8,15 @@ description: >-
 
 ## :question:Who is the guide for, what's involved, when do I need this?
 
-* :people\_hugging: **WHO**: If you are an Ethereum validator experiencing errors due to a problematic secret recovery phrase or mnemonic, this guide can help you fix the majority of common errors.
-* :chains: **WHAT**: Using [btcrecover's](https://github.com/3rdIteration/btcrecover) Seedrecover.py can fix the majorty of simple "invalid mnemonic" or "invalid seed" type errors. This commonly occurs when you have a valid seed backup that simply has a typo in it or missing word(s).
-* :hourglass: **WHEN**: Typical scenarios include attempting to **set withdrawal credentials** or **re-generate keystore files**.
+- :people_hugging: **WHO**: If you are an Ethereum validator experiencing errors due to a problematic secret recovery phrase or mnemonic, this guide can help you fix the majority of common errors.
+- :chains: **WHAT**: Using [btcrecover's](https://github.com/3rdIteration/btcrecover) Seedrecover.py can fix the majorty of simple "invalid mnemonic" or "invalid seed" type errors. This commonly occurs when you have a valid seed backup that simply has a typo in it or missing word(s).
+- :hourglass: **WHEN**: Typical scenarios include attempting to **set withdrawal credentials** or **re-generate keystore files**.
 
-## :hammer\_pick: How to Recover?
+## :hammer_pick: How to Recover?
 
 ## Step 1: Setup an offline PC with Ubuntu Live USB
 
-* First, you'll need to create an Ubuntu Live USB. [Download Ubuntu ISO](https://ubuntu.com/download/desktop) and flash image the ISO to USB drive with [balenaEtcher](https://etcher.balena.io/). See below video demos or [this guide](https://itsfoss.com/create-live-usb-of-ubuntu-in-windows/).
+- First, you'll need to create an Ubuntu Live USB. [Download Ubuntu ISO](https://ubuntu.com/download/desktop) and flash image the ISO to USB drive with [balenaEtcher](https://etcher.balena.io/). See below video demos or [this guide](https://itsfoss.com/create-live-usb-of-ubuntu-in-windows/).
 
 {% hint style="info" %}
 :tv: **Video Demos**
@@ -53,8 +53,8 @@ python3 run-all-tests.py -vv
 
 ## Step 3: Go offline
 
-* Disconnect ethernet cable and/or disable WIFI.
-* Verify no internet access by attemping to ping.
+- Disconnect ethernet cable and/or disable WIFI.
+- Verify no internet access by attemping to ping.
 
 ```bash
 ping 8.8.8.8
@@ -69,11 +69,11 @@ Recovery for Ethereum Validator seeds is the same as a standard seed recovery, b
 
 Seedrecover.py will automatically run through four search phases that should take a few hours at most. The four search phases include:
 
-* Single typo
-* Two typos, including one where you might have a completely different word
-* Three typos, including one where you might have a completely different word
-* Two typos that could be completely different words
-{% endhint %}
+- Single typo
+- Two typos, including one where you might have a completely different word
+- Three typos, including one where you might have a completely different word
+- Two typos that could be completely different words
+  {% endhint %}
 
 Here's the command to recover your ETH validator's secret recovery phase. Update accordingly.
 
@@ -83,9 +83,9 @@ python3 seedrecover.py --mnemonic "<secret recovery phrase>" --addrs <pubkey of 
 
 ### :question:About the flags
 
-* **--mnemonic** : Enter your best guess for your seed/mnemnoic/secret recovery phrase
-* **--addrs** : this is your validators public key without the 0x prefix. For example, if you have the keystores files the pubkey can be found inside "keystore-m\_12381\_3600\_0\_0\_0-xxxxxxx.json" Without keystore files, you can look up your validator's pubkey online at beaconcha.in or etherscan.io by following the validator's 32ETH deposit transaction.
-* **--addr-limit** : Adjust this to the number of validators you created on this mnemonic.
+- **--mnemonic** : Enter your best guess for your seed/mnemnoic/secret recovery phrase
+- **--addrs** : this is your validators public key without the 0x prefix. For example, if you have the keystores files the pubkey can be found inside "keystore-m_12381_3600_0_0_0-xxxxxxx.json" Without keystore files, you can look up your validator's pubkey online at beaconcha.in or etherscan.io by following the validator's 32ETH deposit transaction.
+- **--addr-limit** : Adjust this to the number of validators you created on this mnemonic.
 
 {% hint style="warning" %}
 Not recommended: Running recovery on an online machine? Add the flag `--dsw`
@@ -134,10 +134,10 @@ Wallet Type: btcrseed.WalletEthereumValidator
 2024-03-03 12:41:50 : Search Complete
 
 If this tool helped you to recover funds, please consider donating 1% of what you recovered, in your crypto of choice to:
-BTC: 37N7B7sdHahCXTcMJgEnHz7YmiR4bEqCrS 
-BCH: qpvjee5vwwsv78xc28kwgd3m9mnn5adargxd94kmrt 
-LTC: M966MQte7agAzdCZe5ssHo7g9VriwXgyqM 
-ETH: 0x72343f2806428dbbc2C11a83A1844912184b4243 
+BTC: 37N7B7sdHahCXTcMJgEnHz7YmiR4bEqCrS
+BCH: qpvjee5vwwsv78xc28kwgd3m9mnn5adargxd94kmrt
+LTC: M966MQte7agAzdCZe5ssHo7g9VriwXgyqM
+ETH: 0x72343f2806428dbbc2C11a83A1844912184b4243
 
 Find me on Reddit @ https://www.reddit.com/user/Crypto-Guide
 
@@ -154,15 +154,15 @@ By shutting down Ubuntu Live ISO session, all data used during this task is forg
 Congrats on recovering your ETH Validator!!! Consider donating to the tool makers, btcrecover.
 {% endhint %}
 
-## :track\_next: Next Steps
+## :track_next: Next Steps
 
-* :brain: **Backup your secret recovery phrase!** \[Review Backups Checklist]
-* :moneybag: **Update** \[**Withdrawal Credentials**]
-* :new: **Re-generate** \[**Keystore Files**]
-* :computer: **Manage your node with** \[**EthPillar**]
-* ​:confetti\_ball: **Support us on Gitcoin Grants:** We build this guide exclusively by community support!🙏
+- :brain: **Backup your secret recovery phrase!** \[Review Backups Checklist]
+- :moneybag: **Update** \[**Withdrawal Credentials**]
+- :new: **Re-generate** \[**Keystore Files**]
+- :computer: **Manage your node with** \[**EthPillar**]
+- ​:confetti_ball: **Support us on Gitcoin Grants:** We build this guide exclusively by community support!🙏
 
 ## :books: References
 
-* btcrecover Github: [https://github.com/3rdIteration/btcrecover](https://github.com/3rdIteration/btcrecover)
-* Official Docs: [https://btcrecover.readthedocs.io/en/latest/Usage\_Examples/basic\_seed\_recoveries/#basic-ethereum-validator-recoveries](https://btcrecover.readthedocs.io/en/latest/Usage\_Examples/basic\_seed\_recoveries/#basic-ethereum-validator-recoveries)
+- btcrecover Github: [https://github.com/3rdIteration/btcrecover](https://github.com/3rdIteration/btcrecover)
+- Official Docs: [https://btcrecover.readthedocs.io/en/latest/Usage_Examples/basic_seed_recoveries/#basic-ethereum-validator-recoveries](https://btcrecover.readthedocs.io/en/latest/Usage_Examples/basic_seed_recoveries/#basic-ethereum-validator-recoveries)

@@ -10,20 +10,20 @@ The following steps align with our mainnet guide. You may need to adjust file na
 
 ## :question:What is mev-boost?
 
-* Enables solo and home stakers access to MEV, Maximal Extractible Value.
-* Enables validators to earn higher block rewards.
-* Optional and not required for ETH staking.
-* Open source middleware run by validators to access a competitive block-building market.
-* Built by Flashbots as an implementation of [proposer-builder separation (PBS)](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725) for proof-of-stake (PoS) Ethereum.
-* `home-staker (you) >> mevboost >> relay >> builder >> searcher +/- frontrun/sandwich += efficient markets :)`
+- Enables solo and home stakers access to MEV, Maximal Extractible Value.
+- Enables validators to earn higher block rewards.
+- Optional and not required for ETH staking.
+- Open source middleware run by validators to access a competitive block-building market.
+- Built by Flashbots as an implementation of [proposer-builder separation (PBS)](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725) for proof-of-stake (PoS) Ethereum.
+- `home-staker (you) >> mevboost >> relay >> builder >> searcher +/- frontrun/sandwich += efficient markets :)`
 
 {% hint style="info" %}
 **tldr**: As of August 2023, MEV is estimated be 24% of a validator rewards. Other estimates suggest it can [boost staking rewards by over 60%.](https://hackmd.io/@flashbots/mev-in-eth2)
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/mev24.png" alt=""><figcaption><p>Estimated earnings per validator. Source: <a href="https://ultrasound.money/">https://ultrasound.money</a></p></figcaption></figure>
+<figure><img src="./../.gitbook/assets/mev24.png" alt=""><figcaption><p>Estimated earnings per validator. Source: <a href="https://ultrasound.money/">https://ultrasound.money</a></p></figcaption></figure>
 
-## :hammer\_pick: How to MEV?
+## :hammer_pick: How to MEV?
 
 {% hint style="warning" %}
 **Prerequisite:** You run a full Ethereum node (Execution Layer client \[e.g. geth/besu/nethermind/erigon] + Consensus Layer client \[e.g. prysm/lighthouse/teku/lodestar/nimbus]) and a validator.
@@ -39,8 +39,8 @@ sudo useradd --no-create-home --shell /bin/false mevboost
 
 ### Step 2: Install mevboost
 
-* Downloading binaries is often faster and more convenient.
-* Building from source code can offer better compatibility and is more aligned with the spirit of FOSS (free open source software).
+- Downloading binaries is often faster and more convenient.
+- Building from source code can offer better compatibility and is more aligned with the spirit of FOSS (free open source software).
 
 <details>
 
@@ -121,9 +121,9 @@ The `ExecStart` line lists relays: **Flashbots, UltraSound, Aestus, bloXroute Ma
 {% hint style="info" %}
 Find relay endpoints at:
 
-* [MEV Relay List](mev-relay-list.md)
-* [https://boost.flashbots.net](https://boost.flashbots.net/)
-* [https://github.com/remyroy/ethstaker/blob/main/MEV-relay-list.md](https://github.com/remyroy/ethstaker/blob/main/MEV-relay-list.md)
+- [MEV Relay List](mev-relay-list.md)
+- [https://boost.flashbots.net](https://boost.flashbots.net/)
+- [https://github.com/remyroy/ethstaker/blob/main/MEV-relay-list.md](https://github.com/remyroy/ethstaker/blob/main/MEV-relay-list.md)
 
 Multiple relays can be specified by `-relay`
 
@@ -136,12 +136,14 @@ Example:
 
 Important: Ensure each relay line ends with \ except the last relay line.
 ```
+
 {% endhint %}
 
 Paste the following into your `mevboost.service` file. To exit and save from the `nano` editor, press `Ctrl` + `X`, then `Y`, then`Enter`.
 
 {% tabs %}
 {% tab title="Ethereum Mainnet" %}
+
 ```bash
 [Unit]
 Description=MEV-Boost Service for Ethereum Mainnet
@@ -169,9 +171,11 @@ ExecStart=/usr/local/bin/mev-boost \
 [Install]
 WantedBy=multi-user.target
 ```
+
 {% endtab %}
 
 {% tab title="Holesky Testnet" %}
+
 ```bash
 [Unit]
 Description=MEV-Boost Service for Holesky
@@ -199,6 +203,7 @@ ExecStart=/usr/local/bin/mev-boost \
 [Install]
 WantedBy=multi-user.target
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -211,9 +216,9 @@ WantedBy=multi-user.target
 
 `-min-bid`: you can set a minimum bid value in ETH.
 
-* If all relays cannot bid higher than your minimum value, then your local execution client will produce the block.
-* By setting this value, you can capture MEV opportunities for higher value blocks and maintain a degree of control for local block production which helps strengthen censorship resistance and a neutral Ethereum network.
-{% endhint %}
+- If all relays cannot bid higher than your minimum value, then your local execution client will produce the block.
+- By setting this value, you can capture MEV opportunities for higher value blocks and maintain a degree of control for local block production which helps strengthen censorship resistance and a neutral Ethereum network.
+  {% endhint %}
 
 Reload systemctl to pickup the new service file.
 
@@ -228,6 +233,7 @@ sudo systemctl daemon-reload
 sudo systemctl daemon-reload
 sudo systemctl restart mevboost
 ```
+
 {% endhint %}
 
 Enable mevboost to automatically startup at system reboots and start the service.
@@ -290,23 +296,29 @@ To exit and save from the `nano` editor, press `Ctrl` + `X`, then `Y`, then`Ente
 
 {% tabs %}
 {% tab title="V2 Staking Setup (Current)" %}
+
 ```bash
 sudo nano /etc/systemd/system/consensus.service
 ```
+
 {% endtab %}
 
 {% tab title="V1 Staking Setup" %}
+
 ```bash
 sudo nano /etc/systemd/system/beacon-chain.service
 ```
+
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Lighthouse" %}
+
 ```
 --builder http://127.0.0.1:18550
 ```
+
 {% endtab %}
 
 {% tab title="Teku" %}
@@ -340,21 +352,27 @@ Use one configuration or the other but not both!
 {% endtab %}
 
 {% tab title="Lodestar" %}
+
 ```
 --builder --builder.urls http://127.0.0.1:18550
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus" %}
+
 ```
 --payload-builder=true --payload-builder-url=http://127.0.0.1:18550
 ```
+
 {% endtab %}
 
 {% tab title="Prysm" %}
+
 ```
 --http-mev-relay=http://127.0.0.1:18550
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -386,9 +404,11 @@ sudo nano /etc/systemd/system/validator.service
 
 {% tabs %}
 {% tab title="Lighthouse" %}
+
 ```
 --builder-proposals
 ```
+
 {% endtab %}
 
 {% tab title="Teku" %}
@@ -402,9 +422,11 @@ For Teku running in combined BN+VC configuration, there is no extra configuratio
 {% endtab %}
 
 {% tab title="Lodestar" %}
+
 ```
 --builder
 ```
+
 {% endtab %}
 
 {% tab title="Nimbus" %}
@@ -418,9 +440,11 @@ For Nimbus running in combined BN+VC configuration, there is no extra configurat
 {% endtab %}
 
 {% tab title="Prysm" %}
+
 ```
 --enable-builder
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -463,6 +487,7 @@ sudo journalctl -fu validator
 
 sudo journalctl -fu consensus
 </code></pre>
+
 {% endtab %}
 
 {% tab title="V1 Staking Setup" %}
@@ -482,6 +507,7 @@ sudo journalctl -fu validator
 
 sudo journalctl -fu beacon-chain
 </code></pre>
+
 {% endtab %}
 {% endtabs %}
 
@@ -668,18 +694,18 @@ Refer to [this article by Stephane Gosslin](https://writings.flashbots.net/writi
 
 <summary>How does MEV-boost work?</summary>
 
-* Ethereum stakers must run three pieces of software: a validator client, consensus client, and an execution client.
-* MEV-boost is a separate piece of open source software, which queries and outsources block-building to a network of builders.
-* Block builders prepare full blocks, optimizing for MEV extraction and fair distribution of rewards.
-* They then submit their blocks to relays.
+- Ethereum stakers must run three pieces of software: a validator client, consensus client, and an execution client.
+- MEV-boost is a separate piece of open source software, which queries and outsources block-building to a network of builders.
+- Block builders prepare full blocks, optimizing for MEV extraction and fair distribution of rewards.
+- They then submit their blocks to relays.
 
 <!---->
 
-* Relays aggregate blocks from **multiple** builders in order to select the block with the highest fees.
-* One instance of MEV-boost can be configured by a validator to connect to **multiple** relays.
-* The Consensus Layer client of a validator proposes the most profitable block received from MEV-boost to the Ethereum network for attestation and block inclusion.
+- Relays aggregate blocks from **multiple** builders in order to select the block with the highest fees.
+- One instance of MEV-boost can be configured by a validator to connect to **multiple** relays.
+- The Consensus Layer client of a validator proposes the most profitable block received from MEV-boost to the Ethereum network for attestation and block inclusion.
 
-<img src="../../../.gitbook/assets/mev-boost-integration-overview.png" alt="" data-size="original">
+<img src="./../.gitbook/assets/mev-boost-integration-overview.png" alt="" data-size="original">
 
 </details>
 
@@ -687,8 +713,8 @@ Refer to [this article by Stephane Gosslin](https://writings.flashbots.net/writi
 
 <summary>What are the risks of running MEV-boost?</summary>
 
-* Adding more relays increases risk of adding a "bad" relay (hacked, withholds bid, performance issues) and causes your validator to miss a proposal.
-* More relays = more chance of getting a high-bid block however this also increases chance of getting rugged by "bad" relays and missing a proposal.Requires trust that relays and block builders will act honestly. MEV is not yet a trust-less process until there is protocol-level proposer-builder-separation (PBS).
+- Adding more relays increases risk of adding a "bad" relay (hacked, withholds bid, performance issues) and causes your validator to miss a proposal.
+- More relays = more chance of getting a high-bid block however this also increases chance of getting rugged by "bad" relays and missing a proposal.Requires trust that relays and block builders will act honestly. MEV is not yet a trust-less process until there is protocol-level proposer-builder-separation (PBS).
 
 Detailed explanation: [https://writings.flashbots.net/writings/understanding-mev-boost-liveness-risks](https://writings.flashbots.net/writings/understanding-mev-boost-liveness-risks/)
 
@@ -718,9 +744,9 @@ If multiple relays are available, the relay bidding highest MEV reward will be c
 
 Based on varying degrees of profit or censorship, MEV relays can decide on what transactions to bundle in a block.
 
-* Ethical relays: will not censor transactions or profit from front running / sandwich attacks, which is harmful to everyday users on Ethereum.
-* OFAC relays: will censor transactions according to the OFAC list.
-* Maximal profit relays: profit is all that matters, ethics have no meaning.
+- Ethical relays: will not censor transactions or profit from front running / sandwich attacks, which is harmful to everyday users on Ethereum.
+- OFAC relays: will censor transactions according to the OFAC list.
+- Maximal profit relays: profit is all that matters, ethics have no meaning.
 
 </details>
 
@@ -732,22 +758,22 @@ No changes needed. mevboost only makes outgoing tcp calls.
 
 </details>
 
-## :track\_next: Next Steps
+## :track_next: Next Steps
 
-* :moneybag: **MEV Smoothing:** Earn rewards on a consistent basis! Potentially share lottery blocks. Average out your MEV rewards.
-  * **Smoothly -** [**https://docs.smoothly.money/how-to-guide**](https://docs.smoothly.money/how-to-guide)
-  * **Dappnode's Smooth -** [**https://smooth.dappnode.io/how-to**](https://smooth.dappnode.io/how-to)
-* :new: **Stay Updated**: Subscribe to [flashbot's mev-boost repository](https://github.com/flashbots/mev-boost/releases) to be notified of new releases. Hit the Notifications button.
-* :telephone\_receiver: **Stay in contact**: Follow [MEV-Boost Twitter contributors](https://github.com/thegostep/awesome-mev-boost#twitter)
-* :rocket: **Future ideas**: Learn about the future of MEV democratized by [PBS](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/).
-* ​:confetti\_ball: **Support us on Gitcoin Grants:** We build this guide exclusively by community support!🙏
+- :moneybag: **MEV Smoothing:** Earn rewards on a consistent basis! Potentially share lottery blocks. Average out your MEV rewards.
+  - **Smoothly -** [**https://docs.smoothly.money/how-to-guide**](https://docs.smoothly.money/how-to-guide)
+  - **Dappnode's Smooth -** [**https://smooth.dappnode.io/how-to**](https://smooth.dappnode.io/how-to)
+- :new: **Stay Updated**: Subscribe to [flashbot's mev-boost repository](https://github.com/flashbots/mev-boost/releases) to be notified of new releases. Hit the Notifications button.
+- :telephone_receiver: **Stay in contact**: Follow [MEV-Boost Twitter contributors](https://github.com/thegostep/awesome-mev-boost#twitter)
+- :rocket: **Future ideas**: Learn about the future of MEV democratized by [PBS](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/).
+- ​:confetti_ball: **Support us on Gitcoin Grants:** We build this guide exclusively by community support!🙏
 
 ## :books: References
 
-* [https://github.com/remyroy/ethstaker/blob/main/prepare-for-the-merge.md#choosing-and-configuring-an-mev-solution](https://github.com/remyroy/ethstaker/blob/main/prepare-for-the-merge.md#choosing-and-configuring-an-mev-solution)
-* [https://github.com/flashbots/mev-boost/wiki/Testing](https://github.com/flashbots/mev-boost/wiki/Testing)
-* [https://boost.flashbots.net/](https://boost.flashbots.net/)
-* [https://github.com/flashbots/mev-boost/blob/main/README.md](https://github.com/flashbots/mev-boost/blob/main/README.md)
+- [https://github.com/remyroy/ethstaker/blob/main/prepare-for-the-merge.md#choosing-and-configuring-an-mev-solution](https://github.com/remyroy/ethstaker/blob/main/prepare-for-the-merge.md#choosing-and-configuring-an-mev-solution)
+- [https://github.com/flashbots/mev-boost/wiki/Testing](https://github.com/flashbots/mev-boost/wiki/Testing)
+- [https://boost.flashbots.net/](https://boost.flashbots.net/)
+- [https://github.com/flashbots/mev-boost/blob/main/README.md](https://github.com/flashbots/mev-boost/blob/main/README.md)
 
 ## :thumbsup: Credits
 
