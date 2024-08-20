@@ -1,0 +1,2 @@
+# Gnosis Staking Guide
+
