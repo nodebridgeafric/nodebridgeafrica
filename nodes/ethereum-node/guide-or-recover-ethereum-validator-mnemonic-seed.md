@@ -4,7 +4,7 @@ description: >-
   seedrecovery.py by btcrecover.
 ---
 
-# 🔎 Guide | Recover Ethereum Validator Mnemonic Seed
+# Guide | Recover Ethereum Validator Mnemonic Seed
 
 ## :question:Who is the guide for, what's involved, when do I need this?
 
@@ -54,7 +54,7 @@ python3 run-all-tests.py -vv
 ## Step 3: Go offline
 
 * Disconnect ethernet cable and/or disable WIFI.
-* Verify no internet access by attemping to ping.&#x20;
+* Verify no internet access by attemping to ping.
 
 ```bash
 ping 8.8.8.8
@@ -66,8 +66,6 @@ Ping result should say **Network is unreachable**.
 
 {% hint style="info" %}
 Recovery for Ethereum Validator seeds is the same as a standard seed recovery, but uses the validators public key (Also known as Signing Key) in the place of an address.
-
-
 
 Seedrecover.py will automatically run through four search phases that should take a few hours at most. The four search phases include:
 
@@ -86,7 +84,7 @@ python3 seedrecover.py --mnemonic "<secret recovery phrase>" --addrs <pubkey of 
 ### :question:About the flags
 
 * **--mnemonic** : Enter your best guess for your seed/mnemnoic/secret recovery phrase
-* **--addrs** :  this is your validators public key without the 0x prefix. For example, if you have the keystores files the pubkey can be found inside "keystore-m\_12381\_3600\_0\_0\_0-xxxxxxx.json" Without keystore files, you can look up your validator's pubkey online at beaconcha.in or etherscan.io by following the validator's 32ETH deposit transaction.
+* **--addrs** : this is your validators public key without the 0x prefix. For example, if you have the keystores files the pubkey can be found inside "keystore-m\_12381\_3600\_0\_0\_0-xxxxxxx.json" Without keystore files, you can look up your validator's pubkey online at beaconcha.in or etherscan.io by following the validator's 32ETH deposit transaction.
 * **--addr-limit** : Adjust this to the number of validators you created on this mnemonic.
 
 {% hint style="warning" %}
@@ -158,10 +156,10 @@ Congrats on recovering your ETH Validator!!! Consider donating to the tool maker
 
 ## :track\_next: Next Steps
 
-* :brain: **Backup your secret recovery phrase!** [Review Backups Checklist]
-* :moneybag: **Update** [**Withdrawal Credentials**]
-* :new: **Re-generate** [**Keystore Files**]
-* :computer: **Manage your node with** [**EthPillar**]
+* :brain: **Backup your secret recovery phrase!** \[Review Backups Checklist]
+* :moneybag: **Update** \[**Withdrawal Credentials**]
+* :new: **Re-generate** \[**Keystore Files**]
+* :computer: **Manage your node with** \[**EthPillar**]
 * ​:confetti\_ball: **Support us on Gitcoin Grants:** We build this guide exclusively by community support!🙏
 
 ## :books: References

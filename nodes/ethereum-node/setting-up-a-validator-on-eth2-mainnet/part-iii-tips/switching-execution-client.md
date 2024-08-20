@@ -1,4 +1,4 @@
-# 🛡 Switching / Migrating Execution Client
+# Switching / Migrating Execution Client
 
 {% hint style="info" %}
 Important reasons why you would want to switch Execution Clients:

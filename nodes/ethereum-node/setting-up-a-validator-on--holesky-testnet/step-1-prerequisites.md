@@ -8,9 +8,9 @@
 4. Generate your validator keys and import them into your validator client
 5. Monitor and maintain your node
 
-A Ethereum node consists of the Execution Layer + Consensus Layer.
+An Ethereum node consists of the Execution Layer + Consensus Layer.
 
-A Ethereum Staking node is the previous plus a Validator client.
+An Ethereum Staking node is the previous plus a Validator client.
 
 <figure><img src="../../../.gitbook/assets/client-stack.png" alt=""><figcaption><p>Client Stack</p></figcaption></figure>
 

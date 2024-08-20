@@ -2,12 +2,10 @@
 description: No more offline pruning, save time and disk space!
 ---
 
-# 😁 Geth - Enabling path-based state storage
+# Geth - Enabling path-based state storage
 
 {% hint style="info" %}
-As of [Geth v1.13.0](https://blog.ethereum.org/2023/09/12/geth-v1-13-0), a new database model for storing the Ethereum state, which is both faster than the previous scheme, and also has proper pruning implemented.&#x20;
-
-
+As of [Geth v1.13.0](https://blog.ethereum.org/2023/09/12/geth-v1-13-0), a new database model for storing the Ethereum state, which is both faster than the previous scheme, and also has proper pruning implemented.
 
 No more junk accumulating on disk and no more guerilla (offline) pruning!
 {% endhint %}

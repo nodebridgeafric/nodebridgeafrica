@@ -2,7 +2,7 @@
 description: Quickstart guide to setting up MEV-boost for your ETH validator.
 ---
 
-# 💰 Guide | MEV-boost for Ethereum Staking
+# Guide | MEV-boost for Ethereum Staking
 
 {% hint style="info" %}
 The following steps align with our mainnet guide. You may need to adjust file names and directory locations where appropriate. The core concepts remain the same.
@@ -15,7 +15,7 @@ The following steps align with our mainnet guide. You may need to adjust file na
 * Optional and not required for ETH staking.
 * Open source middleware run by validators to access a competitive block-building market.
 * Built by Flashbots as an implementation of [proposer-builder separation (PBS)](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725) for proof-of-stake (PoS) Ethereum.
-* `home-staker (you) >> mevboost >> relay >> builder >> searcher +/-  frontrun/sandwich += efficient markets :)`
+* `home-staker (you) >> mevboost >> relay >> builder >> searcher +/- frontrun/sandwich += efficient markets :)`
 
 {% hint style="info" %}
 **tldr**: As of August 2023, MEV is estimated be 24% of a validator rewards. Other estimates suggest it can [boost staking rewards by over 60%.](https://hackmd.io/@flashbots/mev-in-eth2)
@@ -39,7 +39,7 @@ sudo useradd --no-create-home --shell /bin/false mevboost
 
 ### Step 2: Install mevboost
 
-* Downloading binaries is often faster and more convenient.&#x20;
+* Downloading binaries is often faster and more convenient.
 * Building from source code can offer better compatibility and is more aligned with the spirit of FOSS (free open source software).
 
 <details>
@@ -209,10 +209,10 @@ WantedBy=multi-user.target
 
 `-addr`: set this to `0.0.0.0:18550` if your mevboost is installed on a different machine than your consensus client. Update firewall rules if needed.
 
-`-min-bid`: you can set a minimum bid value in ETH.&#x20;
+`-min-bid`: you can set a minimum bid value in ETH.
 
-* If all relays cannot bid higher than your minimum value, then your local execution client will produce the block.&#x20;
-* By setting this value, you can capture MEV opportunities for higher value blocks and maintain a degree of control for local block production which helps strengthen censorship resistance and a neutral Ethereum network.&#x20;
+* If all relays cannot bid higher than your minimum value, then your local execution client will produce the block.
+* By setting this value, you can capture MEV opportunities for higher value blocks and maintain a degree of control for local block production which helps strengthen censorship resistance and a neutral Ethereum network.
 {% endhint %}
 
 Reload systemctl to pickup the new service file.
@@ -282,7 +282,7 @@ Both the consensus layer client and validator will require additional **Builder 
 
 **Consensus Client Layer Changes (beacon chain)**
 
-Add the appropriate flag to the `ExecStart` line of your **consensus** **client** service file.&#x20;
+Add the appropriate flag to the `ExecStart` line of your **consensus** **client** service file.
 
 Select the tab appropriate to your staking setup.
 
@@ -310,7 +310,7 @@ sudo nano /etc/systemd/system/beacon-chain.service
 {% endtab %}
 
 {% tab title="Teku" %}
-#### Option 1: Systemd service file configuration - Use for V2 Teku staking setup&#x20;
+**Option 1: Systemd service file configuration - Use for V2 Teku staking setup**
 
 If your Teku client is configured by --parameters in the **systemd service file,** add the following changes.
 
@@ -318,7 +318,7 @@ If your Teku client is configured by --parameters in the **systemd service file,
 --validators-builder-registration-default-enabled=true --builder-endpoint=http://127.0.0.1:18550
 ```
 
-#### Option 2: TOML Configuration - Use for V1 Teku staking setup
+**Option 2: TOML Configuration - Use for V1 Teku staking setup**
 
 If your Teku client is configured by passing in a **TOML file (i.e. teku.yaml),** edit `teku.yaml` with nano.
 
@@ -358,7 +358,7 @@ Use one configuration or the other but not both!
 {% endtab %}
 {% endtabs %}
 
-For example, here is the expected result of an updated `ExecStart` line of a **V2 Staking Setup Prysm consensus** **client** service file.&#x20;
+For example, here is the expected result of an updated `ExecStart` line of a **V2 Staking Setup Prysm consensus** **client** service file.
 
 Flag is added on the last line.
 
@@ -424,7 +424,7 @@ For Nimbus running in combined BN+VC configuration, there is no extra configurat
 {% endtab %}
 {% endtabs %}
 
-For example, here is the expected result of an updated `ExecStart` line of a **V2 Staking Setup Prysm validator client** service file.&#x20;
+For example, here is the expected result of an updated `ExecStart` line of a **V2 Staking Setup Prysm validator client** service file.
 
 Flag is added on the last line.
 
@@ -580,7 +580,7 @@ Verify that your validator is registered with a particular relay by making a req
 
 You can either manually query the relay's API or use [dabauxi's Check MEV-Boost Relay Registration script](https://github.com/dabauxi/check-mevboost-registration).
 
-### Check MEV-Boost Relay Registration by dabauxi&#x20;
+#### Check MEV-Boost Relay Registration by dabauxi
 
 Review notes and source code [here](https://github.com/dabauxi/check-mevboost-registration). Requires python.
 
@@ -618,7 +618,7 @@ Relay: 'relay.ultrasound.money', ✔️ registered
 Relay: 'agnostic-relay.net', ✔️ registered
 ```
 
-### &#x20;Check Manually
+#### Check Manually
 
 For example, to verify that your validator is registered with the flashbots relay, enter the following URL into your browser. Replace `<myPubKey>` with the public key of your validator and you will see registration data such as your fee recipient address.
 
@@ -648,7 +648,7 @@ When a block is produced using MEV-boost, you may receive your payment in 1 of 3
 
 Specifically, your MEV payment may arrive as:
 
-1\) by setting you as the block's Fee Recipient&#x20;
+1\) by setting you as the block's Fee Recipient
 
 2\) an internal transaction
 

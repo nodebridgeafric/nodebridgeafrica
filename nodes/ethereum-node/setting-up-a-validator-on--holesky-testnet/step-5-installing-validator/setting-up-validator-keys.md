@@ -438,7 +438,7 @@ $HOME/staking-deposit-cli/validator_keys
 
 <summary>Option 2 - USB Key</summary>
 
-### **Step 1: From OFFLINE machine, copy validator keys to a USB key.**
+#### **Step 1: From OFFLINE machine, copy validator keys to a USB key.**
 
 Plug the USB key into offline machine, then locate the device name.
 
@@ -481,7 +481,7 @@ sudo cp $HOME/staking-deposit-cli/validator_keys/*.json /media/usb-drive/staking
 sudo umount /media/usb-drive
 ```
 
-### **Step 2: From a USB key,  copy validator keys to the NODE.**
+#### **Step 2: From a USB key, copy validator keys to the NODE.**
 
 Plug the USB key into node, then locate the device name.
 

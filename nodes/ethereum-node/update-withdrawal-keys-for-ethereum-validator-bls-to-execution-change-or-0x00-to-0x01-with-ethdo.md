@@ -4,7 +4,7 @@ description: >-
   execution withdrawal 0x01 credentials using the ETHDO tool by wealdtech.
 ---
 
-# 🦉 Update Withdrawal Keys for Ethereum Validator (BLS to Execution Change or 0x00 to 0x01) with ETHDO
+# Update Withdrawal Keys for Ethereum Validator (BLS to Execution Change or 0x00 to 0x01) with ETHDO
 
 {% hint style="info" %}
 The following steps align with our mainnet guide. You may need to adjust file names and directory locations where appropriate. The core concepts remain the same.
@@ -79,7 +79,7 @@ BLS credentials: 0x0002a0addda8106aed690654c7af7af0bc5ccde321c8e5e2319ff432cee70
 
 If you have BLS credentials, continue with the rest of this guide. Otherwise, stop because ethdo will output "`Ethereum execution address`" and that means you've already set your withdrawal address!
 
-6. Download pre-generated offline preparation files made daily by EthStaker.&#x20;
+6. Download pre-generated offline preparation files made daily by EthStaker.
 
 <pre class="language-bash"><code class="lang-bash">#mainnet
 wget https://files.ethstaker.cc/offline-preparation-mainnet.tar.gz
@@ -122,8 +122,8 @@ tar -xvf offline-preparation-goerli.tar.gz
 
 9. Using your USB key, copy both
 
-* the `ethdo` executable&#x20;
-* and `offline-preparation.json` file&#x20;
+* the `ethdo` executable
+* and `offline-preparation.json` file
 
 to your offline air-gapped computer.
 
@@ -186,8 +186,8 @@ After a minute or two, you should see the text, "`offline-preparation.json gener
 
 7. Using your USB key, copy both
 
-* the `ethdo` executable&#x20;
-* and `offline-preparation.json` file&#x20;
+* the `ethdo` executable
+* and `offline-preparation.json` file
 
 to your offline air-gapped computer.
 
@@ -213,9 +213,9 @@ to your offline air-gapped computer.
 chmod +x ethdo
 ```
 
-4. This ethdo command sets your validator credentials and the output is stored in a `change-operations.json` file. Replace `<MY MNEMONIC PHRASE>` AND `<MY ETH WITHDRAW ADDRESS>` accordingly.&#x20;
+4. This ethdo command sets your validator credentials and the output is stored in a `change-operations.json` file. Replace `<MY MNEMONIC PHRASE>` AND `<MY ETH WITHDRAW ADDRESS>` accordingly.
 
-:octagonal\_sign: Double check your work as this is permanent once set! :octagonal\_sign:&#x20;
+:octagonal\_sign: Double check your work as this is permanent once set! :octagonal\_sign:
 
 :octagonal\_sign: FINAL REMINDER: DO NOT USE AN EXCHANGE ETH ADDRESS AS YOUR WITHDRAWAL ADDRESS :octagonal\_sign:
 
@@ -253,7 +253,7 @@ back to your online computer.
 :bulb:If you no longer have a synced full node, you can alternatively upload `change-operation.json` file to [https://beaconcha.in/tools/broadcast](https://beaconcha.in/tools/broadcast)
 
 1. On the **online computer**, copy the `change-operation.json` to your home directory, where `ethdo` is also located.
-2. Run the following command to broadcast your withdrawal credentials. &#x20;
+2. Run the following command to broadcast your withdrawal credentials.
 
 ```
 ./ethdo validator credentials set
@@ -262,7 +262,7 @@ back to your online computer.
 </details>
 
 {% hint style="success" %}
-Congrats! Your BLS to Execution change is now pending in a queue, waiting to be included in a block.&#x20;
+Congrats! Your BLS to Execution change is now pending in a queue, waiting to be included in a block.
 {% endhint %}
 
 ## :fast\_forward:Next Steps
@@ -285,14 +285,13 @@ Congrats! Your BLS to Execution change is now pending in a queue, waiting to be 
 * Ethdo official withdrawals guide: [https://github.com/wealdtech/ethdo/blob/master/docs/changingwithdrawalcredentials.md](https://github.com/wealdtech/ethdo/blob/master/docs/changingwithdrawalcredentials.md)
 * Attestant's Post: [https://www.attestant.io/posts/understanding-withdrawals/](https://www.attestant.io/posts/understanding-withdrawals/)
 
-
 ## :books:FAQ
 
 <details>
 
 <summary>Using my node, how can I check if my change is pending in the withdrawals queue?</summary>
 
-Replace \<MY VALIDATOR INDEX>. Adjust the REST API port number, if needed.&#x20;
+Replace \<MY VALIDATOR INDEX>. Adjust the REST API port number, if needed.
 
 Lighthouse/Nimbus=5052. Prysm=3500. Lodestar=9596. Teku=5051.
 
@@ -323,11 +322,11 @@ However, if the output shows \[], this means your change is complete and no long
 
 <summary>How much longer do I need to wait for this change to take effect?</summary>
 
-Each block can add 16 `blstoexecutionchange`messages and the time to process a BLS change depends on the size of the withdraw queue.&#x20;
+Each block can add 16 `blstoexecutionchange`messages and the time to process a BLS change depends on the size of the withdraw queue.
 
-Find the size of the queue with the following command.&#x20;
+Find the size of the queue with the following command.
 
-Adjust the REST API port number, if needed.&#x20;
+Adjust the REST API port number, if needed.
 
 Lighthouse/Nimbus=5052. Prysm=3500. Lodestar=9596. Teku=5051.
 

@@ -62,7 +62,7 @@ sudo rm -r /var/lib/lighthouse/beacon
 * Refer to [https://eth-clients.github.io/checkpoint-sync-endpoints](https://eth-clients.github.io/checkpoint-sync-endpoints/) and pick another random state providers from the list, if desired.
 * Do not trust any single checkpoint provider. Verify the state root and block root against multiple checkpoints to ensure you're on the correct chain.
 
-### **Nimbus**:
+#### **Nimbus**:
 
 Run the following to start the checkpoint sync.
 
@@ -81,7 +81,7 @@ When the nimbus checkpoint sync is complete, you'll see the following message:
 Done, your beacon node is ready to serve you! Don't forget to check that you're on the canonical chain by comparing the checkpoint root with other online sources. See https://nimbus.guide/trusted-node-sync.html for more information.
 ```
 
-### **Teku**:
+#### **Teku**:
 
 Edit your config file
 
@@ -97,7 +97,7 @@ Ensure the following line is listed
 
 To exit and save, press `Ctrl` + `X`, then `Y`, then`Enter`.
 
-### **Lighthouse**:
+#### **Lighthouse**:
 
 Edit your service file
 
@@ -113,7 +113,7 @@ Ensure the following line is listed on your `ExecStart` line
 
 To exit and save, press `Ctrl` + `X`, then `Y`, then`Enter`.
 
-### **Prysm**:
+#### **Prysm**:
 
 Edit your service file
 
@@ -130,7 +130,7 @@ Ensure the following line is listed on your `ExecStart` line
 
 To exit and save, press `Ctrl` + `X`, then `Y`, then`Enter`.
 
-### **Lodestar**:
+#### **Lodestar**:
 
 Edit your service file
 

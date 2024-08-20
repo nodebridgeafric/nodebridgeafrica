@@ -2,7 +2,7 @@
 description: How to connect your ETH wallet to your own node's RPC endpoint
 ---
 
-# ⚡ Using Node as RPC URL endpoint
+# Using Node as RPC URL endpoint
 
 ### :tada: Reasons to use your own NODE as RPC URL endpoint
 
@@ -21,7 +21,7 @@ Before continuing please understand the following:
 
 ### 1. Verify RPC port 8545 is listening
 
-Double check that your node is listening on port 8545&#x20;
+Double check that your node is listening on port 8545
 
 ```bash
 ss -ntlp | grep 8545
@@ -36,15 +36,9 @@ LISTEN 0      128    [::ffff:127.0.0.1]:8545             *:*    users:(("java",p
 {% hint style="warning" %}
 **Port 8545 is NOT listening or using Geth or Besu?**
 
-
-
 **Note: Nethermind** and **Erigon** enable RPC by default.
 
-
-
 The following flags on the `ExecStart` line are required to enable RPC.
-
-
 
 **Geth**
 
@@ -59,8 +53,6 @@ The following flags on the `ExecStart` line are required to enable RPC.
 --rpc-http-cors-origins="*"
 ```
 
-
-
 Changes can be made to the **systemd unit file** `execution.service,`
 
 ```bash
@@ -68,8 +60,6 @@ sudo nano /etc/systemd/system/execution.service
 ```
 
 To exit and save, press `Ctrl` + `X`, then `Y`, then `Enter`.
-
-
 
 Make sure to reload and restart.
 
@@ -83,8 +73,6 @@ sudo systemctl restart execution
 
 {% hint style="info" %}
 Every time you want to use your node as an RPC endpoint, you must open a SSH tunnel connection with port 8545 forwarded.
-
-
 
 **Exception:** **Local nodes** (i.e. using Ubuntu Desktop) - if you're accessing your wallet on the same machine as your node, skip this step.
 {% endhint %}
@@ -142,7 +130,7 @@ Download from [https://rabby.io](https://rabby.io/)
 
 Example of Adding a Network:
 
-![](../../../../.gitbook/assets/rabby.png)
+<img src="../../../../.gitbook/assets/rabby.png" alt="" data-size="original">
 
 </details>
 
@@ -161,7 +149,7 @@ Download from [https://frame.sh](https://frame.sh/)
 
 Example of Adding a Network:
 
-![](../../../../.gitbook/assets/frame.png)
+<img src="../../../../.gitbook/assets/frame.png" alt="" data-size="original">
 
 </details>
 
@@ -181,7 +169,7 @@ Download from [https://metamask.io](https://metamask.io/)
 
 Example of Adding a Network:
 
-![](../../../../.gitbook/assets/meta.png)
+<img src="../../../../.gitbook/assets/meta.png" alt="" data-size="original">
 
 </details>
 
