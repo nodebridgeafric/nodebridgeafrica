@@ -7,12 +7,10 @@ description: >-
 # Guide | How to setup a validator on ETH2 mainnet
 
 {% hint style="success" %}
-As of Dec 5 2020, this guide is updated for **mainnet.** 😁
+As of August 20 2024, this guide is updated for **mainnet.** 😁
 {% endhint %}
 
 #### ✨ For the testnet guide, [please click here](../../nodes/ethereum-node/guide-or-how-to-setup-a-validator-on-eth2-testnet.md).
-
-![](./.gitbook/assets/gg.jpg)
 
 ## 🏁 0. Prerequisites
 

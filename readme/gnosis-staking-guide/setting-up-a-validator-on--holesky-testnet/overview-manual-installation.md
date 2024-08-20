@@ -3,7 +3,7 @@
 ## :new: Announcements
 
 {% hint style="success" %}
-As of August 25 2024, this **Version 1 Guide** compiled by **NodeBridge Africa** :grin:
+As of August 25 2024, this **Version 1 Guide** was compiled by **NodeBridge Africa** :grin:
 {% endhint %}
 
 {% hint style="info" %}

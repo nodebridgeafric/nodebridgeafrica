@@ -3,7 +3,7 @@
 ## :new: What You Should Know!
 
 {% hint style="success" %}
-As of August 25 2024, this **Version 1.0 Guide** written for **🦉NodeBridge Africa**🦉 **MAINNET Ethereum** :grin:
+As of August 25 2024, this **Version 1.0 Guide** was compiled by **🦉NodeBridge Africa**🦉 for **MAINNET Ethereum** :grin:
 {% endhint %}
 
 {% hint style="info" %}
@@ -20,6 +20,6 @@ For the advanced user who wants customization and is comfortable with CLI comman
 
 The following parts make up this guide:
 
-* [**Part I - Installation**](../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-i-installation-1/) describes in 5 steps how to setup your staking node.
-* [**Part II - Maintenance**](../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-ii-maintenance-1/) explains ongoing tasks you'll require to keep your staking node in great shape and up-to-date.
-* [**Part III - Tips**](../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/) contains additional procedures to simplify managing your staking node.
+- [**Part I - Installation**](../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-i-installation-1/) describes in 5 steps how to setup your staking node.
+- [**Part II - Maintenance**](../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-ii-maintenance-1/) explains ongoing tasks you'll require to keep your staking node in great shape and up-to-date.
+- [**Part III - Tips**](../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/) contains additional procedures to simplify managing your staking node.
