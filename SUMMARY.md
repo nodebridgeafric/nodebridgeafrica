@@ -1,6 +1,12 @@
 # Table of contents
 
-* [Staking Guide](README.md)
+* [😌 Home](README.md)
+* [About Us](about-us.md)
+* [🔔 Community Code of Conduct](community-code-of-conduct.md)
+* [🚀 Support Nodebridge Africa](support-nodebridge-africa.md)
+* [🚫 Disclaimer](disclaimer.md)
+* [Staking Guide](<README (1).md>)
+  * [Hardware & system requirements](readme/hardware-and-system-requirements.md)
   * [Ethereum Staking Guide](readme/ethereum-staking-guide/README.md)
     * [Guide | How to setup a validator on ETH2 mainnet](readme/ethereum-staking-guide/guide-or-how-to-setup-a-validator-on-eth2-mainnet.md)
     * [Guide: How to Setup a validator on Holesky Testnet](readme/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/README.md)
