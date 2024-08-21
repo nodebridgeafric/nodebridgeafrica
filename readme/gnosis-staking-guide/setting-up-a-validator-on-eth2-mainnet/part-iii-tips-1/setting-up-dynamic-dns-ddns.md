@@ -6,20 +6,20 @@ description: >-
 
 # Setting up dynamic DNS (DDNS)
 
-## :fast_forward: Quick steps guide
+## :fast\_forward: Quick steps guide
 
 {% hint style="info" %}
-The following steps align with our [mainnet guide](../../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/). You may need to adjust file names and directory locations where appropriate. The core concepts remain the same.
+The following steps align with our [mainnet guide](../../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/). You may need to adjust file names and directory locations where appropriate. The core concepts remain the same.
 {% endhint %}
 
 ### :dagger: Why do I need a dynamic DNS service?
 
-- Most internet connections are through a dynamic IP address and can change weekly or even daily.
-- Frequent IP changes can make it difficult to host services such as a validator.
-- As a workaround, you can use a DDNS (Dynamic DNS) service.
-- Using a subdomain (i.e. mySubDomain.duckdns.org), you relate this to your latest dynamic IP address.
-- Periodically, say every 5 minutes, your computer updates a subdomain with your latest dynamic IP address.
-- Other validators or users would find you via the subdomain, instead of IP address.
+* Most internet connections are through a dynamic IP address and can change weekly or even daily.
+* Frequent IP changes can make it difficult to host services such as a validator.
+* As a workaround, you can use a DDNS (Dynamic DNS) service.
+* Using a subdomain (i.e. mySubDomain.duckdns.org), you relate this to your latest dynamic IP address.
+* Periodically, say every 5 minutes, your computer updates a subdomain with your latest dynamic IP address.
+* Other validators or users would find you via the subdomain, instead of IP address.
 
 {% hint style="info" %}
 There are many [alternative DDNS services](https://hackerspad.net/software/duck-dns/#alternatives) but seldom do they accept crypto donations like [Duck DNS](https://www.duckdns.org).
@@ -27,7 +27,7 @@ There are many [alternative DDNS services](https://hackerspad.net/software/duck-
 
 ### :robot: Minimum System Requirements
 
-- Linux cron
+* Linux cron
 
 ### :construction: How to Configure the DDNS
 
@@ -41,7 +41,6 @@ For the purpose of this tutorial, we will be using [DuckDNS.org](https://www.duc
 
 {% tabs %}
 {% tab title="Prysm" %}
-
 ```bash
 # Edit your beacon-chain unit file
 sudo nano /etc/systemd/system/beacon-chain.service
@@ -58,7 +57,6 @@ sudo systemctl daemon-reload
 # Restart your beacon-chain
 sudo systemctl restart beacon-chain
 ```
-
 {% endtab %}
 {% endtabs %}
 

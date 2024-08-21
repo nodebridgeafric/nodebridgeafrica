@@ -20,6 +20,6 @@ For the advanced user who wants customization and is comfortable with CLI comman
 
 The following parts make up this guide:
 
-- [**Part I - Installation**](../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-i-installation-1/) describes in 5 steps how to setup your staking node.
-- [**Part II - Maintenance**](../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-ii-maintenance-1/) explains ongoing tasks you'll require to keep your staking node in great shape and up-to-date.
-- [**Part III - Tips**](../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/) contains additional procedures to simplify managing your staking node.
+* [**Part I - Installation**](../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-i-installation-1/) describes in 5 steps how to setup your staking node.
+* [**Part II - Maintenance**](../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-ii-maintenance-1/) explains ongoing tasks you'll require to keep your staking node in great shape and up-to-date.
+* [**Part III - Tips**](../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/) contains additional procedures to simplify managing your staking node.

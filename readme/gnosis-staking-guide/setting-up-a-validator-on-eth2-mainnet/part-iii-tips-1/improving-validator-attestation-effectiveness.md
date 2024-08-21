@@ -69,4 +69,4 @@ sudo systemctl restart consensus
 
 #### :gear: Strategy: Perform updates or reboots during the longest attestation gap
 
-Learn how to at [this quick guide.](../../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-ii-maintenance-1/finding-the-longest-attestation-slot-gap.md)
+Learn how to at [this quick guide.](../../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-ii-maintenance-1/finding-the-longest-attestation-slot-gap.md)

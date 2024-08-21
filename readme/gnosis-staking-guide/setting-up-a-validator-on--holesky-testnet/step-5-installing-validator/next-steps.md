@@ -39,7 +39,7 @@ Syncing the consensus client is instantaneous with checkpoint sync but the execu
 
 ### :checkered\_flag: Optional Steps
 
-* :robot:**MEV-boost**: Setup [MEV-boost](../../../ethereum-staking-guide/mev-boost/) for extra staking rewards!
+* :robot:**MEV-boost**: Setup [MEV-boost](../../../ethereum-staking-guide/ethereum-staking-guide/mev-boost/) for extra staking rewards!
 * :bar\_chart:**Monitoring**: Setup Monitoring with Grafana and Prometheus
 * :chains:**RPC**: Setup using your own Node as a RPC endpoint
 * :mobile\_phone:**Notifications**: Setup Mobile App Notifications and Monitoring by beaconcha.in

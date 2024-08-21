@@ -16,24 +16,24 @@ To update, navigate to
 
 `EthPillar > Consensus Client > Update to latest release`
 
-<figure><img src="./../../../ethereum-staking-guide/.gitbook/assets/cl-update.png" alt=""><figcaption><p>EthPillar Update</p></figcaption></figure>
+<figure><img src="../../../ethereum-staking-guide/.gitbook/assets/cl-update.png" alt=""><figcaption><p>EthPillar Update</p></figcaption></figure>
 
-## :fast_forward: Manual Updates
+## :fast\_forward: Manual Updates
 
 When a new release is cut, you will want to update to the latest stable release. The following shows you how to update your beacon chain and validator.
 
 {% hint style="warning" %}
 Always review the **release notes** before updating. There may be changes requiring your attention.
 
-- [Lighthouse](https://github.com/sigp/lighthouse/releases)
-- [Lodestar](https://github.com/ChainSafe/lodestar/releases)
-- [Teku](https://github.com/ConsenSys/teku/releases)
-- [Nimbus](https://github.com/status-im/nimbus-eth2/releases)
-- [Prysm](https://github.com/prysmaticlabs/prysm/releases)
-  {% endhint %}
+* [Lighthouse](https://github.com/sigp/lighthouse/releases)
+* [Lodestar](https://github.com/ChainSafe/lodestar/releases)
+* [Teku](https://github.com/ConsenSys/teku/releases)
+* [Nimbus](https://github.com/status-im/nimbus-eth2/releases)
+* [Prysm](https://github.com/prysmaticlabs/prysm/releases)
+{% endhint %}
 
 {% hint style="success" %}
-:fire: **Pro tip**: Plan your update to overlap with the longest attestation gap. [Learn how here.](../../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-ii-maintenance-1/finding-the-longest-attestation-slot-gap.md)
+:fire: **Pro tip**: Plan your update to overlap with the longest attestation gap. [Learn how here.](../../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-ii-maintenance-1/finding-the-longest-attestation-slot-gap.md)
 {% endhint %}
 
 ## Step 1: Select your consensus client.
@@ -95,7 +95,7 @@ make
 
 :bulb:**Tip**: Improve some Lighthouse benchmarks by around 20% at the expense of increased compile time? Use `maxperf` profile.
 
-- To compile with maxperf, replace the above `make` command with
+* To compile with maxperf, replace the above `make` command with
 
 ```bash
 PROFILE=maxperf make
@@ -468,7 +468,6 @@ sudo systemctl start consensus validator
 
 {% tabs %}
 {% tab title="Lighthouse | Prysm | Lodestar | Nimbus | Teku" %}
-
 ```bash
 # Verify services status
 sudo systemctl status consensus validator
@@ -482,11 +481,9 @@ sudo journalctl -fu consensus
 ```bash
 sudo journalctl -fu validator
 ```
-
 {% endtab %}
 
 {% tab title=" Combined BN+VC for Nimbus | Teku" %}
-
 ```bash
 # Check services status
 sudo systemctl status consensus
@@ -496,7 +493,6 @@ sudo systemctl status consensus
 # Check logs
 sudo journalctl -fu consensus
 ```
-
 {% endtab %}
 {% endtabs %}
 

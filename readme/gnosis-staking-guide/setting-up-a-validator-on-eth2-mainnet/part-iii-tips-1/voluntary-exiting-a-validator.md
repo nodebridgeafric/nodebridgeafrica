@@ -4,18 +4,18 @@ description: Remove a validator from staking duties.
 
 # Voluntary Exiting a Validator
 
-## :track_next: Voluntary Exit Timeline Visualized
+## :track\_next: Voluntary Exit Timeline Visualized
 
-<figure><img src="./../../../ethereum-staking-guide/.gitbook/assets/exit-timeline.png" alt=""><figcaption><p>Voluntary exit procedures involve multiple steps and potential delays. For a complete overview of these steps and delays, refer to Ladislaus's informative graphic.</p></figcaption></figure>
+<figure><img src="../../../ethereum-staking-guide/.gitbook/assets/exit-timeline.png" alt=""><figcaption><p>Voluntary exit procedures involve multiple steps and potential delays. For a complete overview of these steps and delays, refer to Ladislaus's informative graphic.</p></figcaption></figure>
 
 ## :clap: Purpose
 
 Use the Voluntary Exit command to signal your intentions to permanently stop your duties as a validator.
 
-- **Timeline**: Voluntary exiting is possible after your validator is actively validating. If there is no exit queue, the exit process requires at least 4 epochs, or 26 minutes. After your validator is "exited", and proceeds through the "withdrawal delay" phase and "withdrawal processing" phase, your ETH is automatically swept back to your withdrawal address.
-- **Consequences**: Once a validator is in exited state, it's non-reversible. You would need to re-key, or generate new validator keys to start staking again.
-- **ETH Deposit**: In order to re-claim your 32ETH validator deposit and perform a full withdrawal, you must have previously set a Withdrawal Address. If not yet set, see here: [0x01 withdrawal address.](../../../ethereum-staking-guide/update-withdrawal-keys-for-ethereum-validator-bls-to-execution-change-or-0x00-to-0x01-with-ethdo.md)
-- **Responsibilities**: After your validator leaves the exit queue and is truly exited, it is safe to turn off your execution client, consensus client and validator.
+* **Timeline**: Voluntary exiting is possible after your validator is actively validating. If there is no exit queue, the exit process requires at least 4 epochs, or 26 minutes. After your validator is "exited", and proceeds through the "withdrawal delay" phase and "withdrawal processing" phase, your ETH is automatically swept back to your withdrawal address.
+* **Consequences**: Once a validator is in exited state, it's non-reversible. You would need to re-key, or generate new validator keys to start staking again.
+* **ETH Deposit**: In order to re-claim your 32ETH validator deposit and perform a full withdrawal, you must have previously set a Withdrawal Address. If not yet set, see here: [0x01 withdrawal address.](../../../ethereum-staking-guide/ethereum-staking-guide/update-withdrawal-keys-for-ethereum-validator-bls-to-execution-change-or-0x00-to-0x01-with-ethdo.md)
+* **Responsibilities**: After your validator leaves the exit queue and is truly exited, it is safe to turn off your execution client, consensus client and validator.
 
 Reference: [https://liquidcollective.io/eth-activations-and-exits/](https://liquidcollective.io/eth-activations-and-exits/)
 
@@ -23,7 +23,6 @@ Reference: [https://liquidcollective.io/eth-activations-and-exits/](https://liqu
 
 {% tabs %}
 {% tab title="Lighthouse" %}
-
 ```bash
 sudo lighthouse account validator exit \
 --keystore /var/lib/lighthouse/validators/<0x validator>/<keystore.json file> \
@@ -39,11 +38,9 @@ sudo lighthouse account validator exit \
 --beacon-node http://localhost:5052 \
 --network mainnet
 ```
-
 {% endtab %}
 
 {% tab title="Teku" %}
-
 ```bash
 sudo /usr/local/bin/teku/bin/teku voluntary-exit \
 --beacon-node-api-endpoint=http://127.0.0.1:5052 \
@@ -57,11 +54,9 @@ sudo /usr/local/bin/teku/bin/teku voluntary-exit \
 --beacon-node-api-endpoint=http://127.0.0.1:5052 \
 --validator-keys=/var/lib/teku/validator_keys/keys/validator_1abc3.json:/etc/teku/validators-password.txt
 ```
-
 {% endtab %}
 
 {% tab title="Nimbus" %}
-
 ```bash
 sudo /usr/local/bin/nimbus_beacon_node deposits exit \
 --validator=<VALIDATOR_PUBLIC_KEY> \
@@ -75,16 +70,13 @@ sudo /usr/local/bin/nimbus_beacon_node deposits exit \
 --validator=0x838f0247538237064e90fd8fa183400af82dd2103df885 \
 --data-dir=/var/lib/nimbus
 ```
-
 {% endtab %}
 
 {% tab title="Prysm" %}
-
 ```bash
 sudo /usr/local/bin/validator accounts voluntary-exit \
 --wallet-dir=/var/lib/prysm/validators
 ```
-
 {% endtab %}
 
 {% tab title="Lodestar" %}
@@ -108,7 +100,6 @@ Restart validator
 ```bash
 sudo systemctl restart validator
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -118,8 +109,8 @@ sudo systemctl restart validator
 
 ### Official reference documentation from each team can be found below:
 
-- [Exiting a Teku validator](https://docs.teku.consensys.net/how-to/voluntarily-exit)
-- [Exiting a Prysm validator](https://docs.prylabs.network/docs/wallet/exiting-a-validator)
-- [Exiting a Nimbus validator](https://nimbus.guide/voluntary-exit.html)
-- [Exiting a Lodestar validator](https://chainsafe.github.io/lodestar/run/validator-management/validator-cli#validator-voluntary-exit)
-- [Exiting a Lighthouse validator](https://lighthouse-book.sigmaprime.io/voluntary-exit.html)
+* [Exiting a Teku validator](https://docs.teku.consensys.net/how-to/voluntarily-exit)
+* [Exiting a Prysm validator](https://docs.prylabs.network/docs/wallet/exiting-a-validator)
+* [Exiting a Nimbus validator](https://nimbus.guide/voluntary-exit.html)
+* [Exiting a Lodestar validator](https://chainsafe.github.io/lodestar/run/validator-management/validator-cli#validator-voluntary-exit)
+* [Exiting a Lighthouse validator](https://lighthouse-book.sigmaprime.io/voluntary-exit.html)

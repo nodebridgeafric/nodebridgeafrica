@@ -153,4 +153,4 @@ Enter your validator's pubkey to view its status.
 
 #### :fire\_extinguisher: 7 Update Monitoring with Prometheus and Grafana
 
-[Review section 6](../../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-i-installation-1/monitoring-your-validator-with-grafana-and-prometheus.md) and change your `prometheus.yml`. Ensure prometheus is connected to your new consensus client's metrics port. You will also want to import your new consensus client's dashboard.
+[Review section 6](../../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-i-installation-1/monitoring-your-validator-with-grafana-and-prometheus.md) and change your `prometheus.yml`. Ensure prometheus is connected to your new consensus client's metrics port. You will also want to import your new consensus client's dashboard.

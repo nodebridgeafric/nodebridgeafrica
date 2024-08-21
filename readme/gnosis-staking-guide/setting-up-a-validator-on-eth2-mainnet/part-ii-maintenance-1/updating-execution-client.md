@@ -10,23 +10,23 @@ To update, navigate to
 
 `EthPillar > Execution Client > Update to latest release`
 
-<figure><img src="./../../../ethereum-staking-guide/.gitbook/assets/el-update.png" alt=""><figcaption><p>EthPillar Update</p></figcaption></figure>
+<figure><img src="../../../ethereum-staking-guide/.gitbook/assets/el-update.png" alt=""><figcaption><p>EthPillar Update</p></figcaption></figure>
 
-## :fast_forward: Manual Updates
+## :fast\_forward: Manual Updates
 
 When a new release is cut, you will want to update to the latest stable release. The following shows you how to update your execution client.
 
 {% hint style="warning" %}
 Always review the **release notes** before updating. There may be changes requiring your attention.
 
-- [Nethermind](https://github.com/NethermindEth/nethermind/releases)
-- [Besu](https://github.com/hyperledger/besu/releases)
-- [Geth](https://github.com/ethereum/go-ethereum/releases)
-- [Erigon](https://github.com/ledgerwatch/erigon/releases)
-  {% endhint %}
+* [Nethermind](https://github.com/NethermindEth/nethermind/releases)
+* [Besu](https://github.com/hyperledger/besu/releases)
+* [Geth](https://github.com/ethereum/go-ethereum/releases)
+* [Erigon](https://github.com/ledgerwatch/erigon/releases)
+{% endhint %}
 
 {% hint style="success" %}
-:fire: **Pro tip**: Plan your update to overlap with the longest attestation gap. [Learn how here.](../../../ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-ii-maintenance-1/finding-the-longest-attestation-slot-gap.md)
+:fire: **Pro tip**: Plan your update to overlap with the longest attestation gap. [Learn how here.](../../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-ii-maintenance-1/finding-the-longest-attestation-slot-gap.md)
 {% endhint %}
 
 ## Step 1: Select your execution client.
