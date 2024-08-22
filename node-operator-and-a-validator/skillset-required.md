@@ -2,7 +2,7 @@
 
 The skillsets required
 
-### Understanding how the blockchain works ar a basic technical level
+### Understanding how the blockchain works at a basic technical level
 
 
 

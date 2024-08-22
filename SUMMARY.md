@@ -6,6 +6,7 @@
 * [🚀 Support Nodebridge Africa](support-nodebridge-africa.md)
 * [🚫 Disclaimer](disclaimer.md)
 * [Understanding Blockchain](understanding-blockchain.md)
+* [Consensus Mechanism](consensus-mechanism.md)
 * [Understanding Staking and Node](understanding-staking-and-node.md)
 * [Node Operator and A Validator](node-operator-and-a-validator/README.md)
   * [Node Operator and Validator](node-operator-and-a-validator/node-operator-and-validator.md)

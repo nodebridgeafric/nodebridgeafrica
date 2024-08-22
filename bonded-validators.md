@@ -15,13 +15,7 @@ Hence, bonded validators enable node operators to lower their capital requiremen
 
 ### Examples of bonded validators <a href="#examples-of-bonded-validators" id="examples-of-bonded-validators"></a>
 
-| Option         | ETH bond | ETH matched | Non-ETH bond         | Fee %                | Note                                              |
-| -------------- | -------- | ----------- | -------------------- | -------------------- | ------------------------------------------------- |
-| Rocketpool     | 8        | 24          | 2.4 ETH worth of RPL | 14% out of 14% total | 8% APR on RPL staked                              |
-| Stader         | 4        | 28          | 0.4 ETH worth of SD  | 6% out of 10% total  | 7.97% APR on SD staked                            |
-| Lido           | 2        | 32          | None                 | 8% out of 10% total  | Bond provided in stETH which also accrues rewards |
-| Ether.fi (WIP) |          |             |                      |                      |                                                   |
-| Puffer (WIP)   |          |             |                      |                      |                                                   |
+<table><thead><tr><th width="168">Option</th><th>ETH bond</th><th>ETH matched</th><th width="153">Non-ETH bond</th><th width="98">Fee %</th><th>Note</th></tr></thead><tbody><tr><td>Rocketpool</td><td>8</td><td>24</td><td>2.4 ETH worth of RPL</td><td>14% out of 14% total</td><td>8% APR on RPL staked</td></tr><tr><td>Stader</td><td>4</td><td>28</td><td>0.4 ETH worth of SD</td><td>6% out of 10% total</td><td>7.97% APR on SD staked</td></tr><tr><td>Lido</td><td>2</td><td>32</td><td>None</td><td>8% out of 10% total</td><td>Bond provided in stETH which also accrues rewards</td></tr><tr><td>Ether.fi (WIP)</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Puffer (WIP)</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
 
 ### How do I run bonded validators as a solo staker? <a href="#how-do-i-run-bonded-validators-as-a-solo-staker" id="how-do-i-run-bonded-validators-as-a-solo-staker"></a>
 

@@ -14,11 +14,9 @@ The breakdown of these fees on average are as follows:
 
 **Average total: \~3.42% APR**
 
-<figure><img src=".gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (17).png" alt=""><figcaption><p>Last 30 days data from Rated.Network. 2nd June 2024.</p></figcaption></figure>
 
 
-
-Last 30 days data from Rated.Network. 2nd June 2024.
 
 **Block attestation rewards**
 
