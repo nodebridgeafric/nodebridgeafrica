@@ -89,6 +89,8 @@ Nice work. Now you now the best gap to avoid missing any validator duties.
 
 ## :robot: Start staking by building a validator <a href="#start-staking-by-building-a-validator" id="start-staking-by-building-a-validator"></a>
 
+### Visit here for our Mainnet guide
+
 {% hint style="success" %}
 Congrats on completing the guide. ✨
 {% endhint %}

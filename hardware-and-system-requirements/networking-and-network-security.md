@@ -48,7 +48,7 @@ It is entirely possible and also sufficiently safe to connect your validator nod
 {% tab title="Dedicated Router" %}
 Adding a dedicated router in between your validator node and existing home router offers a greater level of segregation and adds another security layer. Useful if you plan to host guests at home frequently.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -88,6 +88,6 @@ Check out the Port Forwarding section under the Advanced Networking Page below a
 {% endtab %}
 
 {% tab title="Dedicated Node Router " %}
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}

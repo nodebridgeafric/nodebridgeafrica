@@ -1,19 +1,5 @@
 # Overview - Manual Installation
 
-## :new: What You Should Know!
-
-{% hint style="success" %}
-As of August 25 2024, this **Version 1.0 Guide** was compiled by **🦉NodeBridge Africa**🦉 for **MAINNET Ethereum** :grin:
-{% endhint %}
-
-{% hint style="info" %}
-:sparkles: **It is recommended to always test and practice on testnet before mainnet. See** [Holesky testnet ](../../../../nodes/ethereum-node/testnet-holesky-validator/)guide.
-{% endhint %}
-
-{% hint style="warning" %}
-:eyes: Started staking pre-Merge? Use the **Version 1 MAINNET Guide.** [Available here.](../../../../nodes/ethereum-node/archived-guides/guide-or-how-to-setup-a-validator-on-eth2-mainnet/)
-{% endhint %}
-
 ## :wrench: About This Guide
 
 For the advanced user who wants customization and is comfortable with CLI commands, this guide will walk you through the details of setting up a validator.

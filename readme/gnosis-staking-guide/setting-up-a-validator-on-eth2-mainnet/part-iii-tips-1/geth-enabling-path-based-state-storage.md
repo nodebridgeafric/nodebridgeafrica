@@ -12,21 +12,20 @@ No more junk accumulating on disk and no more guerilla (offline) pruning!
 
 ### :tada: Enjoy performance improvements
 
-<figure><img src="./../../../ethereum-staking-guide/.gitbook/assets/geth-v1.13.0-sync-bench.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../ethereum-staking-guide/.gitbook/assets/geth-v1.13.0-sync-bench.png" alt=""><figcaption></figcaption></figure>
 
 ### :robot: How to enable PBSS for existing installations
 
 {% hint style="info" %}
 Before continuing please understand the following:
 
-- Synching Geth can take hours during which time block proposals can be missed
-- Consider using a backup EL/CL if you have many validators
-- Enabling PBSS requires a full Geth resync
-  {% endhint %}
+* Synching Geth can take hours during which time block proposals can be missed
+* Consider using a backup EL/CL if you have many validators
+* Enabling PBSS requires a full Geth resync
+{% endhint %}
 
 {% tabs %}
 {% tab title="V2 Staking Setup (Current)" %}
-
 ```bash
 # Stop geth
 sudo systemctl stop execution
@@ -45,11 +44,9 @@ sudo -u execution /usr/local/bin/geth --datadir /var/lib/geth removedb
 # Start geth
 sudo systemctl start execution
 ```
-
 {% endtab %}
 
 {% tab title="V1 Staking Setup" %}
-
 ```bash
 # Stop geth
 sudo systemctl stop eth1
@@ -68,7 +65,6 @@ sudo /usr/bin/geth --datadir ~/.ethereum removedb
 # Start geth
 sudo systemctl start eth1
 ```
-
 {% endtab %}
 {% endtabs %}
 

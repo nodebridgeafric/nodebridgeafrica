@@ -27,26 +27,30 @@ Your Ethereum staking node may be
 * **Local:** on a laptop / PC / NUC that you can physically connect keyboard/mouse/monitor.
 * **Remote:** in the cloud on a VPS
 
-If your staking node is **remote**, then you will want to setup SSH, secure shell.
+### OS Preparation
+
+**Remote Node**: If your staking node is **remote**, then you will want to setup SSH, secure shell.&#x20;
 
 If using a VPS or **remote** node, install and start the SSH client for your operating system:
 
-**Windows**: [PuTTY](https://www.puttygen.com/download-putty)
+{% hint style="info" %}
+Here's a [guide from Makeuseof](https://www.makeuseof.com/tag/beginners-guide-setting-ssh-linux-testing-setup/) to connect by SSH to your **remote node.**
+{% endhint %}
 
-**MacOS and Linux**: from the Terminal, use the native command:
+**Windows**: You will need to install PuTTY. PuTTY, a popular terminal emulator, is an open-source, light-weight, and free SSH client. It offers support to a variety of network protocols like SSH, Telnet, Serial, SCP, SFTP, etc. PuTTY also comes with a command-line tool called “**psftp**” which can securely transfer files between computers over an SSH connection. [PuTTY](https://www.puttygen.com/download-putty)
+
+**MacOS and Linux**: Simply use the Terminal. From the Terminal, use the native command:
 
 ```
 ssh <YourUserName>@<YourServersIP>
 ```
-
-Here's a [guide from Makeuseof](https://www.makeuseof.com/tag/beginners-guide-setting-ssh-linux-testing-setup/) to connect by SSH to your **remote node.**
 
 ## :hammer\_pick: How to Run Commands
 
 * Commands are to be run in a terminal window or ssh terminal.
 * Commands preceded by `sudo` will prompt for your password at first, and periodically afterwards.
 
-## :woman\_technologist: Skills for operating an staking node
+## :woman\_technologist: Skills for Operating a Staking Node
 
 As a validator for Ethereum, you will typically have the following abilities:
 

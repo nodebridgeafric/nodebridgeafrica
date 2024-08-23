@@ -1,19 +1,5 @@
 # Updating Execution Client
 
-## :rocket: Automated Updates
-
-:pill:**Install** [**EthPillar**](../../../../../nodes/ethereum-node/ethpillar.md): a simple companion UI for node management!
-
-Update your software with a keystroke.
-
-To update, navigate to
-
-`EthPillar > Execution Client > Update to latest release`
-
-<figure><img src="../../../.gitbook/assets/el-update.png" alt=""><figcaption><p>EthPillar Update</p></figcaption></figure>
-
-## :fast\_forward: Manual Updates
-
 When a new release is cut, you will want to update to the latest stable release. The following shows you how to update your execution client.
 
 {% hint style="warning" %}

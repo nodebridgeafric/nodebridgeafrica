@@ -10,7 +10,7 @@
 
 An Ethereum node consists of the Execution Layer + Consensus Layer.
 
-An Ethereum Staking node is the previous plus a Validator client.
+An Ethereum Staking node is the Execution Layer + Consensus Layer + Validator client.
 
 <figure><img src="../../../.gitbook/assets/client-stack.png" alt=""><figcaption><p>Client Stack</p></figcaption></figure>
 

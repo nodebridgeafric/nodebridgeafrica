@@ -30,17 +30,7 @@ description: >-
 * **ETH balance:** at least 32 Goerli ETH
 * **Wallet**: Metamask installed
 
-If you need to install Ubuntu, refer to
-
-{% content-ref url="../../../nodes/overview-xtz/guide-how-to-setup-a-baker/install-ubuntu.md" %}
-[install-ubuntu.md](../../../nodes/overview-xtz/guide-how-to-setup-a-baker/install-ubuntu.md)
-{% endcontent-ref %}
-
-If you need to install Metamask, refer to
-
-{% content-ref url="../../../wallets/browser-wallets/metamask-ethereum.md" %}
-[metamask-ethereum.md](../../../wallets/browser-wallets/metamask-ethereum.md)
-{% endcontent-ref %}
+If you need to install Ubuntu,[ refer to this guide.](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview)
 
 ## 🤖 1. Download a ETH1 node, geth
 

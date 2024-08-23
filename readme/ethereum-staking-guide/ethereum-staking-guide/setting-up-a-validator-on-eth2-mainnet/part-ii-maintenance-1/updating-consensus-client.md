@@ -1,24 +1,6 @@
----
-description: >-
-  Scenario: In discord, you see an alert that your consensus client just
-  announced a new release. How best to update?
----
-
 # Updating Consensus Client
 
-## :rocket: Automated Updates
-
-:pill:**Install** [**EthPillar**](../../../../../nodes/ethereum-node/ethpillar.md): a simple companion UI for node management!
-
-Update your software with a keystroke.
-
-To update, navigate to
-
-`EthPillar > Consensus Client > Update to latest release`
-
-<figure><img src="../../../.gitbook/assets/cl-update.png" alt=""><figcaption><p>EthPillar Update</p></figcaption></figure>
-
-## :fast\_forward: Manual Updates
+## :fast\_forward: Updates
 
 When a new release is cut, you will want to update to the latest stable release. The following shows you how to update your beacon chain and validator.
 

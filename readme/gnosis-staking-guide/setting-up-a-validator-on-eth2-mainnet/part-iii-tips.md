@@ -9,6 +9,7 @@ Part III includes the following topics containing additional procedures to simpl
 * [Dealing with Storage Issues on the Execution Client](../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/dealing-with-storage-issues-on-the-execution-client.md)
 * [Disk Usage by Execution/Consensus Client](../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/disk-usage-by-execution-consensus-client.md)
 * [EIP2333 Key Generator by iancoleman.io](../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/eip2333-key-generator-by-iancoleman-io.md)
+* [Geth - Enabling path-based state storage](../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/geth-enabling-path-based-state-storage.md)
 * [Important Directory Locations](../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/important-directory-locations.md)
 * [Improving Validator Attestation Effectiveness](../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/improving-validator-attestation-effectiveness.md)
 * [Reducing Network Bandwidth Usage](../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/reducing-network-bandwidth-usage.md)

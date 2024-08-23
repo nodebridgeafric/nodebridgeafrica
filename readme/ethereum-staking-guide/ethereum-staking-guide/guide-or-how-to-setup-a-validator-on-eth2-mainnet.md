@@ -10,7 +10,7 @@ description: >-
 As of August 20 2024, this guide is updated for **mainnet.** 😁
 {% endhint %}
 
-#### ✨ For the testnet guide, [please click here](https://nodebridge-africa.gitbook.io/nodebridge-africa/readme/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet).
+#### ✨ For the testnet guide, [please click here](setting-up-a-validator-on--holesky-testnet/).
 
 ## 🏁 0. Prerequisites
 
@@ -2118,11 +2118,7 @@ Use [https://beaconcha.in/](https://beaconcha.in/) to create alerts and track yo
 Because beacon chain relies on accurate times to perform attestations and produce blocks, your computer's time must be accurate to real NTP or NTS time within 0.5 seconds.
 {% endhint %}
 
-Setup **Chrony** with the following guide.
-
-{% content-ref url="../../../nodes/overview-ada/guide-how-to-build-a-haskell-stakepool-node/how-to-setup-chrony.md" %}
-[how-to-setup-chrony.md](../../../nodes/overview-ada/guide-how-to-build-a-haskell-stakepool-node/how-to-setup-chrony.md)
-{% endcontent-ref %}
+Setup **Chrony** with [this guide](https://app.gitbook.com/o/EP2fvFr5rWGP7dYsEo2Y/s/G9WtRptWgpOtES8UPFKA/\~/changes/12/readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-i-installation-1/synchronizing-time-with-chrony).
 
 {% hint style="info" %}
 chrony is an implementation of the Network Time Protocol and helps to keep your computer's time synchronized with NTP.
@@ -2422,10 +2418,6 @@ Credits: [https://grafana.com/grafana/dashboards/13457](https://grafana.com/graf
 
 Credits: [https://github.com/GuillaumeMiralles/prysm-grafana-dashboard](https://github.com/GuillaumeMiralles/prysm-grafana-dashboard)
 {% endtab %}
-
-{% tab title="Lodestar" %}
-Work in progress.
-{% endtab %}
 {% endtabs %}
 
 #### Example of Grafana Dashboards for each ETH1 node.
@@ -2447,10 +2439,6 @@ Credits: [https://grafana.com/dashboards/10273](https://grafana.com/dashboards/1
 ![](../.gitbook/assets/nethermind-dash.png)
 
 Credits: [https://github.com/NethermindEth/metrics-infrastructure](https://github.com/NethermindEth/metrics-infrastructure)
-{% endtab %}
-
-{% tab title="OpenEthereum" %}
-Work in progress
 {% endtab %}
 {% endtabs %}
 
@@ -2743,12 +2731,6 @@ build/nimbus_beacon_node deposits exit --validator=<VALIDATOR_PUBLIC_KEY> --data
 $HOME/prysm/prysm.sh validator accounts voluntary-exit
 ```
 {% endtab %}
-
-{% tab title="Lodestar" %}
-```bash
-#TO BE DETERMINED
-```
-{% endtab %}
 {% endtabs %}
 
 ### 🗝 8.2 Verify your mnemonic phrase
@@ -2825,22 +2807,10 @@ lighthouse account validator slashing-protection export <lighthouse_interchange.
 ```
 {% endtab %}
 
-{% tab title="Nimbus" %}
-To be implemented
-{% endtab %}
-
 {% tab title="Teku" %}
 ```bash
 teku slashing-protection export --to=<FILE>
 ```
-{% endtab %}
-
-{% tab title="Prysm" %}
-To be implemented
-{% endtab %}
-
-{% tab title="Lodestar" %}
-To be implemented
 {% endtab %}
 {% endtabs %}
 
@@ -2867,22 +2837,10 @@ lighthouse account validator slashing-protection import <my_interchange.json>
 ```
 {% endtab %}
 
-{% tab title="Nimbus" %}
-To be implemented
-{% endtab %}
-
 {% tab title="Teku" %}
 ```bash
 teku slashing-protection import --from=<FILE>
 ```
-{% endtab %}
-
-{% tab title="Prysm" %}
-To be implemented
-{% endtab %}
-
-{% tab title="Lodestar" %}
-To be implemented
 {% endtab %}
 {% endtabs %}
 
@@ -3071,10 +3029,6 @@ In case you need to locate your validator keys, database directories or other im
 ~/.eth2/beaconchaindata
 ```
 {% endtab %}
-
-{% tab title="Lodestar" %}
-TBD
-{% endtab %}
 {% endtabs %}
 
 #### Eth1 node files and locations
@@ -3208,12 +3162,6 @@ nano /etc/systemd/system/beacon-chain.service
 # add the --http-web3provider parameter
 # example
 # --http-web3provider=http://192.168.10.20:8545
-```
-{% endtab %}
-
-{% tab title="Lodestar" %}
-```
-tbd.
 ```
 {% endtab %}
 {% endtabs %}

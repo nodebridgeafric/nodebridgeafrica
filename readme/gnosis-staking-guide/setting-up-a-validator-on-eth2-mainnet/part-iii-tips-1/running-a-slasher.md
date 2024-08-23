@@ -9,7 +9,7 @@ description: >-
 ## :fast\_forward: Quick steps guide
 
 {% hint style="info" %}
-The following steps align with our [mainnet guide](../../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/). You may need to adjust file names and directory locations where appropriate. The core concepts remain the same.
+The following steps align with our [mainnet guide](../../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/). You may need to adjust file names and directory locations where appropriate. The core concepts remain the same.
 {% endhint %}
 
 ### :dagger: What is a Slasher?
@@ -85,7 +85,7 @@ Nice work. You're running a slasher now. :dagger: :robot: :knife:
 {% endhint %}
 
 {% hint style="info" %}
-Be sure to familiarize yourself with the [reference material for detailed official slasher documentation.](../../../../nodes/ethereum-node/setting-up-a-validator-on-eth2-mainnet/part-iii-tips/run-a-slasher.md#reference-material)
+Be sure to familiarize yourself with the reference material for detailed official slasher documentation.
 {% endhint %}
 
 ## :robot: Start staking by building a validator <a href="#start-staking-by-building-a-validator" id="start-staking-by-building-a-validator"></a>

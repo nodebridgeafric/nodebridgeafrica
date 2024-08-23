@@ -9,6 +9,7 @@ Part III includes the following topics containing additional procedures to simpl
 * [Dealing with Storage Issues on the Execution Client](part-iii-tips-1/dealing-with-storage-issues-on-the-execution-client.md)
 * [Disk Usage by Execution/Consensus Client](part-iii-tips-1/disk-usage-by-execution-consensus-client.md)
 * [EIP2333 Key Generator by iancoleman.io](part-iii-tips-1/eip2333-key-generator-by-iancoleman-io.md)
+* [Geth - Enabling path-based state storage](part-iii-tips-1/geth-enabling-path-based-state-storage.md)
 * [Important Directory Locations](part-iii-tips-1/important-directory-locations.md)
 * [Improving Validator Attestation Effectiveness](part-iii-tips-1/improving-validator-attestation-effectiveness.md)
 * [Reducing Network Bandwidth Usage](part-iii-tips-1/reducing-network-bandwidth-usage.md)

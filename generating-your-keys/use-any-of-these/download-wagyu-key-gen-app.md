@@ -2,7 +2,7 @@
 
 Step 1: Download the Wagyu Key Gen app for your operating system[View Wagyu Key Gen audit by HashCloak](https://github.com/stake-house/wagyu-key-gen/files/7693548/Wagyu.Key.Gen.Audit.Report.pdf)Please make sure that you are downloading from the official StakeHouse GitHub account by verifying the url: [**https://github.com/stake-house/wagyu-key-gen/releases** ](https://github.com/stake-house/wagyu-key-gen/releases)
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 
 

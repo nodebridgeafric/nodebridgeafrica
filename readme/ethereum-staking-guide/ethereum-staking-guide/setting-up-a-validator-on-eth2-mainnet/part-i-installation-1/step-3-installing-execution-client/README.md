@@ -11,7 +11,9 @@ Only one execution client is required per node.
 * To strengthen Ethereum's resilience against potential attacks or consensus bugs, it's best practice to run a minority client in order to increase client diversity.
 * Find the latest distribution of execution clients here: [https://clientdiversity.org](https://clientdiversity.org/)
 
-<figure><img src="../../../../.gitbook/assets/cd-e.png" alt=""><figcaption><p>Sept 2023 Client Diversity</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/Screenshot from 2024-08-23 12-28-41.png" alt=""><figcaption><p>August 2024 Client Diversity</p></figcaption></figure>
+
+
 
 ## Overview of Execution Clients
 
