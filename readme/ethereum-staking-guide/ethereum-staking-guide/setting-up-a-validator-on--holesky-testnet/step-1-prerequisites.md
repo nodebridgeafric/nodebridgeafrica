@@ -2,7 +2,7 @@
 
 ## :rocket: How Staking on Ethereum Works
 
-1. Acquire some hardware (laptop, desktop, server) or rent a VPS (cloud server): You need to run a node to stake.
+1. Acquire some hardware (laptop, desktop, server) that meets this specification or rent a VPS (cloud server): You need to run a node to stake.
 2. Sync an execution layer client
 3. Sync a consensus layer client
 4. Generate your validator keys and import them into your validator client
@@ -10,7 +10,7 @@
 
 An Ethereum node consists of the Execution Layer + Consensus Layer.
 
-An Ethereum Staking node is the previous plus a Validator client.
+An Ethereum Staking node consist of a Execution Layer + a Consensus Layer + a Validator client.
 
 <figure><img src="../../.gitbook/assets/client-stack.png" alt=""><figcaption><p>Client Stack</p></figcaption></figure>
 

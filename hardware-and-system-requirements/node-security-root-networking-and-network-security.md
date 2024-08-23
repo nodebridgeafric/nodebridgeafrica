@@ -1,4 +1,27 @@
-# Networking & network security
+# Node Security: Root, Networking & Network Security
+
+Before running a validator node, ensure you have secure the root account, setup a firewall, forwarded the correct port to the correct machine(s) from your router for both the Execution layer client and Consensus layer client. There are designated ports for each client. See the table below:
+
+| Execution Client | Default Port  |
+| ---------------- | ------------- |
+| Reth             | 30303 TCP/UDP |
+| Erigon           | 30303 TCP/UDP |
+| Geth             | 30303 TCP/UDP |
+| Nethermind       | 30303 TCP/UDP |
+| Besu             | 30303 TCP/UDP |
+
+| Consensus Client | Default Port         |
+| ---------------- | -------------------- |
+| Nimbus           | 9000 TCP/UDP         |
+| Lighthouse       | 9000 TCP/UDP         |
+| Teku             | 9000 TCP/UDP         |
+| Prysm            | 13000 TCP, 12000 UDP |
+
+
+
+{% hint style="info" %}
+Learn more about port and ports in networking [here](https://www.cloudflare.com/learning/network-layer/what-is-a-computer-port/)
+{% endhint %}
 
 ### Network architecture <a href="#network-architecture" id="network-architecture"></a>
 
@@ -17,7 +40,7 @@ ISPs in some countries combine both modem and routers into a single device.
 {% tab title="Shared Router" %}
 It is entirely possible and also sufficiently safe to connect your validator node directly to your existing home router if you do not plan to have un-trusted guests over at your home often.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Secure your node router properly by setting strong passwords on the WIFI and device level. Do not expose these passwords or let anyone else connect to the WIFI network or log in to the device level of your node router.
 {% endtab %}
@@ -25,7 +48,7 @@ It is entirely possible and also sufficiently safe to connect your validator nod
 {% tab title="Dedicated Router" %}
 Adding a dedicated router in between your validator node and existing home router offers a greater level of segregation and adds another security layer. Useful if you plan to host guests at home frequently.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -59,7 +82,7 @@ Check out the Port Forwarding section under the Advanced Networking Page below a
 
 {% tabs %}
 {% tab title="Shared Router" %}
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 {% endtab %}
