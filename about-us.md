@@ -6,11 +6,11 @@ icon: address-card
 
 ### Our Mission
 
-At Nodebridge Africa, we are dedicated to making blockchain technology accessible to everyone and empowering African communities to participate in its growth. Our mission is to simplify the complexities of node operation and blockchain education, bridging the gap between intricate technology and everyday users.
+At NodeBridge Africa, we are dedicated to making blockchain technology accessible to everyone and empowering African communities to participate in its growth. Our mission is to simplify the complexities of node operation and blockchain education, bridging the gap between intricate technology and everyday users.
 
 ### Who We Are
 
-Nodebridge Africa is a passionate team of blockchain enthusiasts, educators, and technology experts committed to fostering a vibrant and inclusive blockchain ecosystem across Africa. We believe in the transformative potential of blockchain technology and strive to make it accessible to individuals and communities throughout the continent.
+NodeBridge Africa is a passionate team of blockchain enthusiasts, educators, and technology experts committed to fostering a vibrant and inclusive blockchain ecosystem across Africa. We believe in the transformative potential of blockchain technology and strive to make it accessible to individuals and communities throughout the continent.
 
 ### What We Do
 
@@ -34,6 +34,6 @@ Community is crucial to the success of any technology. We are dedicated to foste
 
 ### Join Us on Our Journey
 
-We invite you to explore our resources, engage with our community, and embark on your blockchain journey with us. Whether you’re new to blockchain or an experienced professional, Nodebridge Africa is here to support you every step of the way.
+We invite you to explore our resources, engage with our community, and embark on your blockchain journey with us. Whether you’re new to blockchain or an experienced professional, NodeBridge Africa is here to support you every step of the way.
 
 If you have any questions or want to learn more about our initiatives, please feel free to contact us. Together, we can build a brighter future for blockchain technology in Africa.

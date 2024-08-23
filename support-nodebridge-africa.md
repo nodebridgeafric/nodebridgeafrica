@@ -2,11 +2,11 @@
 
 ### Empowering Blockchain Innovation in Africa
 
-At Nodebridge Africa, our mission is to make blockchain technology accessible and empower African communities to participate in its growth. We are committed to simplifying node operation, providing educational resources, and fostering a supportive community. Your support plays a crucial role in helping us achieve these goals and drive meaningful change.
+At NodeBridge Africa, our mission is to make blockchain technology accessible and empower African communities to participate in its growth. We are committed to simplifying node operation, providing educational resources, and fostering a supportive community. Your support plays a crucial role in helping us achieve these goals and drive meaningful change.
 
 ### Why Your Support Matters
 
-Blockchain technology has the potential to transform economies, enhance transparency, and create new opportunities. By supporting Nodebridge Africa, you contribute to:
+Blockchain technology has the potential to transform economies, enhance transparency, and create new opportunities. By supporting NodeBridge Africa, you contribute to:
 
 * **Educational Initiatives**: Expanding our educational resources and providing training to help individuals from all backgrounds understand and leverage blockchain technology.
 * **Community Building**: Organizing events, workshops, and meetups that foster collaboration, knowledge sharing, and networking within the blockchain community.
@@ -21,25 +21,25 @@ Your donation can make a significant impact. Here are some ways you can support 
 
 Make a one-time or recurring financial contribution to support our ongoing projects and initiatives. Your funds will directly support our educational programs, community events, and development efforts.
 
-* **Donate Now**: \[Link to donation form or payment gateway, to be included later]
+* **Donate Now**: Send us an email here: nodebridgeafric@gmail.com&#x20;
 
 #### **2. Sponsor an Event**
 
 Help us organize workshops, seminars, or community meetups. Sponsorship opportunities are available for individuals and organizations interested in supporting specific events or initiatives.
 
-* **Become a Sponsor**: \[Link to sponsorship information, to be included later]
+* **Become a Sponsor**: Send us an email here: nodebridgeafric@gmail.com&#x20;
 
 #### **3. Volunteer Your Time**
 
-Contribute your skills and expertise by volunteering with Nodebridge Africa. Whether you’re a blockchain expert, educator, or event organizer, your involvement can make a difference.
+Contribute your skills and expertise by volunteering with NodeBridge Africa. Whether you’re a blockchain expert, educator, or event organizer, your involvement can make a difference.
 
-* **Join Our Volunteer Team**: \[Link to volunteer sign-up, to be included later]
+* **Join Our Volunteer Team**: Send us an email here: nodebridgeafric@gmail.com&#x20;
 
 #### **4. Spread the Word**
 
-Share our mission and initiatives with your network. The more people know about Nodebridge Africa, the more we can grow our community and extend our reach.
+Share our mission and initiatives with your network. The more people know about NodeBridge Africa, the more we can grow our community and extend our reach.
 
-* **Share on Social Media**: \[Links to social media platforms, to be included later]
+* **Share on Social Media**: Send us an email here: nodebridgeafric@gmail.com&#x20;
 
 ### How Donations Are Used
 
@@ -51,4 +51,4 @@ Your generosity is vital to our success and the advancement of blockchain techno
 
 If you have any questions about donations or would like to discuss how you can get involved, please contact us.
 
-Thank you for being a part of the Nodebridge Africa community. Your support helps us continue to make a difference!
+Thank you for being a part of the NodeBridge Africa community. Your support helps us continue to make a difference!

@@ -1,6 +1,6 @@
 # 🔔 Community Code of Conduct
 
-Welcome to Nodebridge Africa! As a community dedicated to fostering a supportive and inclusive environment for blockchain enthusiasts, it is essential that we all adhere to a set of guidelines to ensure a positive experience for everyone. This Community Code of Conduct outlines the behavior and standards expected of all members.
+Welcome to NodeBridge Africa! As a community dedicated to fostering a supportive and inclusive environment for blockchain enthusiasts, it is essential that we all adhere to a set of guidelines to ensure a positive experience for everyone. This Community Code of Conduct outlines the behavior and standards expected of all members.
 
 ### Our Values
 
@@ -35,4 +35,4 @@ Violation of the Community Code of Conduct may result in actions such as warning
 
 We are continuously working to improve our community and welcome feedback on how we can enhance our Code of Conduct and overall environment. If you have suggestions or concerns, please feel free to contact us.
 
-Thank you for being a part of Nodebridge Africa. Together, we can build a supportive and inclusive community that fosters growth, learning, and collaboration in the world of blockchain technology.
+Thank you for being a part of NodeBridge Africa. Together, we can build a supportive and inclusive community that fosters growth, learning, and collaboration in the world of blockchain technology.

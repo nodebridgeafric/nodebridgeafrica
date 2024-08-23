@@ -1,4 +1,8 @@
-# All you need to know before staking
+---
+hidden: true
+---
+
+# Copy of All you need to know before staking
 
 1. Decide and Choose the OS of the computer you'll be using. This will be the computer you use to generate your keys. It doesn't need to be the OS you want to use for your node.Acquire some hardware (laptop, desktop, server) that meets this specification or rent a VPS (cloud server). As of May 2022, you'll need \~1TB for the Mainnet execution chain data alone (growing at >1GB/day). CPU and RAM resource usage can vary significantly between clients. Research the different clients if you're working with resource constraints.
 2. Internet: Ideally your internet connection should be reliable and as close to 24/7 as possible without interruption. Ensure your bandwidth can't be throttled and isn't capped so your node stays in sync and will be ready to validate when called. You need enough upload bandwidth too. As of May 2022 this is \~1.2-1.3 GB download and \~0.9-1 GB upload per hour, and is likely to increase. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to a more serious penalty known as slashing.
