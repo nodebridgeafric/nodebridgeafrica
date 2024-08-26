@@ -543,6 +543,10 @@ Expected sample output:
 
 1. Follow the walk-through at the Launchpad: [https://holesky.launchpad.ethstaker.cc](https://holesky.launchpad.ethstaker.cc)
 
+{% hint style="info" %}
+Follow[ this guide](https://www.datawallet.com/crypto/add-holesky-to-metamask) to add the Ethereum Holesky testnet to MetaMask
+{% endhint %}
+
 {% hint style="danger" %}
 **Do not send real mainnet ETH during this process!** :octagonal\_sign: Use only Holesky ETH.
 {% endhint %}
