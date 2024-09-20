@@ -169,6 +169,6 @@ Withdrawals can enhance capital efficiency but cannot include liquidation collat
 
 To reactivate a liquidated cluster, users must provide the required liquidation collateral and ideally add more to ensure an operational runway.
 
-#### Summary
+#### Conclusion
 
 Clusters are essential for the efficient management of distributed validators. Monitoring balances, maintaining sufficient collateral, and managing deposits and withdrawals are critical for avoiding liquidation and ensuring continuous validator functionality. By leveraging SSV.Network, participants can enhance the security and efficiency of their Ethereum staking operations while contributing positively to the Ethereum ecosystem.
