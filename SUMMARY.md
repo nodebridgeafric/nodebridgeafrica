@@ -228,3 +228,4 @@
         * [Using All Available LVM Disk Space](readme/gnosis-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/using-all-available-lvm-disk-space.md)
         * [Using Node as RPC URL endpoint](readme/gnosis-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/using-staking-node-as-rpc-url-endpoint.md)
     * [Security Best Practices for your ETH staking validator node](readme/gnosis-staking-guide/guide-or-security-best-practices-for-a-eth2-validator-beaconchain-node.md)
+* [Introduction to SSV.Network](introduction-to-ssv.network.md)
