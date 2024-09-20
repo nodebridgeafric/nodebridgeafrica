@@ -6,7 +6,7 @@ SSV.Network is a decentralized, open-source platform designed for Ethereum staki
 
 #### Key Benefits
 
-* **Active-Active Redundancy**: Ensures that validators can continue to operate even if some nodes experience downtime, improving reliability.
+* **Active-Active Redundancy and fault tolerance**: Ensures that validators can continue to operate even if some nodes experience downtime, improving reliability.
 * **Enhanced Security**: By splitting validator keys, the risk of a single point of failure is significantly reduced.
 * **Support for Diverse Users**: Accommodates staking pools, services, and solo stakers, enhancing overall participation in the Ethereum network.
 
@@ -22,7 +22,7 @@ A cryptographic technique that allows the reconstruction of a validator key usin
 
 #### 3. BLS Signatures
 
-Boneh-Lynn-Shacham (BLS) signatures allow for the aggregation of multiple signatures into a single validator key signature. This enhances both security and flexibility in how duties are assigned among operators.
+Boneh-Lynn-Shacham (BLS) signatures allow for the aggregation of multiple signatures into a single validator key signature. By combining Shamir and BLS - the keys are 'broken down' to share and regrouped whenever a duty is assigned. This enhances both security and flexibility in how duties are assigned among operators.
 
 #### 4. Multi-Party Computation (MPC)
 
@@ -47,7 +47,7 @@ The native token of SSV.Network, $SSV, serves two primary purposes:
 * **Payments**: Stakers use $SSV to compensate operators for managing their validators.
 * **Governance**: Token holders participate in governance, making decisions and allocating treasury funds.
 
-#### Tokenomics
+### Tokenomics
 
 * **Facilitates Transactions**: The $SSV token acts as the medium of exchange between stakers and operators.
 * **Revenue Generation**: As more ETH is staked, both operators and the DAO treasury benefit from increased revenues, promoting network growth.
@@ -65,7 +65,7 @@ The SSV.Network DAO decentralizes ownership and governance of the protocol. Hold
 1. **Run an SSV Node**: Install the required software to run the SSV protocol on your hardware.
 2. **Register**: Complete registration through the network’s smart contracts or via the web interface.
 
-#### Fee Configuration
+### Fee Configuration
 
 * **Setting Fees**: Operators can determine their fees based on the number of validators they manage. Fees are presented as annual payments but are paid continuously as validators produce blocks.
 * **Fee Adjustment**: Operators can modify their fees anytime through a two-step process:
@@ -129,6 +129,8 @@ Clusters are vital for managing distributed validators. They facilitate coordina
 
 #### Example of Clusters:
 
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 * **Cluster #1**: Manages 3 validators with Operators 1, 2, 3, 4, 5, 6, 7.
 * **Cluster #2**: Manages 1 validator with Operators 1, 2, 3, 4.
 
@@ -141,22 +143,17 @@ Maintaining a healthy balance is crucial to ensure continuous operation. The clu
 
 #### Liquidation Threshold Calculation:
 
-
-
-
-
-Where:
-
-* ( V ): Number of validators in the cluster
-* ( O\_1...4 \text{ fee} ): Operator fees in $SSV per block
-* ( N \text{ fee} ): Network fee in $SSV per block
-* ( LTP ): Liquidation Threshold Period (in blocks)
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Operational Runway Calculation:
 
+The operational runway is any additional funds added to the cluster balance that prolongs the operation of its validators. This means that all extra funds added to the cluster balance on top of the required collateral will increase its operational runway.
 
+<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
+Since operator and network fees are dynamic, the required liquidation collateral and operational runway could vary between different clusters.
 
+The cluster balance needs to be kept in check to ensure the continued operation of its validator(s). To manage cluster balances, users can deposit or withdraw funds at will.
 
 ### Managing Cluster Balances
 
