@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Prysm
 
 ## Overview
@@ -123,7 +119,7 @@ sudo nano /etc/systemd/system/consensus.service
 Paste the following configuration into the file.
 
 <pre class="language-bash"><code class="lang-bash"><strong>[Unit]
-</strong>Description=Prysm Consensus Layer Client service for Holesky
+</strong>Description=Prysm Consensus Layer Client service for Mainnet
 Wants=network-online.target
 After=network-online.target
 Documentation=https://www.nodebridgeafrica.com
@@ -137,14 +133,14 @@ RestartSec=3
 KillSignal=SIGINT
 TimeoutStopSec=900
 ExecStart=/usr/local/bin/beacon-chain \
-  --holesky \
+  --mainnet \
   --datadir=/var/lib/prysm/beacon \
   --grpc-gateway-port 5052 \
   --p2p-tcp-port 13000 \
   --p2p-udp-port 12000 \
   --p2p-max-peers 80 \
   --monitoring-port 8008 \
-  --checkpoint-sync-url=https://holesky.beaconstate.ethstaker.cc \
+  --checkpoint-sync-url=https://beaconstate.info \
   --execution-endpoint=http://localhost:8551 \
   --jwt-secret=/secrets/jwtsecret \
   --accept-terms-of-use=true \

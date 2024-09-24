@@ -1,38 +1,36 @@
-# Geth
+# Erigon
+
+{% hint style="info" %}
+**Erigon** - Successor to OpenEthereum, Erigon is an implementation of Ethereum (aka "Ethereum client"), on the efficiency frontier, written in Go.
+{% endhint %}
 
 ## Overview
 
-{% hint style="danger" %}
-:octagonal\_sign:**Strongly discouraged** :octagonal\_sign:**: GETH can be** [**hazardous to your all YOUR STAKE.**](https://twitter.com/EthDreamer/status/1749355402473410714)
-
-Select a minority client.
-
-**Recommendation:** Besu or Nethermind.
-{% endhint %}
-
-{% hint style="info" %}
-**Geth** - Go Ethereum is one of the three original implementations (along with C++ and Python) of the Ethereum protocol. It is written in **Go**, fully open source and licensed under the GNU LGPL v3.
-{% endhint %}
-
 #### Official Links
 
-| Subject       | Link                                                                                                 |
-| ------------- | ---------------------------------------------------------------------------------------------------- |
-| Releases      | [https://github.com/ethereum/go-ethereum/releases](https://github.com/ethereum/go-ethereum/releases) |
-| Documentation | [https://geth.ethereum.org/docs](https://geth.ethereum.org/docs)                                     |
-| Website       | [https://geth.ethereum.org](https://geth.ethereum.org/)                                              |
+| Subject       | Link                                                                                                     |
+| ------------- | -------------------------------------------------------------------------------------------------------- |
+| Releases      | [https://github.com/ledgerwatch/erigon/releases](https://github.com/ledgerwatch/erigon/releases)         |
+| Documentation | [https://erigon.readthedocs.io/en/latest/index.html](https://erigon.readthedocs.io/en/latest/index.html) |
+| Website       | [https://erigon.substack.com](https://erigon.substack.com/)                                              |
 
-### 1. Create service account and data directory
+### 1. Initial configuration
 
 Create a service user for the execution service, create data directory and assign ownership.
 
 ```bash
 sudo adduser --system --no-create-home --group execution
-sudo mkdir -p /var/lib/geth
-sudo chown -R execution:execution /var/lib/geth
+sudo mkdir -p /var/lib/erigon
+sudo chown -R execution:execution /var/lib/erigon
 ```
 
-### **2. Install binaries**
+Install dependencies.
+
+```bash
+sudo apt install curl libsnappy-dev libc6-dev jq libc6 unzip -y
+```
+
+### 2. Install Binaries
 
 * Downloading binaries is often faster and more convenient.
 * Building from source code can offer better compatibility and is more aligned with the spirit of FOSS (free open source software).
@@ -41,23 +39,24 @@ sudo chown -R execution:execution /var/lib/geth
 
 <summary>Option 1 - Download binaries</summary>
 
-<pre class="language-bash"><code class="lang-bash">RELEASE_URL="https://geth.ethereum.org/downloads"
-<strong>FILE="https://gethstore.blob.core.windows.net/builds/geth-linux-amd64[a-zA-Z0-9./?=_%:-]*.tar.gz"
-</strong>BINARIES_URL="$(curl -s $RELEASE_URL | grep -Eo $FILE | head -1)"
+Run the following to automatically download the latest linux release, un-tar and cleanup.
+
+```bash
+RELEASE_URL="https://api.github.com/repos/ledgerwatch/erigon/releases/latest"
+BINARIES_URL="$(curl -s $RELEASE_URL | jq -r ".assets[] | select(.name) | .browser_download_url" | grep linux_amd64)"
 
 echo Downloading URL: $BINARIES_URL
 
 cd $HOME
-wget -O geth.tar.gz $BINARIES_URL
-tar -xzvf geth.tar.gz -C $HOME
-rm geth.tar.gz
-sudo mv $HOME/geth-* geth
-</code></pre>
+wget -O erigon.tar.gz $BINARIES_URL
+tar -xzvf erigon.tar.gz -C $HOME
+rm erigon.tar.gz
+```
 
 Install the binaries.
 
 ```bash
-sudo mv $HOME/geth/geth /usr/local/bin
+sudo mv $HOME/erigon /usr/local/bin/erigon
 ```
 
 </details>
@@ -66,10 +65,10 @@ sudo mv $HOME/geth/geth /usr/local/bin
 
 <summary>Option 2 - Build from source code</summary>
 
-Install Go dependencies
+Install Go dependencies. Latest version [available here](https://go.dev/dl/).
 
 ```bash
-wget -O go.tar.gz https://go.dev/dl/go1.19.6.linux-amd64.tar.gz
+wget -O go.tar.gz https://go.dev/dl/go1.20.5.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go.tar.gz
 echo export PATH=$PATH:/usr/local/go/bin >> $HOME/.bashrc
 source $HOME/.bashrc
@@ -94,21 +93,19 @@ Build the binary.
 ```bash
 mkdir -p ~/git
 cd ~/git
-git clone -b master https://github.com/ethereum/go-ethereum.git
-cd go-ethereum
-# Get new tags
+git clone https://github.com/ledgerwatch/erigon.git
+cd erigon
 git fetch --tags
 # Get latest tag name
 latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
 # Checkout latest tag
 git checkout $latestTag
-# Build
-make geth
+make erigon
 ```
 
 Install the binary.
 
-<pre class="language-bash"><code class="lang-bash"><strong>sudo cp $HOME/git/go-ethereum/build/bin/geth /usr/local/bin
+<pre class="language-bash"><code class="lang-bash"><strong>sudo cp $HOME/git/erigon/build/bin/erigon /usr/local/bin
 </strong></code></pre>
 
 </details>
@@ -123,8 +120,9 @@ sudo nano /etc/systemd/system/execution.service
 
 Paste the following configuration into the file.
 
-<pre class="language-bash"><code class="lang-bash">[Unit]
-Description=Geth Execution Layer Client service for Chiado
+```shell
+[Unit]
+Description=Erigon Execution Layer Client service for Mainnet
 Wants=network-online.target
 After=network-online.target
 Documentation=https://www.nodebridgeafrica.com
@@ -137,22 +135,23 @@ Restart=on-failure
 RestartSec=3
 KillSignal=SIGINT
 TimeoutStopSec=900
-ExecStart=/usr/local/bin/geth \
-    --chiado \
-    --port 30303 \
-    --http.port 8545 \
-    --authrpc.port 8551 \
-    --maxpeers 50 \
-    --metrics \
-    --http \
-    --datadir=/var/lib/geth \
-    --pprof \
-    --state.scheme=path \
-    --authrpc.jwtsecret=/secrets/jwtsecret
-   
-<strong>[Install]
-</strong>WantedBy=multi-user.target
-</code></pre>
+ExecStart=/usr/local/bin/erigon \
+   --datadir /var/lib/erigon \
+   --chain mainnet \
+   --port 30303 \
+   --torrent.port 42069 \
+   --maxpeers 50 \
+   --private.api.addr 127.0.0.1:9099 \
+   --authrpc.port 8551 \
+   --metrics \
+   --pprof \
+   --prune htc \
+   --prune.r.before=11052984 \
+   --authrpc.jwtsecret=/secrets/jwtsecret
+
+[Install]
+WantedBy=multi-user.target
+```
 
 To exit and save, press `Ctrl` + `X`, then `Y`, then `Enter`.
 
@@ -176,14 +175,17 @@ Press `Ctrl` + `C` to exit the status.
 
 {% tabs %}
 {% tab title="View Logs" %}
-<pre class="language-bash"><code class="lang-bash"><strong>sudo journalctl -fu execution | ccze
-</strong></code></pre>
+```bash
+sudo journalctl -fu execution | ccze
+```
 
-A properly functioning **Geth** execution client will indicate "Imported new potential chain segment". For example,
+A properly functioning **Erigon** execution client will indicate "Handling new payload". For example,
 
 ```
-geth[4531]: INFO [02-04|01:20:48.280] Chain head was updated    number=16000 hash=2317ae..c41107
-geth[4531]: INFO [02-04|01:20:49.648] Imported new potential chain segment       number=16000 hash=ab173f..33a21b
+erigon[3]: [INFO] [09-29|03:36:24.689] [NewPayload] Handling new payload        height=19999 hash=0xea060...2846a907ceb4
+erigon[3]: [INFO] [09-29|03:36:25.278] [updateForkchoice] Fork choice update: flushing in-memory state (built by previous newPayload)
+erigon[3]: [INFO] [09-29|03:36:25.280] RPC Daemon notified of new headers       from=19998 to=19999 hash=0xeeed..710b597 header sending=13.32µs log sending=290ns
+erigon[3]: [INFO] [09-29|03:36:25.280] head updated                             hash=0xea06098ad5e...5e5f43 number=20000
 ```
 {% endtab %}
 
@@ -214,7 +216,7 @@ Common reasons to reset the database can include:
 
 ```bash
 sudo systemctl stop execution
-sudo rm -rf /var/lib/geth/*
+sudo rm -rf /var/lib/erigon/*
 sudo systemctl restart execution
 ```
 

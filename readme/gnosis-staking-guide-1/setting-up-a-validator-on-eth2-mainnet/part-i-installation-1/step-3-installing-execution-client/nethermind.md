@@ -137,7 +137,7 @@ Paste the following configuration into the file.
 
 ```shell
 [Unit]
-Description=Nethermind Execution Layer Client service for Chiado
+Description=Nethermind Execution Layer Client service for Mainnet
 Wants=network-online.target
 After=network-online.target
 Documentation=https://www.nodebridgeafrica.com
@@ -153,7 +153,7 @@ TimeoutStopSec=900
 WorkingDirectory=/var/lib/nethermind
 Environment="DOTNET_BUNDLE_EXTRACT_BASE_DIR=/var/lib/nethermind"
 ExecStart=/usr/local/bin/nethermind/nethermind \
-  --config chiado \
+  --config mainnet \
   --datadir="/var/lib/nethermind" \
   --Network.DiscoveryPort 30303 \
   --Network.P2PPort 30303 \
@@ -166,7 +166,7 @@ ExecStart=/usr/local/bin/nethermind/nethermind \
   --Pruning.Mode=Hybrid \
   --Pruning.FullPruningTrigger=VolumeFreeSpace \
   --Pruning.FullPruningThresholdMb=300000
-   
+  
 [Install]
 WantedBy=multi-user.target
 ```

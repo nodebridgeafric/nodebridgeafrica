@@ -1,29 +1,28 @@
 # Step 1: Prerequisites
 
-## :rocket: How Staking on Gnosis Tesnet Works
+## :rocket: How Staking on Ethereum Works
 
 1. Acquire some hardware (laptop, desktop, server) or rent a VPS (cloud server): You need to run a node to stake.
 2. Sync an execution layer client
 3. Sync a consensus layer client
-4. Buy some XDia and GNO
-5. Generate your validator keys and import them into your validator client
-6. Monitor and maintain your node
+4. Generate your validator keys and import them into your validator client
+5. Monitor and maintain your node
 
 An Ethereum node consists of the Execution Layer + Consensus Layer.
 
-An Ethereum Staking node is the previous plus a Validator client.
+An Ethereum Staking node is the Execution Layer + Consensus Layer + Validator client.
 
-<figure><img src="../../ethereum-staking-guide/.gitbook/assets/client-stack.png" alt=""><figcaption><p>Client Stack</p></figcaption></figure>
+<figure><img src="../../../ethereum-staking-guide/.gitbook/assets/client-stack.png" alt=""><figcaption><p>Client Stack</p></figcaption></figure>
 
-<figure><img src="../../ethereum-staking-guide/.gitbook/assets/eth-validator-diagram.png" alt=""><figcaption><p>Big picture: Execution / Consensus / Validator</p></figcaption></figure>
+<figure><img src="../../../ethereum-staking-guide/.gitbook/assets/eth-validator-diagram.png" alt=""><figcaption><p>Big picture: Execution / Consensus / Validator</p></figcaption></figure>
 
 ## :wave: Introduction
 
-This guide was written for aspiring Gnosis stakers who have basic familiarity with command line tools and it was tested against Ubuntu 22.04.1 LTS client. You’ll want a dedicated cloud VPS or local desktop/server/laptop running a clean install of Ubuntu preferably.
+This guide was written for aspiring Ethereum stakers who have basic familiarity with command line tools and it was tested against Ubuntu 22.04.1 LTS client. You’ll want a dedicated cloud VPS or local desktop/server/laptop running a clean install of Ubuntu preferably.
 
 ### Terminology
 
-Your Gnosis staking node may be
+Your Ethereum staking node may be
 
 * **Local:** on a laptop / PC / NUC that you can physically connect keyboard/mouse/monitor.
 * **Remote:** in the cloud on a VPS
@@ -47,13 +46,16 @@ Here's a [guide from Makeuseof](https://www.makeuseof.com/tag/beginners-guide-se
 * Commands are to be run in a terminal window or ssh terminal.
 * Commands preceded by `sudo` will prompt for your password at first, and periodically afterwards.
 
-## :woman\_technologist: Skills for operating an staking node
+## :woman\_technologist: Skills for operating a staking node
 
 As a validator for Ethereum, you will typically have the following abilities:
 
-* operational knowledge of how to set up, run and maintain a Ethereum consensus client, execution client and validator continuously
-* a long term commitment to maintain your validator 24/7/365
-* basic operating system skills
+*
+  1. Operational knowledge of how to set up, run and maintain a Ethereum consensus client, execution client and validator continuously
+*
+  2. A long term commitment to maintain your validator 24/7/365
+*
+  3. Basic operating system skills
 
 ## :man\_technologist: Experience required to be a successful ETH Staker
 
@@ -65,18 +67,14 @@ As a validator for Ethereum, you will typically have the following abilities:
 * **Operating system:** 64-bit Linux (i.e. Ubuntu 22.04.1 LTS Server or Desktop)
 * **Processor:** Dual core CPU, Intel Core i5–760 or AMD FX-8100 or better
 * **Memory:** 16GB RAM
-* **Storage:** 2TB SSD for testnet
+* **Storage:** 2TB SSD
 * **Internet:** Stable broadband internet connection with speeds at least 5 Mbps upload and download.
 * **Internet Data Plan**: At least 2 TB per month.
 * **Power:** Reliable electrical power. Mitigate with a [Uninterruptible Power Supply (UPS)](https://www.lifewire.com/best-uninterrupted-power-supplies-4142625).
-* **ETH balance:** at least 1 GNO and some XDAI for deposit transaction fees
-* **Wallet**: [Rabby](https://rabby.io/) wallet installed
+* **ETH balance:** at least 32 ETH and some ETH for deposit transaction fees
+* **Wallet**: [Rabby](https://rabby.io/) Wallet installed
 
 ## :man\_lifting\_weights: Recommended Node Setup Requirements
-
-{% hint style="info" %}
-Once done with testnet staking, this hardware configuration would be suitable for a mainnet staking node.
-{% endhint %}
 
 * **Operating system:** 64-bit Linux (i.e. Ubuntu 22.04.1 LTS Server or Desktop)
 * **Processor:** Quad core CPU, Intel Core i7–4770 or AMD FX-8310 or better
@@ -85,8 +83,8 @@ Once done with testnet staking, this hardware configuration would be suitable fo
 * **Internet:** Stable broadband internet connections with speeds at least 10 Mbps without data limit.
 * **Data Plan**: At least 2 TB per month. Ideally, no data cap or unlimited data plan.
 * **Power:** Reliable electrical power with a [Uninterruptible Power Supply (UPS)](https://www.lifewire.com/best-uninterrupted-power-supplies-4142625).
-* **ETH balance:** at least 1 GNO and some XDAI for deposit transaction fees
-* **Wallet**: [Rabby](https://rabby.io/) wallet installed
+* **ETH balance:** at least 32 ETH and some ETH for deposit transaction fees
+* **Wallet**: [Rabby](https://rabby.io/) Wallet installed
 
 {% hint style="info" %}
 :desktop: **Hardware Builds**: For examples of actual staking hardware builds, check out [RocketPool's hardware guide](https://github.com/rocket-pool/docs.rocketpool.net/blob/main/docs/guides/node/local/hardware.md#example-setups) and [Ethstaker's Hardware Examples](https://docs.ethstaker.cc/ethstaker-knowledge-base/hardware/hardware-examples).
@@ -99,7 +97,7 @@ Once done with testnet staking, this hardware configuration would be suitable fo
 * [**Top SSD List**](https://docs.google.com/spreadsheets/d/1B27\_j9NDPU3cNlj2HKcrfpJKHkOf-Oi1DbuuQva2gT4/edit)**:** Suitable drives are identified as Mid-Range or better.
 {% endhint %}
 
-<figure><img src="../../ethereum-staking-guide/.gitbook/assets/ethereum-inside.png" alt=""><figcaption><p>Ethereum Staking Node</p></figcaption></figure>
+<figure><img src="../../../ethereum-staking-guide/.gitbook/assets/ethereum-inside.png" alt=""><figcaption><p>Ethereum Staking Node</p></figcaption></figure>
 
 {% hint style="success" %}
 :sparkles: **Pro Validator Tip**: Highly recommend you begin with a brand new instance of an OS, VM, and/or machine. Avoid headaches by NOT reusing testnet keys, wallets, or databases for your validator.
@@ -132,7 +130,7 @@ With your local or remote node, now you need to install an Operating System. Thi
 {% endhint %}
 
 {% hint style="warning" %}
-**Tip**: When installing Ubuntu Server, ensure you are selecting “**Use an entire disk**” on the **Guided storage configuration** screen. Next screen will be the **Storage configuration** screen, ensure your settings are using all available disk storage. A common issue is that Ubuntu server defaults to using only 200GB.
+**Tip**: When installing Ubuntu Server, ensure you are selecting “**Use an entire disk**” on the **Guided storage configuration** screen. Next screen will be the **Storage configuration** screen, ensure your settings are using all available disk storage. A [common issue](../../../ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on-eth2-mainnet/part-iii-tips-1/using-all-available-lvm-disk-space.md) is that Ubuntu server defaults to using only 200GB.
 {% endhint %}
 
 ## :performing\_arts: Setup Rabby
@@ -153,4 +151,4 @@ At the end of this guide, you will build a staking validator node that hosts thr
 **Execution client** - Supplies incoming validator deposits from the eth mainnet chain to the beacon chain client.
 {% endhint %}
 
-![How Ethereum nodes fits together featuring Leslie the Rhino, the mascot named after American computer scientist Leslie Lamport](../../ethereum-staking-guide/.gitbook/assets/eth2network.png)
+![How Ethereum nodes fits together featuring Leslie the Rhino, the mascot named after American computer scientist Leslie Lamport](../../../ethereum-staking-guide/.gitbook/assets/eth2network.png)

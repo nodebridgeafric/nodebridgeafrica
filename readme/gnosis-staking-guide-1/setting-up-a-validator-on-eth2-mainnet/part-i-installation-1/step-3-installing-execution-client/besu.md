@@ -115,7 +115,7 @@ Paste the following configuration into the file.
 
 ```shell
 [Unit]
-Description=Besu Execution Layer Client service for Chaido
+Description=Besu Execution Layer Client service for Mainnet
 Wants=network-online.target
 After=network-online.target
 Documentation=https://www.nodebridgeafrica.com
@@ -130,7 +130,7 @@ KillSignal=SIGINT
 TimeoutStopSec=900
 Environment="JAVA_OPTS=-Xmx5g"
 ExecStart=/usr/local/bin/besu/bin/besu \
-  --network= chiado \
+  --network=mainnet \
   --p2p-port=30303 \
   --rpc-http-port=8545 \
   --engine-rpc-port=8551 \
@@ -142,11 +142,16 @@ ExecStart=/usr/local/bin/besu/bin/besu \
   --data-storage-format=BONSAI \
   --Xbonsai-limit-trie-logs-enabled=true \
   --data-path="/var/lib/besu" \
+  --Xplugin-rocksdb-high-spec-enabled \
   --engine-jwt-secret=/secrets/jwtsecret
   
 [Install]
 WantedBy=multi-user.target
 ```
+
+{% hint style="info" %}
+**Running less than 32GB of RAM?** Deleting the flag, `--Xplugin-rocksdb-high-spec-enabled` is advisable.
+{% endhint %}
 
 To exit and save, press `Ctrl` + `X`, then `Y`, then `Enter`.
 

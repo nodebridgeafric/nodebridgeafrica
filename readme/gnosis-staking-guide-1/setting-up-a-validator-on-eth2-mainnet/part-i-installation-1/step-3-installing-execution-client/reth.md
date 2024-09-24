@@ -1,26 +1,18 @@
-# Geth
+# Reth
 
 ## Overview
 
-{% hint style="danger" %}
-:octagonal\_sign:**Strongly discouraged** :octagonal\_sign:**: GETH can be** [**hazardous to your all YOUR STAKE.**](https://twitter.com/EthDreamer/status/1749355402473410714)
-
-Select a minority client.
-
-**Recommendation:** Besu or Nethermind.
-{% endhint %}
-
 {% hint style="info" %}
-**Geth** - Go Ethereum is one of the three original implementations (along with C++ and Python) of the Ethereum protocol. It is written in **Go**, fully open source and licensed under the GNU LGPL v3.
+**Reth** - short for Rust Ethereum, is an Ethereum full node implementation that is focused on being user-friendly, highly modular, as well as being fast and efficient.
 {% endhint %}
 
-#### Official Links
+### Official Links
 
-| Subject       | Link                                                                                                 |
-| ------------- | ---------------------------------------------------------------------------------------------------- |
-| Releases      | [https://github.com/ethereum/go-ethereum/releases](https://github.com/ethereum/go-ethereum/releases) |
-| Documentation | [https://geth.ethereum.org/docs](https://geth.ethereum.org/docs)                                     |
-| Website       | [https://geth.ethereum.org](https://geth.ethereum.org/)                                              |
+| Subject       | Link                                                                       |
+| ------------- | -------------------------------------------------------------------------- |
+| Releases      | [https://github.com/paradigmxyz/reth](https://github.com/paradigmxyz/reth) |
+| Documentation | [https://paradigmxyz.github.io/reth/](https://paradigmxyz.github.io/reth/) |
+| Website       | [https://www.paradigm.xyz/oss/reth](https://www.paradigm.xyz/oss/reth)     |
 
 ### 1. Create service account and data directory
 
@@ -28,8 +20,15 @@ Create a service user for the execution service, create data directory and assig
 
 ```bash
 sudo adduser --system --no-create-home --group execution
-sudo mkdir -p /var/lib/geth
-sudo chown -R execution:execution /var/lib/geth
+sudo mkdir -p /var/lib/reth
+sudo chown -R execution:execution /var/lib/reth
+```
+
+Install dependencies.
+
+```bash
+sudo apt-get update
+sudo apt install -y ccze jq curl
 ```
 
 ### **2. Install binaries**
@@ -41,23 +40,23 @@ sudo chown -R execution:execution /var/lib/geth
 
 <summary>Option 1 - Download binaries</summary>
 
-<pre class="language-bash"><code class="lang-bash">RELEASE_URL="https://geth.ethereum.org/downloads"
-<strong>FILE="https://gethstore.blob.core.windows.net/builds/geth-linux-amd64[a-zA-Z0-9./?=_%:-]*.tar.gz"
-</strong>BINARIES_URL="$(curl -s $RELEASE_URL | grep -Eo $FILE | head -1)"
+```bash
+RELEASE_URL="https://api.github.com/repos/paradigmxyz/reth/releases/latest"
+BINARIES_URL="$(curl -s $RELEASE_URL | jq -r '.assets[] | select(.name | startswith ("reth")) | .browser_download_url' | grep x86_64-unknown-linux-gnu.tar.gz$)"
 
 echo Downloading URL: $BINARIES_URL
 
 cd $HOME
-wget -O geth.tar.gz $BINARIES_URL
-tar -xzvf geth.tar.gz -C $HOME
-rm geth.tar.gz
-sudo mv $HOME/geth-* geth
-</code></pre>
+wget -O reth.tar.gz $BINARIES_URL
+tar -xzvf reth.tar.gz -C $HOME
+rm reth.tar.gz
+```
 
-Install the binaries.
+Install the binaries and display the version.
 
 ```bash
-sudo mv $HOME/geth/geth /usr/local/bin
+sudo mv $HOME/reth /usr/local/bin
+reth --version
 ```
 
 </details>
@@ -66,50 +65,63 @@ sudo mv $HOME/geth/geth /usr/local/bin
 
 <summary>Option 2 - Build from source code</summary>
 
-Install Go dependencies
+**Install rust dependency**
 
 ```bash
-wget -O go.tar.gz https://go.dev/dl/go1.19.6.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go.tar.gz
-echo export PATH=$PATH:/usr/local/go/bin >> $HOME/.bashrc
-source $HOME/.bashrc
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-Verify Go is properly installed by checking the version and cleanup files.
+When prompted, enter '1' to proceed with the default install.
+
+Update your environment variables.
 
 ```bash
-go version
-rm go.tar.gz
+echo export PATH="$HOME/.cargo/bin:$PATH" >> ~/.bashrc
+source ~/.bashrc
 ```
 
-Install build dependencies.
+Install rust dependencies.
 
 ```bash
 sudo apt-get update
-sudo apt install build-essential git
+sudo apt install -y git libclang-dev pkg-config build-essential
 ```
 
-Build the binary.
+Build the binaries.
 
 ```bash
 mkdir -p ~/git
 cd ~/git
-git clone -b master https://github.com/ethereum/go-ethereum.git
-cd go-ethereum
-# Get new tags
+git clone https://github.com/paradigmxyz/reth.git
+cd reth
 git fetch --tags
 # Get latest tag name
 latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
 # Checkout latest tag
 git checkout $latestTag
-# Build
-make geth
+# Build the release
+cargo build --release --features jemalloc
+```
+
+In case of compilation errors, run the following sequence.
+
+```bash
+rustup update
+cargo clean
+cargo build --release --features jemalloc
+```
+
+Verify Reth was built properly by checking the version number.
+
+```bash
+~/git/reth/target/release/reth --version
 ```
 
 Install the binary.
 
-<pre class="language-bash"><code class="lang-bash"><strong>sudo cp $HOME/git/go-ethereum/build/bin/geth /usr/local/bin
-</strong></code></pre>
+```bash
+sudo cp ~/git/reth/target/release/reth /usr/local/bin
+```
 
 </details>
 
@@ -124,7 +136,7 @@ sudo nano /etc/systemd/system/execution.service
 Paste the following configuration into the file.
 
 <pre class="language-bash"><code class="lang-bash">[Unit]
-Description=Geth Execution Layer Client service for Chiado
+Description=Reth Execution Layer Client service for Mainnet
 Wants=network-online.target
 After=network-online.target
 Documentation=https://www.nodebridgeafrica.com
@@ -137,17 +149,22 @@ Restart=on-failure
 RestartSec=3
 KillSignal=SIGINT
 TimeoutStopSec=900
-ExecStart=/usr/local/bin/geth \
-    --chiado \
+Environment=RUST_LOG=info
+ExecStart=/usr/local/bin/reth node \
+    --full \
+    --chain mainnet \
+    --datadir=/var/lib/reth \
+    --metrics 127.0.0.1:6060 \
     --port 30303 \
-    --http.port 8545 \
-    --authrpc.port 8551 \
-    --maxpeers 50 \
-    --metrics \
+    --discovery.port 30303 \
+    --enable-discv5-discovery \
+    --discovery.v5.port 30304 \
     --http \
-    --datadir=/var/lib/geth \
-    --pprof \
-    --state.scheme=path \
+    --http.port 8545 \
+    --http.api="rpc,eth,web3,net,debug" \
+    --log.file.directory=/var/lib/reth/logs \ 
+    --max-outbound-peers 25 \
+    --max-inbound-peers 25 \
     --authrpc.jwtsecret=/secrets/jwtsecret
    
 <strong>[Install]
@@ -179,11 +196,12 @@ Press `Ctrl` + `C` to exit the status.
 <pre class="language-bash"><code class="lang-bash"><strong>sudo journalctl -fu execution | ccze
 </strong></code></pre>
 
-A properly functioning **Geth** execution client will indicate "Imported new potential chain segment". For example,
+A properly functioning **Reth** execution client will indicate "Block added to canonical chain". For example,
 
 ```
-geth[4531]: INFO [02-04|01:20:48.280] Chain head was updated    number=16000 hash=2317ae..c41107
-geth[4531]: INFO [02-04|01:20:49.648] Imported new potential chain segment       number=16000 hash=ab173f..33a21b
+INFO reth::node::events: Forkchoice updated head_block_hash=2317ae..c41107 safe_block_hash=ab173f..33a21b finalized_block_hash=ab173f..33a21b status=Valid
+INFO reth::node::events: Block added to canonical chain number=16000 hash=2317ae..c41107
+INFO reth::node::events: Canonical chain committed number=16000 hash=2317ae..c41107 elapsed=12.508272ms
 ```
 {% endtab %}
 
@@ -214,7 +232,7 @@ Common reasons to reset the database can include:
 
 ```bash
 sudo systemctl stop execution
-sudo rm -rf /var/lib/geth/*
+sudo rm -rf /var/lib/reth/*
 sudo systemctl restart execution
 ```
 

@@ -124,7 +124,7 @@ sudo nano /etc/systemd/system/execution.service
 Paste the following configuration into the file.
 
 <pre class="language-bash"><code class="lang-bash">[Unit]
-Description=Geth Execution Layer Client service for Chiado
+Description=Geth Execution Layer Client service for Mainnet
 Wants=network-online.target
 After=network-online.target
 Documentation=https://www.nodebridgeafrica.com
@@ -138,7 +138,7 @@ RestartSec=3
 KillSignal=SIGINT
 TimeoutStopSec=900
 ExecStart=/usr/local/bin/geth \
-    --chiado \
+    --mainnet \
     --port 30303 \
     --http.port 8545 \
     --authrpc.port 8551 \

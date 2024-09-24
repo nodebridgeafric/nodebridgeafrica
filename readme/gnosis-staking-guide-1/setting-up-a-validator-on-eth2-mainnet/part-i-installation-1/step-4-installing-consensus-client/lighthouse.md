@@ -27,7 +27,7 @@ sudo chown -R consensus:consensus /var/lib/lighthouse
 Install dependencies.
 
 ```bash
-sudo apt install curl ccze jq -y
+sudo apt install curl jq ccze -y
 ```
 
 ### 2. Install Binaries
@@ -133,7 +133,7 @@ Paste the following configuration into the file.
 
 ```shell
 [Unit]
-Description=Lighthouse Consensus Layer Client service for Chiado
+Description=Lighthouse Consensus Layer Client service for Mainnet
 Wants=network-online.target
 After=network-online.target
 Documentation=https://www.nodebridgeafrica.com
@@ -148,11 +148,11 @@ KillSignal=SIGINT
 TimeoutStopSec=900
 ExecStart=/usr/local/bin/lighthouse bn \
   --datadir /var/lib/lighthouse \
-  --network chiado \
+  --network mainnet \
   --staking \
   --validator-monitor-auto \
   --metrics \
-  --checkpoint-sync-url=https://holesky.beaconstate.ethstaker.cc \
+  --checkpoint-sync-url=https://beaconstate.info \
   --port 9000 \
   --quic-port 9001 \
   --http-port 5052 \
