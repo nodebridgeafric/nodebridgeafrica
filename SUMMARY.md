@@ -335,3 +335,4 @@
     * [Page 6](troubleshooting/scp-confirguration/page-6.md)
     * [check the path of your SSH private key on your VM](troubleshooting/scp-confirguration/check-the-path-of-your-ssh-private-key-on-your-vm.md)
     * [Setting Up Private Key](troubleshooting/scp-confirguration/setting-up-private-key.md)
+    * [Permission denied (publickey)](troubleshooting/scp-confirguration/permission-denied-publickey.md)
