@@ -42,6 +42,8 @@ The OWR uses a straightforward distribution logic:
 * **If Balance > 16 ETH**: The contract sends the excess balance to your principal address.
 * **If Balance < 16 ETH**: The contract assumes this balance is part of the rewards and sends it to the rewards address.
 
+<figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+
 **Setting Up the OWR**
 
 When you set up an OWR, you'll need to provide:

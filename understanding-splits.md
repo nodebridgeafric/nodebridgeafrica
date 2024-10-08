@@ -10,6 +10,8 @@ In the ever-evolving world of blockchain technology, managing on-chain revenue c
 
 Splits is a set of composable, open-source, and audited smart contracts that allows users to manage and distribute on-chain revenue with ease. Think of it as a financial tool that helps you share your earnings fairly among multiple recipients, whether they are team members, collaborators, or stakeholders.
 
+<figure><img src=".gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+
 #### Key Features of Splits
 
 1. **Autonomous Hyperstructure**: Splits operates as a hyperstructure, meaning it runs perpetually without the need for ongoing maintenance or trusted third parties. It charges no protocol fees and operates solely on gas costs.
