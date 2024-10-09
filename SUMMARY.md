@@ -322,6 +322,7 @@
     * [Security Best Practices for your ETH staking validator node](readme/gnosis-staking-guide-1/guide-or-security-best-practices-for-a-eth2-validator-beaconchain-node.md)
 * [Introduction to SSV.Network](introduction-to-ssv.network.md)
 * [Obol](obol/README.md)
+  * [Page 10](obol/page-10.md)
   * [Obol Split: Validator Reward Management](obol/obol-split-validator-reward-management.md)
   * [Page 7](obol/page-7.md)
   * [Page 8](obol/page-8.md)
