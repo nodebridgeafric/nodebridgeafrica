@@ -34,6 +34,7 @@
   * [Node Security: Root, Networking & Network Security](hardware-and-system-requirements/networking-and-network-security.md)
   * [Advanced networking](hardware-and-system-requirements/advanced-networking.md)
 * [Staking Guide](<README (1).md>)
+  * [Running A Node In Africa](readme/running-a-node-in-africa.md)
   * [Ethereum Staking Guide](readme/ethereum-staking-guide/README.md)
     * [Introduction to ETH Validators](readme/ethereum-staking-guide/introduction-to-eth-validators.md)
     * [Ethereum Staking Guide](readme/ethereum-staking-guide/ethereum-staking-guide/README.md)
