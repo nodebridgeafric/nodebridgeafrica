@@ -67,6 +67,8 @@ The consensus client is vital for maintaining the security of the Ethereum netwo
 3. **Configuration**: Once installed, configure your network settings similarly to the execution client.
 4. **Verification**: Use the run/start command to check if the consensus client is operating correctly. Ensure it can connect to the Ethereum network.
 
+<figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption><p>Simplified diagram of a coupled execution and consensus client. <br>Source: <a href="https://ethereum.org/en/developers/docs/nodes-and-clients/">https://ethereum.org/en/developers/docs/nodes-and-clients/</a></p></figcaption></figure>
+
 #### Set Up Network Connectivity
 
 For your Ethereum node to communicate effectively with the network, you need to ensure it is reachable by other nodes. Checkout [this configuration guide](ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-2-configuring-node.md):
