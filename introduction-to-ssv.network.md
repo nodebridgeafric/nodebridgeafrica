@@ -129,7 +129,7 @@ Clusters are vital for managing distributed validators. They facilitate coordina
 
 #### Example of Clusters:
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Cluster #1**: Manages 3 validators with Operators 1, 2, 3, 4, 5, 6, 7.
 * **Cluster #2**: Manages 1 validator with Operators 1, 2, 3, 4.
@@ -143,7 +143,7 @@ Maintaining a healthy balance is crucial to ensure continuous operation. The clu
 
 #### Liquidation Threshold Calculation:
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### Operational Runway Calculation:
 
