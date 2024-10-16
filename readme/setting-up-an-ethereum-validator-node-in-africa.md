@@ -130,7 +130,7 @@ One of the first hurdles was our unreliable power supply. Frequent outages threa
 
 \[]
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Alternative sources of power</p></figcaption></figure>
 
 **Knowledge Gap**
 
