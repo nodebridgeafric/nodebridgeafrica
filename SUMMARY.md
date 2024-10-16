@@ -35,7 +35,7 @@
   * [Advanced networking](hardware-and-system-requirements/advanced-networking.md)
 * [Introduction to ETH Validators](readme/ethereum-staking-guide/introduction-to-eth-validators.md)
 * [Staking Guide](<README (1).md>)
-  * [How to Set Up an Ethereum Validator Node In Africa](readme/running-a-node-in-africa.md)
+  * [Setting Up an Ethereum Validator Node In Africa](readme/setting-up-an-ethereum-validator-node-in-africa.md)
   * [Ethereum Staking Guide](readme/ethereum-staking-guide/README.md)
     * [Ethereum Guide](readme/ethereum-staking-guide/ethereum-staking-guide/README.md)
       * [Guide: How to Setup a validator on Holesky Testnet](readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/README.md)
