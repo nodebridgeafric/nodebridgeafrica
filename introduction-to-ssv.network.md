@@ -149,7 +149,7 @@ Maintaining a healthy balance is crucial to ensure continuous operation. The clu
 
 The operational runway is any additional funds added to the cluster balance that prolongs the operation of its validators. This means that all extra funds added to the cluster balance on top of the required collateral will increase its operational runway.
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 Since operator and network fees are dynamic, the required liquidation collateral and operational runway could vary between different clusters.
 

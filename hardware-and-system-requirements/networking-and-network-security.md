@@ -40,7 +40,7 @@ ISPs in some countries combine both modem and routers into a single device.
 {% tab title="Shared Router" %}
 It is entirely possible and also sufficiently safe to connect your validator node directly to your existing home router if you do not plan to have un-trusted guests over at your home often.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Secure your node router properly by setting strong passwords on the WIFI and device level. Do not expose these passwords or let anyone else connect to the WIFI network or log in to the device level of your node router.
 {% endtab %}
