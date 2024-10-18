@@ -1,6 +1,6 @@
 # Setting Up an Ethereum Validator Node In Africa
 
-Hardware Requirements for Running an Ethereum Node
+**Hardware Requirements for Running an Ethereum Node**
 
 To successfully run an Ethereum node, it’s essential to have a computer that meets specific hardware requirements. You can use operating systems like Windows, Mac, or Linux. Below are the **minimum requirements** for a full Ethereum node:
 
@@ -48,10 +48,10 @@ Once you have verified that your hardware meets the necessary requirements, the 
 * **Besu**
 * **Erigon**
 
-**Installation Steps:** Kindly follow [this guide](ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-3-installing-execution-client/) for easy setup.
+**Installation Steps:** Kindly follow [this guide](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-3-installing-execution-client/) for easy setup.
 
 1. **Download**: Choose an execution client and download it from its official website or GitHub repository. Ensure you are downloading the latest version to benefit from the latest features and security improvements.
-2. **Installation**: Follow the [installation instructions](ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-3-installing-execution-client/) specific to your operating system. This may include running commands in the terminal or executing setup files.
+2. **Installation**: Follow the [installation instructions](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-3-installing-execution-client/) specific to your operating system. This may include running commands in the terminal or executing setup files.
 3. **Configuration**: After installation, configure your network settings. This includes setting parameters like network ID, data directories, and peer connections.
 4. **Verification**: Test if the execution client is running correctly by using the appropriate start/run command in your terminal or command prompt. Monitor the logs to ensure there are no errors.
 
@@ -59,7 +59,7 @@ Once you have verified that your hardware meets the necessary requirements, the 
 
 The consensus client is vital for maintaining the security of the Ethereum network, especially after the transition to proof-of-stake (PoS). It validates blocks, tracks validators, and processes their attestations.
 
-**Popular Consensus Clients:** Kindly follow [this guide](ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-4-installing-consensus-client/) for easy setup.
+**Popular Consensus Clients:** Kindly follow [this guide](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-4-installing-consensus-client/) for easy setup.
 
 * **Prysm**
 * **Lighthouse**
@@ -69,7 +69,7 @@ The consensus client is vital for maintaining the security of the Ethereum netwo
 **Installation Steps:**
 
 1. **Download**: Select a consensus client and download it from the official source.
-2. **Installation**: Follow the [specific installation instructions](ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-4-installing-consensus-client/) provided for your chosen client.
+2. **Installation**: Follow the [specific installation instructions](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-4-installing-consensus-client/) provided for your chosen client.
 3. **Configuration**: Once installed, configure your network settings similarly to the execution client.
 4. **Verification**: Use the run/start command to check if the consensus client is operating correctly. Ensure it can connect to the Ethereum network.
 
@@ -77,12 +77,12 @@ The consensus client is vital for maintaining the security of the Ethereum netwo
 
 #### Set Up Network Connectivity
 
-For your Ethereum node to communicate effectively with the network, you need to ensure it is reachable by other nodes. Checkout [this configuration guide](ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-2-configuring-node.md):
+For your Ethereum node to communicate effectively with the network, you need to ensure it is reachable by other nodes. Checkout [this configuration guide](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-2-configuring-node.md):
 
 * **Inbound Connections**: Configure your network to allow inbound connections on Ethereum’s default ports (TCP/UDP 30303).
 * **Router/Firewall Configuration**: If your node is behind a router or firewall, you may need to set up port forwarding or open these ports to facilitate connections.
 
-Additionally, secure the HTTP connection between your beacon node and execution node using a JWT token. Refer to [specific guides on generating and implementing JWT tokens](ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-2-configuring-node.md).
+Additionally, secure the HTTP connection between your beacon node and execution node using a JWT token. Refer to [specific guides on generating and implementing JWT tokens](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-2-configuring-node.md).
 
 #### Install the Validator Client
 
@@ -94,10 +94,10 @@ A validator is a crucial part of the Ethereum ecosystem, participating in the ne
 * **Attestations**: It broadcasts votes (attestations) to signal agreement with valid blocks.
 * **Network Security**: The validator client contributes to network security by producing blocks when selected and monitoring for updates.
 
-**Installation Steps:** Kingly [checkout this guide](ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-5-installing-validator/)
+**Installation Steps:** Kingly [checkout this guide](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-5-installing-validator/)
 
 1. **Download**: Choose a validator client and download it from its official source.
-2. **Installation**: Follow the [installation instructions](ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-5-installing-validator/) provided for the client.
+2. **Installation**: Follow the [installation instructions](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-5-installing-validator/) provided for the client.
 3. **Configuration**: Properly configure the client to manage your validator keys and connect to the network.
 4. **Verification**: Ensure the validator client is running correctly and can communicate with both the execution and consensus clients.
 
@@ -117,6 +117,8 @@ Ongoing maintenance is vital for a well-functioning Ethereum node. Here are key 
 * **Disk Space Management**: Keep an eye on disk space to ensure you don’t run out, which could affect performance.
 * **Stay Informed**: Follow updates and announcements from the Ethereum community to stay aligned with network changes.
 * **Regular Updates**: Frequently update your clients to ensure compatibility with the evolving Ethereum network.
+
+
 
 ### Challenges Faced
 
