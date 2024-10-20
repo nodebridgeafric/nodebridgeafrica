@@ -104,6 +104,10 @@ Monthly expenses may include include:
 
 We offer workshops and training on setting up and managing Ethereum nodes. We also provide tutorials, FAQs, and online resources for troubleshooting.
 
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+
+
 **6.2 Local Events**
 
 Conferences and meetups organized by our community across Africa, such as those hosted in Lagos, Nigeria at the Blockspace Innovation hub and web 3 Lagos conference, facilitate knowledge sharing, networking, and capacity building for aspiring node operators.

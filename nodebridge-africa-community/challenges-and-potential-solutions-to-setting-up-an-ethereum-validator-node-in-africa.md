@@ -28,7 +28,7 @@ Next came the struggle for stable internet. We opted for Starlink and fiber opti
 Starlink
 {% endembed %}
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Starlink kits</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Starlink kits</p></figcaption></figure>
 
 **Configuration and technical challenges**
 
