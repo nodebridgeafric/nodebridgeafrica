@@ -207,9 +207,7 @@ Monthly expenses may include include:
 
 We offer workshops and training on setting up and managing Ethereum nodes. We also provide tutorials, FAQs, and online resources for troubleshooting.
 
-{% embed url="https://x.com/blockopsnetwork/status/1821111154237661229" %}
-
-
+{% embed url="https://www.youtube.com/watch?v=evwyZENDq2k" %}
 
 <figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
