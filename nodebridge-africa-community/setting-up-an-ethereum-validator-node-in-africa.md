@@ -1,8 +1,8 @@
-# Setting Up an Ethereum Validator Node In Africa \[Draft]
+# Setting Up an Ethereum Validator Node In Africa
 
 ### **Introduction**
 
-Setting up an Ethereum validator node in Africa not only supports the network's decentralization but also contributes to the broader goals of financial inclusion and transparency. Setting up a validator node comes with its own set of requirements, challenges, and potential solutions. This article delves into the essential prerequisites for setting up an Ethereum validator node in Africa. It explores the unique hurdles some of our community members faced, and offers practical strategies to overcome these obstacles. By understanding these concepts, anyone can better position themselves to harness the transformative power of Ethereum while fostering local growth and development.
+Setting up an Ethereum validator node in Africa not only supports the network's decentralization but also contributes to the broader goals of financial inclusion and transparency. This article delves into the essential prerequisites for setting up an Ethereum validator node in Africa. It explores the unique hurdles some of our community members faced, and offers practical strategies to overcome these obstacles. By understanding these concepts, anyone can better position themselves to harness the transformative power of Ethereum while fostering local growth and development.
 
 ### **What is an Ethereum Node?**
 
@@ -16,13 +16,105 @@ The role of Ethereum nodes is particularly significant in Africa, where decentra
 
 **1.1 Basic Hardware Needs**
 
-To run an Ethereum node, the hardware requirements vary depending on the desired performance and the type of node being operated. Here are some configurations:
+To run an Ethereum node, the hardware requirements vary depending on the desired performance and the type of node being operated. One can run node on different hardware such as a raspberry pi,  personal computer, desktop computer, and DappNode. Here are some hardware configurations:
 
-* **Raspberry Pi Setup**: We strongly recommend [**NanoPC T6, Rock 5B or Orange Pi 5 Plus**](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/recommended-hardware.html) boards to run an Ethereum full/staking node. [A rock pi 5 is recommendable](https://www.reddit.com/r/ethereum/comments/19bsuze/can\_i\_run\_an\_ethereum\_validator\_node\_on\_a/?rdt=52829), it is much more powerful than the raspi, has NVMe SSD, 16 GB RAM, much more powerful CPU and so on. it is a cost-effective and energy-efficient option, particularly for running validator nodes. This is ideal for hobbyists or those with limited budgets but requires regular monitoring.
+1. **Raspberry Pi Setup**
 
-<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption><p>Setup</p></figcaption></figure>
+* **Raspberry Pi Setup**: We strongly recommend [**NanoPC T6, Rock 5B or Orange Pi 5 Plus**](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/recommended-hardware.html) boards to run an Ethereum full/staking node. [A rock pi 5 is recommendable](https://www.reddit.com/r/ethereum/comments/19bsuze/can\_i\_run\_an\_ethereum\_validator\_node\_on\_a/?rdt=52829) because it is much more powerful than the raspi and has an NVMe SSD, 16 GB RAM, much more powerful CPU. Using a raspberry pi setup is a cost-effective and energy-efficient option, particularly for running validator nodes. This is ideal for hobbyists or those with limited budgets but requires regular monitoring.
 
-*   **PC Setup**: A more robust option for running full nodes, which requires significant computational power and storage. A desktop setup includes:
+<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption><p>Orange Pi Setup</p></figcaption></figure>
+
+**Recommended Hardware**
+
+This is the recommended hardware to run an **Execution Layer client** + **Consensus Layer client**. The key components are the NVMe disk and the RAM memory. Please, make sure **you get a board with 16 GB of RAM**.
+
+{% tabs %}
+{% tab title="NanoPC T6" %}
+Recommended hardware and settings for running an Ethereum full/staking node on a NanoPC T6 board
+
+* **NanoPC T6** (16GB RAM)
+* **MicroSD Card** (16 GB Class 10 minimum)
+* **NVMe disk** 2 TB minimum (M2.2280)
+* **Power supply**
+* **Ethernet cable**
+* **Port forwarding** (see clients for further info)
+* **A case with passive heatsinkn**
+* USB keyboard, Monitor and HDMI cable (Optional)
+
+**Buy links**
+
+[NanoPC T6 board 16 GB](https://www.friendlyelec.com/index.php?route=product/product\&product\_id=292)
+{% endtab %}
+
+{% tab title="Radxa Rock 5B" %}
+Recommended hardware and settings for running an Ethereum full/staking node on a Rock 5B board
+
+* **Rock 5B board** (16GB RAM)
+* **MicroSD Card** (16 GB Class 10 minimum)
+* **NVMe disk** 2 TB minimum (M2.2280)
+* **Power supply** (Radxa official)
+* **Ethernet cable**
+* **Port forwarding** (see clients for further info)
+* **A case with passive heatsinkn**
+* USB keyboard, Monitor and HDMI cable (Optional)
+
+**Buy Links**
+
+BOARD
+
+* [Rock 5B board 16 GB](https://shop.allnetchina.cn/products/rock5-model-b?variant=39514839515238)
+* [Radxa power supply](https://shop.allnetchina.cn/products/radxa-power-pd-30w?variant=39929851904102)
+
+\
+
+{% endtab %}
+
+{% tab title="Orange Pi 5 Plus" %}
+
+
+Recommended hardware and settings for running an Ethereum full/staking node on a Orange Pi 5 Plus board
+
+* **Orange Pi 5 Plus board** (16GB RAM)
+* **MicroSD Card** (16 GB Class 10 minimum)
+* **NVMe disk** 2 TB minimum (M2.2280)
+* **Power supply**
+* **Ethernet cable**
+* **Port forwarding** (see clients for further info)
+* **A case with passive heatsinkn**
+* USB keyboard, Monitor and HDMI cable (Optional)
+
+**Buy Links**
+
+* [Orange Pi 5 Plus official page](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5-plus.html)
+* [Orange Pi 5 Plus Case with heatsink](https://aliexpress.com/item/1005005728553439.html)
+{% endtab %}
+
+{% tab title="Orange Pi 5" %}
+
+
+Recommended hardware and settings for running an Ethereum full/staking node on a Orange Pi 5 board
+
+* **Orange Pi 5 Plus board** (16GB RAM)
+* **MicroSD Card** (16 GB Class 10 minimum)
+* **NVMe disk** 2 TB minimum (only 2230 & 2242 supported. 2280 if your case is hollow)
+* **Power supply**
+* **Ethernet cable**
+* **Port forwarding** (see clients for further info)
+* **A case with passive heatsinkn**
+* USB keyboard, Monitor and HDMI cable (Optional)
+
+**Buy Links**
+
+* [Orange Pi 5 official page](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5.html)
+* [Case with heatsink](https://aliexpress.com/item/1005005115126370.html)
+{% endtab %}
+{% endtabs %}
+
+[Source: ](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/recommended-hardware.html)
+
+2. **Personal Computer Setup**
+
+*   **Personal Computer Setup**: Personal computer or desktop computer is more robust option for running full nodes, which requires significant computational power and storage. A desktop setup includes:
 
     * **CPU**: Minimum of a 4-core processor (Intel i5 or equivalent)
     * **RAM**: 16GB-32GB to handle Ethereum’s ever-increasing data load and support smooth transaction processing.
@@ -30,7 +122,7 @@ To run an Ethereum node, the hardware requirements vary depending on the desired
 
 
 
-<figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption><p>Node Architecture</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption><p>Desktop Node Setup</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption><p>Two sets of Custom Nodes</p></figcaption></figure>
 
@@ -52,7 +144,7 @@ The first step in setting up an Ethereum node is installing a reliable operating
 
 #### Installing the Ethereum Execution Client
 
-Once you have verified that your hardware meets the necessary requirements, the next step is to install an execution client. The execution client is responsible for processing transactions and maintaining the state of the blockchain. Popular execution clients include:
+Once you have verified that your hardware meets the necessary requirements and you have installed your OS, the next step is to install an execution client. The execution client is responsible for processing transactions and maintaining the state of the blockchain. Popular execution clients include:
 
 * **Geth**
 * **Nethermind**
@@ -63,14 +155,14 @@ Once you have verified that your hardware meets the necessary requirements, the 
 
 1. **Download**: Choose an execution client and download it from its official website or GitHub repository. Ensure you are downloading the latest version to benefit from the latest features and security improvements.
 2. **Installation**: Follow the [installation instructions](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-3-installing-execution-client/) specific to your operating system. This may include running commands in the terminal or executing setup files.
-3. **Configuration**: After installation, configure your network settings. This includes setting parameters like network ID, data directories, and peer connections.
+3. **Configuration**: After installation, configure your network settings. This includes setting parameters like network port, owner permission, and expose network for peer connections.
 4. **Verification**: Test if the execution client is running correctly by using the appropriate start/run command in your terminal or command prompt. Monitor the logs to ensure there are no errors.
 
 #### Install the Consensus Client
 
 The consensus client is vital for maintaining the security of the Ethereum network, especially after the transition to proof-of-stake (PoS). It validates blocks, tracks validators, and processes their attestations.
 
-**Popular Consensus Clients:** Kindly follow [this guide](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-4-installing-consensus-client/) for easy setup.
+**Popular Consensus Clients:** Kindly follow [this guide](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-4-installing-consensus-client/) for easy setup. These are the lists of some popular consensus clients.
 
 * **Prysm**
 * **Lighthouse**
@@ -88,6 +180,8 @@ The consensus client is vital for maintaining the security of the Ethereum netwo
 
 <figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption><p>Simplified diagram of a coupled execution and consensus client. <br>Source: <a href="https://ethereum.org/en/developers/docs/nodes-and-clients/">https://ethereum.org/en/developers/docs/nodes-and-clients/</a></p></figcaption></figure>
 
+To start validating transactions, you need a validator client layer.
+
 #### Install the Validator Client
 
 A validator is a crucial part of the Ethereum ecosystem, participating in the network’s consensus. The validator client operates on behalf of the validator, managing its private keys and making attestations about the blockchain’s state.&#x20;
@@ -96,7 +190,7 @@ A validator is a crucial part of the Ethereum ecosystem, participating in the ne
 
 * **Verification**: The client verifies new blocks and re-executes transactions to confirm their validity.
 * **Attestations**: It broadcasts votes (attestations) to signal agreement with valid blocks.
-* **Network Security**: The validator client contributes to network security by producing blocks when selected and monitoring for updates.
+* **Network Security**: The validator client contributes to network security by producing blocks when selected and monitoring the network for updates.
 
 **Installation Steps:** Kingly [checkout this guide](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-5-installing-validator/)
 
@@ -104,6 +198,8 @@ A validator is a crucial part of the Ethereum ecosystem, participating in the ne
 2. **Installation**: Follow the [installation instructions](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-5-installing-validator/) provided for the client.
 3. **Configuration**: Properly configure the client to manage your validator keys and connect to the network.
 4. **Verification**: Ensure the validator client is running correctly and can communicate with both the execution and consensus clients.
+
+These pieces of software can be installed on a DappNode as well.
 
 ### **2.3 DAppNode Installation**
 
@@ -113,26 +209,32 @@ Follow [this tutorial](https://www.youtube.com/watch?v=VBUIIV8Jo\_U) to learn ho
 
 {% embed url="https://www.youtube.com/watch?v=VBUIIV8Jo_U" %}
 
+
+
+To save time installing most of these software through an automated tool and without spending time writing codes or interacting with the command line interface, a tool was built by coincashew called Ethpillar make this seamless.
+
 ### **2.4 Ethpillar UI Installation**
 
-**Ethpillar**: This user-friendly tool allows you to set up an Ethereum node (Nimbus + Nethermind) in just minutes. It simplifies the installation process, making it accessible even for those with limited technical expertise. Additionally, ethpillar includes MEVboost, which enhances your node’s functionality by maximizing potential earnings from MEV (Maximal Extractable Value) opportunities. With clear instructions and an intuitive interface, ethpillar ensures a seamless experience for users looking to join the Ethereum network. This is the [installation guide.](https://www.coincashew.com/coins/overview-eth/ethpillar)
+**Ethpillar**: This user-friendly tool that allows you to set up an Ethereum node (Nimbus + Nethermind) in just minutes. It simplifies the installation process, making it accessible even for those with limited technical expertise. Additionally, ethpillar includes MEVboost, which enhances your node’s functionality by maximizing potential earnings from MEV (Maximal Extractable Value) opportunities. With clear instructions and an intuitive interface, ethpillar ensures a seamless experience for users looking to join the Ethereum network. This is the [installation guide.](https://www.coincashew.com/coins/overview-eth/ethpillar) Some people have used this tool to setup their node seamlessly.
 
 {% embed url="https://x.com/Nodebridgeafric/status/1829125233866924284" %}
-Harystyles as a Solo Staker Utilized the Ethpillar tool
+A Solo Staker Utilized the Ethpillar tool
 {% endembed %}
 
 {% embed url="https://x.com/Nodebridgeafric/status/1843351820380651712" %}
 Active validator on the holesky beacon chain
 {% endembed %}
 
+Now, let's talk a little bit about network connectivity and how we can secure our node.&#x20;
+
 ### Set Up Network Connectivity
 
 For your Ethereum node to communicate effectively with the network, you need to ensure it is reachable by other nodes. Checkout [this configuration guide](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-2-configuring-node.md):
 
 * **Inbound Connections**: Configure your network to allow inbound connections on Ethereum’s default ports (TCP/UDP 30303).
-* **Router/Firewall Configuration**: If your node is behind a router or firewall, you may need to set up port forwarding or open these ports to facilitate connections.
+* **Router/Firewall Configuration**: If your node is behind a router or firewall, you may need to set up port forwarding or open these ports to facilitate connections. For Starlink users, subscribing to a business or priority plan that offers a public IP feature is a great way to ensure that your node remain accessible by other peers.
 
-Additionally, secure the HTTP connection between your beacon node and execution node using a JWT token. Refer to [specific guides on generating and implementing JWT tokens](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-2-configuring-node.md).
+There are different ways to ensure that your node is secure.
 
 ### Secure Your Node
 
@@ -142,13 +244,17 @@ Running an Ethereum node means you are part of the network and handling valuable
 * **SSH Access**: Configure SSH access securely for remote management.
 * **Regular Updates**: Keep your system, execution client, consensus client, and validator client updated with the latest security patches to mitigate vulnerabilities.
 
+Additionally, it is important to secure the HTTP connection between your beacon node and execution node using a JWT token. Refer to [specific guides on generating and implementing JWT tokens](../readme/ethereum-staking-guide/ethereum-staking-guide/setting-up-a-validator-on--holesky-testnet/step-2-configuring-node.md).
+
+Great, so let's talk about internet connectivity.
+
 ### Section 3: Connectivity Solutions
 
 **3.1 Internet Options**
 
 Reliable internet is crucial for syncing the blockchain and processing transactions. Here are a few connectivity options utilized in Africa:
 
-* **MTN**: Africa’s largest mobile network offers widespread coverage but variable speeds depending on location. MTN provides bundles suited for Ethereum nodes, though latency might affect performance in remote areas. MTN offers 1TB for $61 (N100,000) valid for 365 days at the time of writing this article.
+* **MTN**: Africa’s largest mobile network offers widespread coverage but variable speeds depending on location. MTN provides bundles suited for Ethereum nodes, though latency might affect performance in remote areas. MTN offers 1TB for $61 (N100,000) valid for 365 days at the time of writing this article. Other Internet Service Providers (ISP) include GLO, Airtel, and 9-mobile.
 * **Starlink**: Ideal for rural areas with limited access to traditional broadband, Starlink provides high-speed satellite internet. Its latency and high bandwidth are beneficial for node operations. Starlink is uncapped and the residential plan goes for about $23 (N38,000) unlimited at the time of writing this article.
 
 .
@@ -157,7 +263,7 @@ Reliable internet is crucial for syncing the blockchain and processing transacti
 Starlink&#x20;
 {% endembed %}
 
-<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption><p>Starlink kit</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption><p>Starlink complete kit</p></figcaption></figure>
 
 * **Fiber Optics**: In urban regions, fiber-optic connections are the gold standard for node performance, offering high-speed, low-latency internet essential for rapid transaction processing.
 
@@ -165,9 +271,9 @@ Starlink&#x20;
 
 High bandwidth and low latency are critical for smooth operation, especially when syncing large blocks.&#x20;
 
-<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption><p>Different ISPs during research phase</p></figcaption></figure>
 
-Monitoring tools like [`Speedtest`](https://www.speedtest.net/) can help assess the connection's stability, and applications like **Grafana** or **Prometheus** can monitor node performance and connectivity in real-time.
+Monitoring tools like [`Speedtest`](https://www.speedtest.net/) can help assess the connection's stability, and applications like **Grafana** or **Prometheus** can monitor node performance and connectivity in real-time. Without power or stable electricity supply, all these won't be possible to begin with.
 
 ### Section 4: Power Supply Challenges
 
@@ -193,9 +299,9 @@ For short outages, **power banks** or **portable generators** offer temporary so
 
 The costs of setting up an Ethereum node can vary:
 
-* **Hardware**: $xxx for a Raspberry Pi 5 setup or upwards of $xxx for a high-end PC setup.
+* **Hardware**: $109 for a [Raspberry Pi 5 setup](https://it.aliexpress.com/item/1005004959012661.html?gatewayAdapt=glo2ita) for a high-end PC setup and approximately $700 for a custom node computer. This require little or no cost to setup.
 * **Solar energy setup**: Around $xxx-$xxx depending on the capacity and quality of the components.
-* **Internet costs**: Starlink installation starts at $xxx, while fiber and mobile connections vary by location.
+* **Internet costs**: Starlink installation starts at $50, while fiber and mobile connections vary by location and service provider.
 
 **5.2 Ongoing Maintenance Costs**
 
@@ -215,9 +321,9 @@ We offer workshops and training on setting up and managing Ethereum nodes. We al
 Workshop in collaboration with blockops
 {% endembed %}
 
-<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption><p>Workshop on setting up a node</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>A webinar in collaboration with Gnosis chain</p></figcaption></figure>
 
 **6.2 Local Events**
 
@@ -229,7 +335,9 @@ Conferences and meetups organized by our community across Africa, such as those 
 
 <figure><img src="../.gitbook/assets/IMG-20240810-WA0015 (1).jpg" alt=""><figcaption><p>Running an Ethereum Node Workshop at Blockspace, Lagos, Nigeria</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption><p>Running an Ethereum node workshop</p></figcaption></figure>
+
+A lot of innovations are coming into the space to reduce barrier to entry, enhance node performance and security and promote the decentralization of the network. This include Distributed Validator Technology (DVT) squad staking, LIDO Community Staking Module, SSV, amongs others.
 
 ### Section 7: Decentralized Validator Technologies (DVT)
 

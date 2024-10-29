@@ -35,7 +35,7 @@
   * [Advanced networking](hardware-and-system-requirements/advanced-networking.md)
 * [Introduction to ETH Validators](readme/ethereum-staking-guide/introduction-to-eth-validators.md)
 * [NodeBridge Africa Community](nodebridge-africa-community/README.md)
-  * [Setting Up an Ethereum Validator Node In Africa \[Draft\]](nodebridge-africa-community/setting-up-an-ethereum-validator-node-in-africa-draft.md)
+  * [Setting Up an Ethereum Validator Node In Africa](nodebridge-africa-community/setting-up-an-ethereum-validator-node-in-africa.md)
 * [Staking Guide](<README (1).md>)
   * [Ethereum Staking Guide](readme/ethereum-staking-guide/README.md)
     * [Ethereum Guide](readme/ethereum-staking-guide/ethereum-staking-guide/README.md)
