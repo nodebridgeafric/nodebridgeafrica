@@ -254,8 +254,8 @@ Great, so let's talk about internet connectivity.
 
 Reliable internet is crucial for syncing the blockchain and processing transactions. Here are a few connectivity options utilized in Africa:
 
-* **MTN**: Africa’s largest mobile network offers widespread coverage but variable speeds depending on location. MTN provides bundles suited for Ethereum nodes, though latency might affect performance in remote areas. MTN offers 1TB for $61 (N100,000) valid for 365 days at the time of writing this article. Other Internet Service Providers (ISP) include GLO, Airtel, and 9-mobile.
-* **Starlink**: Ideal for rural areas with limited access to traditional broadband, Starlink provides high-speed satellite internet. Its latency and high bandwidth are beneficial for node operations. Starlink is uncapped and the residential plan goes for about $23 (N38,000) unlimited at the time of writing this article.
+* **MTN**: Africa’s largest mobile network offers widespread coverage but variable speeds depending on location. MTN provides bundles suited for Ethereum nodes, though latency might affect performance in remote areas.&#x20;
+* **Starlink**: Ideal for rural areas with limited access to traditional broadband, Starlink provides high-speed satellite internet. Its latency and high bandwidth are beneficial for node operations.&#x20;
 
 .
 
@@ -283,9 +283,9 @@ Power outages are a common issue in many African regions, affecting node uptime.
 
 Solar power is an increasingly viable option, especially in areas with unreliable grid electricity. A basic setup includes:
 
-* **Solar panels**: A xxxW panel can cost around $xxx for sufficient wattage.
-* **Inverter**: Converts solar energy into usable AC power, costing about $xxx.
-* **Battery storage**: Provides backup power during nighttime or outages, with costs ranging from $xxx to $xxx depending on capacity.
+* **Solar panels**: A 150W panel can cost around ₦45,000 – ₦135,000 for sufficient wattage.
+* **Inverter**: Converts solar energy into usable AC power, costing about ₦700,000.
+* **Battery storage**: Provides backup power during nighttime or outages, with costs ranging from ₦1,000,000 to ₦ 1,900,000 for 5KWH, it also depends on the product and capacity.
 
 Such a setup can keep a node running for several hours or days without interruption.
 
@@ -300,15 +300,15 @@ For short outages, **power banks** or **portable generators** offer temporary so
 The costs of setting up an Ethereum node can vary:
 
 * **Hardware**: $109 for a [Raspberry Pi 5 setup](https://it.aliexpress.com/item/1005004959012661.html?gatewayAdapt=glo2ita) for a high-end PC setup and approximately $700 for a custom node computer. This require little or no cost to setup.
-* **Solar energy setup**: Around $xxx-$xxx depending on the capacity and quality of the components.
-* **Internet costs**: Starlink installation starts at $50, while fiber and mobile connections vary by location and service provider.
+* **Solar energy setup**: Installation cost depends on the capacity and quality of the components.
+* **Internet costs**: MTN offers 1TB for $61 (₦100,000) valid for 365 days at the time of writing this article. Other Internet Service Providers (ISP) include GLO, Airtel, and 9-mobile. Starlink is uncapped and the residential plan goes for about $23 (₦38,000) unlimited at the time of writing this article..
 
 **5.2 Ongoing Maintenance Costs**
 
 Monthly expenses may include include:
 
-* **Electricity**: Regular grid usage can cost $xx-$xx per month depending on the country.
-* **Internet**: Monthly fees for ISPs like MTN or Starlink range from $xx-$xxx depending on the plan.
+* **Electricity**: Regular grid usage per month depending on the region.
+* **Internet**: Monthly fees for ISPs like MTN or Starlink depending on the plan.
 * **Hardware maintenance**: SSDs and other components may need periodic replacement. Budget for SSD replacements or other component upgrades every few years.
 
 ### Section 6: Community Support and Education
