@@ -10,7 +10,7 @@ When this happens, we, as validator node operators, will suffer penalties. **The
 
 Looking at the chart below, correlation penalties involving 33% or more of the network will result in all of your staked ETH being slashed!
 
-<figure><img src=".gitbook/assets/image (18).png" alt=""><figcaption><p>Kiln's research on correlation penalties</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (18) (1).png" alt=""><figcaption><p>Kiln's research on correlation penalties</p></figcaption></figure>
 
 This is why there are at least 4 - 5 clients to choose from for execution layer and consensus layer clients today. With Geth owning more than 50% of the execution layer client market share today, the existence of a crazy bug causing validator nodes running Geth to double-sign will be catastrophic.
 

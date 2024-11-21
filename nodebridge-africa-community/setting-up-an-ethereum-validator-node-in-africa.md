@@ -323,7 +323,7 @@ Workshop in collaboration with blockops
 
 <figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption><p>Workshop on setting up a node</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>A webinar in collaboration with Gnosis chain</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption><p>A webinar in collaboration with Gnosis chain</p></figcaption></figure>
 
 **6.2 Local Events**
 

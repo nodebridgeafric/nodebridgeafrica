@@ -40,7 +40,7 @@ ISPs in some countries combine both modem and routers into a single device.
 {% tab title="Shared Router" %}
 It is entirely possible and also sufficiently safe to connect your validator node directly to your existing home router if you do not plan to have un-trusted guests over at your home often.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Secure your node router properly by setting strong passwords on the WIFI and device level. Do not expose these passwords or let anyone else connect to the WIFI network or log in to the device level of your node router.
 {% endtab %}
@@ -48,7 +48,7 @@ It is entirely possible and also sufficiently safe to connect your validator nod
 {% tab title="Dedicated Router" %}
 Adding a dedicated router in between your validator node and existing home router offers a greater level of segregation and adds another security layer. Useful if you plan to host guests at home frequently.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -82,12 +82,12 @@ Check out the Port Forwarding section under the Advanced Networking Page below a
 
 {% tabs %}
 {% tab title="Shared Router" %}
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 {% endtab %}
 
 {% tab title="Dedicated Node Router " %}
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}

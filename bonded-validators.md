@@ -25,7 +25,7 @@ _**There are 2 methods of setting up bonded validators today.**_
 
 {% tabs %}
 {% tab title="Lido CSM" %}
-<figure><img src=".gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>
 
 For the Lido CSM, you will essentially be running just a native validator node with no additional services required on your hardware. Bond deposit is managed on the CSM Webapp.
 

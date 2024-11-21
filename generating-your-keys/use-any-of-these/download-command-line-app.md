@@ -6,7 +6,7 @@ Step 1: Download the deposit command line interface app for your operating syste
 
 
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Step 2: Generate deposit keys using the Ethereum Foundation deposit toolFor security, we recommend you disconnect from the internet to complete this step.
 

@@ -2,7 +2,7 @@
 
 
 
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption><p>It's not a walk in the park but it's definitely easy enough for even non-technical people to pick up!</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16) (1).png" alt=""><figcaption><p>It's not a walk in the park but it's definitely easy enough for even non-technical people to pick up!</p></figcaption></figure>
 
 Operating an Ethereum node requires a diverse set of skills and knowledge to ensure effective setup, maintenance, and participation in the blockchain network. Below are the key skills and expertise needed for an Ethereum node operator:
 
